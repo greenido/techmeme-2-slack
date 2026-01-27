@@ -1,0 +1,16 @@
+{
+  "name": "techmeme-daily-digest",
+  "version": "1.0.0",
+  "description": "Fetches top news from Techmeme, summarizes with Gemini, and posts to Slack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3",
+    "@slack/web-api": "^6.10.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1"
+  }
+}
