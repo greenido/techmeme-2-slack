@@ -84,7 +84,8 @@ async function summarizeWithGemini(content) {
       Keep summaries concise (1-2 sentences).
       Add an emoji relevant to the news item at the start of each bullet.
       Use bullet points (• or -) for each item.
-      
+      Add a link to the original article after each summary.
+
       Raw Content:
       ${content}
     `;
@@ -98,6 +99,12 @@ async function summarizeWithGemini(content) {
     text = text.replace(/\*\*/g, '*');
     // Remove any triple asterisks that might appear
     text = text.replace(/\*\*\*/g, '*');
+    
+    // Replace all URLs with "read more" links
+    // This regex matches URLs in various formats (http://, https://, www., etc.)
+    text = text.replace(/https?:\/\/[^\s\)\]]+/g, (url) => {
+      return `<${url}|read more>`;
+    });
     
     return text;
   } catch (error) {
