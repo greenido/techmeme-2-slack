@@ -62,10 +62,6 @@ console.log(`✓ Slack client initialized (Channel: ${SLACK_CHANNEL})`);
 // CORE FUNCTIONS
 // ═══════════════════════════════════════════════════════════════════════════
 
-// ═══════════════════════════════════════════════════════════════════════════
-// CORE FUNCTIONS
-// ═══════════════════════════════════════════════════════════════════════════
-
 /**
  * Fetches and parses the latest headlines from Techmeme
  * 
