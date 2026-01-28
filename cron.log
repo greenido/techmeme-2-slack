@@ -1,0 +1,45 @@
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 1/28/2026, 8:00:03 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Amazon plans to cut ~16,000 roles across the company as part...
+   - URL: https://www.aboutamazon.com/news/company-news/amazon-layoffs-corporate-jan-2026
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (13.13s)
+   Generated text length: 3647 characters
+   Preview: Here's a summary of the top 10 tech news stories:
+
+• 📉 *Amazon Announces Major Layoffs*
+  Amazon pl...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3835 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1769616017.454919
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 14.28 seconds
+Completed at: 1/28/2026, 8:00:17 AM
+═══════════════════════════════════════════════════════════════════════════
+
