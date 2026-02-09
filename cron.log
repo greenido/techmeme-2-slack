@@ -43,3 +43,489 @@ Total execution time: 14.28 seconds
 Completed at: 1/28/2026, 8:00:17 AM
 ═══════════════════════════════════════════════════════════════════════════
 
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 1/29/2026, 8:00:02 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Meta reports Q4 revenue up 24% YoY to $59.9B, vs. $58.35B es...
+   - URL: https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (24.42s)
+   Generated text length: 3354 characters
+   Preview: Here are the top 10 most important tech news stories:
+
+• 🚀 *Meta's Q4 Surge & Major AI Bet*: Meta r...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3541 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1769702427.943309
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 25.89 seconds
+Completed at: 1/29/2026, 8:00:28 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 1/30/2026, 8:00:01 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Apple reports Q1 revenue up 16% YoY to $143.76B, vs. $138.48...
+   - URL: https://www.cnbc.com/2026/01/29/apple-aapl-earnings-report-q1-2026.html
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (24.84s)
+   Generated text length: 3538 characters
+   Preview: Here are the top 10 most important tech news stories:
+
+• 🍏 *Apple Reports Strong Q1 Earnings & iPho...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3723 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1769788827.835679
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 25.98 seconds
+Completed at: 1/30/2026, 8:00:27 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 1/31/2026, 8:00:01 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Nvidia CEO Jensen Huang said the company will “absolutely” b...
+   - URL: https://www.bloomberg.com/news/articles/2026-01-31/nvidia-to-join-openai-s-current-funding-round-huang-says
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (13.32s)
+   Generated text length: 3568 characters
+   Preview: Here are the top 10 tech news stories:
+
+• 💸 *Nvidia Lowers OpenAI Investment Expectations*: Nvidia ...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3755 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1769875216.248269
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 14.44 seconds
+Completed at: 1/31/2026, 8:00:16 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/1/2026, 8:00:03 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Documents and sources: Abu Dhabi's Sheikh Tahnoon bin Zayed ...
+   - URL: https://www.wsj.com/politics/policy/spy-sheikh-secret-stake-trump-crypto-tahnoon-ea4d97e8?st=EpuRr8&reflink=desktopwebshare_permalink
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (19.28s)
+   Generated text length: 3952 characters
+   Preview: Here are the top 10 tech news stories:
+
+• 💰 A *$500M investment* by Abu Dhabi's Sheikh Tahnoon in W...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 4137 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1769961623.355159
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 20.28 seconds
+Completed at: 2/1/2026, 8:00:23 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/2/2026, 8:00:03 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Sources: SpaceX is in advanced talks to combine with xAI and...
+   - URL: https://www.bloomberg.com/news/articles/2026-02-02/spacex-is-in-advanced-talks-to-combine-with-xai?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MDA0NzAzMiwiZXhwIjoxNzcwNjUxODMyLCJhcnRpY2xlSWQiOiJUOVRXVkJLSzNOWTgwMCIsImJjb25uZWN0SWQiOiIyRkMyODkzMTdENkY0QjYxQUFENTJEOTVFRENDQjlGRSJ9.3DZYnCOV8UVdI6XQRR3Dr7OBaEyCiWsiRAh9BJAdxtg
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (18.74s)
+   Generated text length: 5497 characters
+   Preview: Here are the top 10 most important tech news stories:
+
+• 🚀 *SpaceX and xAI Merger Talks*
+  Elon Mus...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 5682 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1770048023.415329
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 20.01 seconds
+Completed at: 2/2/2026, 8:00:23 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/3/2026, 8:00:02 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: The Paris prosecutor's office says it raided X's French offi...
+   - URL: https://www.bbc.com/news/articles/ce3ex92557jo
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (23.22s)
+   Generated text length: 3485 characters
+   Preview: Here are the top 10 tech news stories from today:
+
+• 🚀 *SpaceX Acquires xAI, Forms $1.25T Entity*
+ ...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3671 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1770134427.237319
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 24.33 seconds
+Completed at: 2/3/2026, 8:00:27 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/4/2026, 8:00:01 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Anthropic says “Claude will remain ad-free”, its users “won'...
+   - URL: https://www.anthropic.com/news/claude-is-a-space-to-think
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (13.38s)
+   Generated text length: 3775 characters
+   Preview: Here are the top tech news stories:
+
+• 🤖 *Anthropic Commits to Ad-Free AI:* Anthropic has announced...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3963 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1770220816.337269
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 14.63 seconds
+Completed at: 2/4/2026, 8:00:16 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/5/2026, 8:00:02 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Alphabet reports Q4 revenue up 18% YoY to $113.83B, above $1...
+   - URL: https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (18.64s)
+   Generated text length: 3773 characters
+   Preview: Here are the top 10 most important tech news stories:
+
+• 📈 *Alphabet Reports Robust Q4 and Massive ...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3960 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1770307222.796339
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 20.66 seconds
+Completed at: 2/5/2026, 8:00:22 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/6/2026, 8:00:02 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Amazon reports Q4 revenue up 14% YoY to $213.39B, vs. $211.3...
+   - URL: https://www.businesswire.com/news/home/20260204777163/en/
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (22.48s)
+   Generated text length: 3650 characters
+   Preview: Here's a summary of the top 10 tech news stories:
+
+• 📉 Amazon reported mixed Q4 earnings, with reve...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3835 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1770393626.230349
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 23.95 seconds
+Completed at: 2/6/2026, 8:00:26 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/7/2026, 8:00:02 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: New York lawmakers propose a bill to impose a three-year mor...
+   - URL: https://www.wired.com/story/new-york-is-the-latest-state-to-consider-a-data-center-pause/
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (10.36s)
+   Generated text length: 3713 characters
+   Preview: Here are the top tech news stories:
+
+• 🇨🇳 *US Bans Chinese Software in Internet-Connected Vehicles...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3900 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1770480014.105309
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 11.41 seconds
+Completed at: 2/7/2026, 8:00:14 AM
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Environment variables validated successfully
+✓ Gemini AI client initialized (Model: gemini-2.5-flash)
+✓ Slack client initialized (Channel: C0AB52GRUUT)
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 STARTING TECHMEME DIGEST BOT
+═══════════════════════════════════════════════════════════════════════════
+Started at: 2/9/2026, 8:00:02 AM
+
+📡 Fetching content from Techmeme...
+✓ Successfully retrieved HTML content
+✓ Successfully extracted 15 headlines
+   Preview of first item:
+   - Title: Slack message: Sam Altman tells staff that ChatGPT is “back ...
+   - URL: https://www.cnbc.com/2026/02/09/sam-altman-touts-chatgpt-growth-as-openai-nears-100-billion-funding.html
+
+📝 Formatting content for AI processing...
+✓ Formatted 15 items for AI
+
+🤖 Generating summary with Gemini AI...
+   Using model: gemini-2.5-flash
+   Sending prompt to Gemini...
+✓ Received response from Gemini (16.94s)
+   Generated text length: 2952 characters
+   Preview: Here are the top 10 tech news stories:
+
+• 🤖 *OpenAI's ChatGPT continues rapid growth*, with CEO Sam...
+   Applying Slack formatting...
+✓ Formatted 10 URLs as Slack links
+
+📤 Posting to Slack...
+   Target channel: C0AB52GRUUT
+   Message length: 3137 characters
+✅ Successfully posted to Slack!
+   Message timestamp: 1770652820.464089
+   Channel: C0AB52GRUUT
+
+═══════════════════════════════════════════════════════════════════════════
+✅ WORKFLOW COMPLETED SUCCESSFULLY!
+═══════════════════════════════════════════════════════════════════════════
+Total execution time: 18.14 seconds
+Completed at: 2/9/2026, 8:00:20 AM
+═══════════════════════════════════════════════════════════════════════════
+

@@ -169,18 +169,40 @@ async function summarizeWithGemini(content) {
     
     // Craft the prompt with specific instructions for the AI
     const prompt = `
-      You are a tech news aggregator. 
-      Read the following raw text items extracted from Techmeme.
-      Identify and summarize the top 10 most important news stories.
-      
-      Format the output as a clean, bulleted list suitable for a Slack message.
-      IMPORTANT: Use single asterisks for bold text (e.g., *Title* not **Title**).
-      Keep summaries concise (1-2 sentences).
-      Add an emoji relevant to the news item at the start of each bullet.
-      Use bullet points (• or -) for each item.
-      Add a link to the original article after each summary.
+     You are a high-signal tech and business news aggregator.
+Your goal is to identify the top 10 most important new stories by synthesizing information from multiple reliable sources, not just the provided text.
 
-      Raw Content:
+Primary source:
+Techmeme (provided below)
+Secondary sources to cross-check and enrich context:
+X (formerly Twitter): verified accounts, founders, VCs, researchers, reputable journalists
+Reddit: relevant high-quality subreddits (e.g. r/startups, r/technology, r/MachineLearning, r/artificial)
+Major tech/business outlets (e.g. Bloomberg, The Information, WSJ, FT, The Verge, Wired)
+
+Selection criteria:
+At least 50% of the selected items must be focused on business, startups, AI, or core technology trends
+
+Prioritize stories with:
+Strategic business impact
+Market or industry implications
+Notable funding, acquisitions, IPOs, or shutdowns
+Breakthroughs or setbacks in AI, infrastructure, or platforms
+De-prioritize shallow product launches or incremental updates unless they have outsized impact
+
+Instructions:
+Read the raw Techmeme content below
+Cross-check and validate importance using the secondary sources
+Merge duplicates into a single, stronger story when appropriate
+Rank by real-world significance, not volume of coverage
+
+Output format (for Slack):
+Use a clean bulleted list (• or -)
+Start each bullet with a relevant emoji
+Use single asterisks for bold titles (e.g. Title)
+Keep summaries concise (1–2 sentences max)
+Clearly state why the story matters
+Add a link to the most authoritative original article for each item
+Raw Content:
       ${content}
     `;
 
@@ -198,8 +220,6 @@ async function summarizeWithGemini(content) {
     console.log(`   Preview: ${text.substring(0, 100)}...`);
     
     // POST-PROCESSING: Clean up the AI output for optimal Slack formatting
-    
-    // POST-PROCESSING: Clean up the AI output for optimal Slack formatting
     console.log('   Applying Slack formatting...');
     
     // Convert double asterisks to single asterisks (Slack uses single * for bold)
@@ -208,14 +228,20 @@ async function summarizeWithGemini(content) {
     // Remove any triple asterisks that might accidentally appear
     text = text.replace(/\*\*\*/g, '*');
     
-    // Replace raw URLs with Slack's "read more" link format
-    // Slack format: <URL|display text> makes URLs more readable
-    const urlCount = (text.match(/https?:\/\//g) || []).length;
-    text = text.replace(/https?:\/\/[^\s\)\]]+/g, (url) => {
+    // Remove markdown-style links [text](url) and convert to Slack format <url|text>
+    // This prevents duplicate "read more" issues
+    text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, (match, linkText, url) => {
+      return `<${url}|${linkText}>`;
+    });
+    
+    // Replace any remaining bare URLs with Slack's link format
+    // Only match URLs that are NOT already inside < > brackets (Slack format)
+    text = text.replace(/(?<!<)(https?:\/\/[^\s<>\)\]]+)(?![^<]*>)/g, (url) => {
       return `<${url}|read more>`;
     });
     
-    console.log(`✓ Formatted ${urlCount} URLs as Slack links`);
+    const urlCount = (text.match(/</g) || []).length;
+    console.log(`✓ Formatted URLs as Slack links`);
     
     return text;
   } catch (error) {
