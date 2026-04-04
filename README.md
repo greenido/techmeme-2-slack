@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📰 Techmeme Daily Digest Bot
+# 📰 Techmeme Daily Digest Bot - v1.0.0
 
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
 <img src="https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" />
