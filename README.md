@@ -305,6 +305,14 @@ npm start
 node index.js
 ```
 
+If both Slack and Telegram are configured but you want to send only to Telegram for a run:
+
+```bash
+npm run start:telegram
+# or
+node index.js --telegram-only
+```
+
 You should see detailed console output:
 
 ```text

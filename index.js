@@ -35,9 +35,13 @@ const SLACK_CHANNEL = process.env.SLACK_CHANNEL_ID;
 // Telegram integration configuration
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+const cliArgs = process.argv.slice(2);
+const telegramOnlyMode = cliArgs.includes('--telegram-only');
 
 const hasSlackConfig = Boolean(SLACK_TOKEN && SLACK_CHANNEL);
 const hasTelegramConfig = Boolean(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID);
+const activeSlackConfig = hasSlackConfig && !telegramOnlyMode;
+const activeTelegramConfig = hasTelegramConfig;
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ENVIRONMENT VALIDATION
@@ -57,7 +61,11 @@ if ((TELEGRAM_BOT_TOKEN && !TELEGRAM_CHAT_ID) || (!TELEGRAM_BOT_TOKEN && TELEGRA
   configurationErrors.push('Telegram delivery requires both TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.');
 }
 
-if (!hasSlackConfig && !hasTelegramConfig) {
+if (telegramOnlyMode && !hasTelegramConfig) {
+  configurationErrors.push('Telegram-only mode requires both TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.');
+}
+
+if (!activeSlackConfig && !activeTelegramConfig) {
   configurationErrors.push('Configure at least one delivery target: Slack or Telegram.');
 }
 
@@ -70,9 +78,12 @@ if (configurationErrors.length > 0) {
 
 console.log('✓ Environment variables validated successfully');
 console.log(`✓ Delivery targets configured: ${[
-  hasSlackConfig ? 'Slack' : null,
-  hasTelegramConfig ? 'Telegram' : null,
+  activeSlackConfig ? 'Slack' : null,
+  activeTelegramConfig ? 'Telegram' : null,
 ].filter(Boolean).join(', ')}`);
+if (telegramOnlyMode) {
+  console.log('✓ Delivery mode: Telegram only');
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // INITIALIZE API CLIENTS
@@ -83,12 +94,12 @@ const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 console.log(`✓ Gemini AI client initialized (Model: ${GEMINI_MODEL})`);
 
 // Initialize Slack Web API client for posting messages when configured
-const slackClient = hasSlackConfig ? new WebClient(SLACK_TOKEN) : null;
-if (hasSlackConfig) {
+const slackClient = activeSlackConfig ? new WebClient(SLACK_TOKEN) : null;
+if (activeSlackConfig) {
   console.log(`✓ Slack client initialized (Channel: ${SLACK_CHANNEL})`);
 }
 
-if (hasTelegramConfig) {
+if (activeTelegramConfig) {
   console.log(`✓ Telegram delivery configured (Chat: ${TELEGRAM_CHAT_ID})`);
 }
 
@@ -379,11 +390,11 @@ async function main() {
     const summary = await summarizeWithGemini(content);
     
     // STEP 4: Post to each configured delivery target
-    if (hasSlackConfig) {
+    if (activeSlackConfig) {
       await postToSlack(summary);
     }
 
-    if (hasTelegramConfig) {
+    if (activeTelegramConfig) {
       await postToTelegram(summary);
     }
     
