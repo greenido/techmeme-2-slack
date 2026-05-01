@@ -2,10 +2,8 @@ name: Daily Tech Digest
 
 on:
   schedule:
-    # Runs at 8:00 AM PST (4:00 PM UTC) every day
-    # PST is UTC-8, so 8:00 AM PST = 4:00 PM UTC
     # Note: GitHub Actions uses UTC time
-    - cron: '0 16 * * *'
+    - cron: '0 14 * * *'
   workflow_dispatch: # Allows manual triggering from GitHub UI
 
 jobs:

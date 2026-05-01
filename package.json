@@ -1,10 +1,11 @@
 {
   "name": "techmeme-daily-digest",
   "version": "1.0.0",
-  "description": "Fetches top news from Techmeme, summarizes with Gemini, and posts to Slack.",
+  "description": "Fetches top news from Techmeme, summarizes with Gemini, and posts to Slack and/or Telegram.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test:telegram": "node telegram-test.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.1.3",

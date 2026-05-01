@@ -4,17 +4,18 @@
 // This script automates the daily tech news digest by:
 // 1. Scraping the latest headlines from Techmeme
 // 2. Using Google's Gemini AI to intelligently summarize the top stories
-// 3. Posting a beautifully formatted digest to your Slack channel
+// 3. Posting a beautifully formatted digest to Slack and/or Telegram
 // ═══════════════════════════════════════════════════════════════════════════
 
 // Load environment variables from .env file
 require('dotenv').config();
 
-// Dependencies for HTTP requests, HTML parsing, AI, and Slack integration
+// Dependencies for HTTP requests, HTML parsing, AI, and messaging integrations
 const axios = require('axios');
 const cheerio = require('cheerio');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { WebClient } = require('@slack/web-api');
+const { postToTelegram } = require('./telegram');
 
 // ═══════════════════════════════════════════════════════════════════════════
 // CONFIGURATION
@@ -31,20 +32,47 @@ const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-pro-latest'; // Fallbac
 const SLACK_TOKEN = process.env.SLACK_BOT_TOKEN;
 const SLACK_CHANNEL = process.env.SLACK_CHANNEL_ID;
 
+// Telegram integration configuration
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+
+const hasSlackConfig = Boolean(SLACK_TOKEN && SLACK_CHANNEL);
+const hasTelegramConfig = Boolean(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID);
+
 // ═══════════════════════════════════════════════════════════════════════════
 // ENVIRONMENT VALIDATION
 // ═══════════════════════════════════════════════════════════════════════════
 // Ensure all required environment variables are present before proceeding
-if (!GEMINI_API_KEY || !SLACK_TOKEN || !SLACK_CHANNEL) {
-  console.error('❌ Error: Missing required environment variables!');
-  console.error('   Please check your .env file and ensure the following are set:');
-  console.error('   - GEMINI_API_KEY');
-  console.error('   - SLACK_BOT_TOKEN');
-  console.error('   - SLACK_CHANNEL_ID');
+const configurationErrors = [];
+
+if (!GEMINI_API_KEY) {
+  configurationErrors.push('GEMINI_API_KEY is required.');
+}
+
+if ((SLACK_TOKEN && !SLACK_CHANNEL) || (!SLACK_TOKEN && SLACK_CHANNEL)) {
+  configurationErrors.push('Slack delivery requires both SLACK_BOT_TOKEN and SLACK_CHANNEL_ID.');
+}
+
+if ((TELEGRAM_BOT_TOKEN && !TELEGRAM_CHAT_ID) || (!TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID)) {
+  configurationErrors.push('Telegram delivery requires both TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.');
+}
+
+if (!hasSlackConfig && !hasTelegramConfig) {
+  configurationErrors.push('Configure at least one delivery target: Slack or Telegram.');
+}
+
+if (configurationErrors.length > 0) {
+  console.error('❌ Error: Invalid environment configuration!');
+  console.error('   Please check your .env file and resolve the following:');
+  configurationErrors.forEach((message) => console.error(`   - ${message}`));
   process.exit(1);
 }
 
 console.log('✓ Environment variables validated successfully');
+console.log(`✓ Delivery targets configured: ${[
+  hasSlackConfig ? 'Slack' : null,
+  hasTelegramConfig ? 'Telegram' : null,
+].filter(Boolean).join(', ')}`);
 
 // ═══════════════════════════════════════════════════════════════════════════
 // INITIALIZE API CLIENTS
@@ -54,9 +82,15 @@ console.log('✓ Environment variables validated successfully');
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 console.log(`✓ Gemini AI client initialized (Model: ${GEMINI_MODEL})`);
 
-// Initialize Slack Web API client for posting messages
-const slackClient = new WebClient(SLACK_TOKEN);
-console.log(`✓ Slack client initialized (Channel: ${SLACK_CHANNEL})`);
+// Initialize Slack Web API client for posting messages when configured
+const slackClient = hasSlackConfig ? new WebClient(SLACK_TOKEN) : null;
+if (hasSlackConfig) {
+  console.log(`✓ Slack client initialized (Channel: ${SLACK_CHANNEL})`);
+}
+
+if (hasTelegramConfig) {
+  console.log(`✓ Telegram delivery configured (Chat: ${TELEGRAM_CHAT_ID})`);
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // CORE FUNCTIONS
@@ -152,11 +186,11 @@ async function fetchTechmemeContent() {
  * 
  * Sends the raw headline data to Gemini with specific instructions to:
  * - Identify the top 10 most important stories
- * - Format for Slack with emojis and proper markdown
+ * - Format for Slack-style delivery with emojis and proper markdown
  * - Keep summaries concise and actionable
  * 
  * @param {string} content - Formatted string of news items with URLs
- * @returns {Promise<string>} Formatted summary text ready for Slack
+ * @returns {Promise<string>} Formatted summary text ready for delivery
  * @throws {Error} If the AI generation fails
  */
 async function summarizeWithGemini(content) {
@@ -219,8 +253,8 @@ Raw Content:
     console.log(`   Generated text length: ${text.length} characters`);
     console.log(`   Preview: ${text.substring(0, 100)}...`);
     
-    // POST-PROCESSING: Clean up the AI output for optimal Slack formatting
-    console.log('   Applying Slack formatting...');
+    // POST-PROCESSING: Clean up the AI output for downstream delivery formatting
+    console.log('   Applying delivery formatting...');
     
     // Convert double asterisks to single asterisks (Slack uses single * for bold)
     text = text.replace(/\*\*/g, '*');
@@ -241,7 +275,7 @@ Raw Content:
     });
     
     const urlCount = (text.match(/</g) || []).length;
-    console.log(`✓ Formatted URLs as Slack links`);
+    console.log('✓ Formatted URLs for downstream delivery');
     
     return text;
   } catch (error) {
@@ -251,6 +285,20 @@ Raw Content:
     }
     throw error;
   }
+}
+
+/**
+ * Builds a consistent digest date for downstream delivery headers
+ *
+ * @returns {string} Locale-formatted date string
+ */
+function getFormattedDigestDate() {
+  return new Date().toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 }
 
 /**
@@ -267,12 +315,7 @@ async function postToSlack(text) {
   
   try {
     // Create a beautiful header with today's date
-    const formattedDate = new Date().toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    const formattedDate = getFormattedDigestDate();
     const header = `*Techmeme Top 10 Digest - ${formattedDate}* :newspaper:\n\n`;
     
     console.log(`   Target channel: ${SLACK_CHANNEL}`);
@@ -305,7 +348,7 @@ async function postToSlack(text) {
  * 1. Fetch headlines from Techmeme
  * 2. Format the data for AI processing
  * 3. Generate intelligent summary with Gemini
- * 4. Post the digest to Slack
+ * 4. Post the digest to each configured delivery channel
  * 
  * @throws {Error} If any step in the workflow fails
  */
@@ -335,8 +378,14 @@ async function main() {
     // STEP 3: Generate summary with Gemini AI
     const summary = await summarizeWithGemini(content);
     
-    // STEP 4: Post to Slack
-    await postToSlack(summary);
+    // STEP 4: Post to each configured delivery target
+    if (hasSlackConfig) {
+      await postToSlack(summary);
+    }
+
+    if (hasTelegramConfig) {
+      await postToTelegram(summary);
+    }
     
     // Calculate and display total execution time
     const totalDuration = ((Date.now() - workflowStartTime) / 1000).toFixed(2);
