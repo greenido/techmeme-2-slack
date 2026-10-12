@@ -1,4 +1,6 @@
-const { WebClient } = require('@slack/web-api');
+const { WebClient, retryPolicies } = require('@slack/web-api');
+
+const SLACK_TIMEOUT_MS = 30_000;
 
 // Slack rejects section blocks whose text exceeds 3000 characters
 const SLACK_SECTION_MAX_LENGTH = 3000;
@@ -83,7 +85,12 @@ async function postToSlack(stories, { token, channel, formattedDate }) {
     console.log(`   Target channel: ${channel}`);
     console.log(`   Blocks: ${message.blocks.length}`);
 
-    const result = await new WebClient(token).chat.postMessage({
+    // The default policy retries for ~30 minutes; keep a daily job bounded
+    const client = new WebClient(token, {
+      timeout: SLACK_TIMEOUT_MS,
+      retryConfig: retryPolicies.fiveRetriesInFiveMinutes,
+    });
+    const result = await client.chat.postMessage({
       channel,
       ...message,
       unfurl_links: false,

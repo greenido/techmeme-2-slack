@@ -1,4 +1,4 @@
-const axios = require('axios');
+const { fetchWithRetry } = require('./http');
 
 const TELEGRAM_MAX_MESSAGE_LENGTH = 4096;
 
@@ -102,17 +102,30 @@ async function postToTelegram(stories, options) {
     for (const [index, message] of messages.entries()) {
       console.log(`   Part ${index + 1}/${messages.length}: ${message.length} characters`);
 
-      const { data } = await axios.post(
+      // Retries honor Telegram's retry_after on 429 rate limits
+      const response = await fetchWithRetry(
         `https://api.telegram.org/bot${botToken}/sendMessage`,
         {
-          chat_id: chatId,
-          text: message,
-          parse_mode: 'HTML',
-          link_preview_options: {
-            is_disabled: true,
-          },
-        }
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'HTML',
+            link_preview_options: {
+              is_disabled: true,
+            },
+          }),
+        },
+        { label: `Telegram part ${index + 1}` }
       );
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok || !data?.ok) {
+        const error = new Error(`Telegram API returned HTTP ${response.status}: ${data?.description ?? response.statusText}`);
+        error.data = data;
+        throw error;
+      }
 
       results.push(data.result);
     }
@@ -124,8 +137,8 @@ async function postToTelegram(stories, options) {
     return results;
   } catch (error) {
     console.error('❌ Error posting to Telegram:', error.message);
-    if (error.response?.data) {
-      console.error('   Response data:', error.response.data);
+    if (error.data) {
+      console.error('   Response data:', error.data);
     }
     throw error;
   }
