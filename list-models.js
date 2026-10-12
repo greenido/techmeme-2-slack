@@ -9,7 +9,6 @@
 
 // Load environment variables
 require('dotenv').config();
-const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Get API key from environment
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -22,9 +21,6 @@ if (!GEMINI_API_KEY) {
 }
 
 console.log('✓ API key loaded successfully\n');
-
-// Initialize the Gemini client
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 /**
  * Fetches and displays all available Gemini AI models

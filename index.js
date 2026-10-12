@@ -13,9 +13,9 @@ require('dotenv').config();
 // Dependencies for HTTP requests, HTML parsing, AI, and messaging integrations
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { WebClient } = require('@slack/web-api');
-const { postToTelegram } = require('./telegram');
+const { generateDigest, getFormattedDigestDate } = require('./digest');
+const { postToSlack, renderSlackMessage } = require('./slack');
+const { postToTelegram, renderTelegramMessages } = require('./telegram');
 
 // ═══════════════════════════════════════════════════════════════════════════
 // CONFIGURATION
@@ -26,7 +26,7 @@ const TECHMEME_URL = 'https://techmeme.com/';
 
 // Google Gemini AI configuration
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-pro-latest'; // Fallback to latest if not specified
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-flash-latest'; // Fallback to latest Flash if not specified
 
 // Slack integration configuration
 const SLACK_TOKEN = process.env.SLACK_BOT_TOKEN;
@@ -37,6 +37,8 @@ const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const cliArgs = process.argv.slice(2);
 const telegramOnlyMode = cliArgs.includes('--telegram-only');
+// --dry-run prints the rendered Slack and Telegram messages instead of posting them
+const dryRunMode = cliArgs.includes('--dry-run');
 
 const hasSlackConfig = Boolean(SLACK_TOKEN && SLACK_CHANNEL);
 const hasTelegramConfig = Boolean(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID);
@@ -65,7 +67,7 @@ if (telegramOnlyMode && !hasTelegramConfig) {
   configurationErrors.push('Telegram-only mode requires both TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.');
 }
 
-if (!activeSlackConfig && !activeTelegramConfig) {
+if (!dryRunMode && !activeSlackConfig && !activeTelegramConfig) {
   configurationErrors.push('Configure at least one delivery target: Slack or Telegram.');
 }
 
@@ -84,19 +86,18 @@ console.log(`✓ Delivery targets configured: ${[
 if (telegramOnlyMode) {
   console.log('✓ Delivery mode: Telegram only');
 }
+if (dryRunMode) {
+  console.log('✓ Delivery mode: dry run (nothing will be posted)');
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
-// INITIALIZE API CLIENTS
+// SERVICE CONFIGURATION
 // ═══════════════════════════════════════════════════════════════════════════
 
-// Initialize Google Gemini AI client for content generation
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-console.log(`✓ Gemini AI client initialized (Model: ${GEMINI_MODEL})`);
+console.log(`✓ Gemini model: ${GEMINI_MODEL}`);
 
-// Initialize Slack Web API client for posting messages when configured
-const slackClient = activeSlackConfig ? new WebClient(SLACK_TOKEN) : null;
 if (activeSlackConfig) {
-  console.log(`✓ Slack client initialized (Channel: ${SLACK_CHANNEL})`);
+  console.log(`✓ Slack delivery configured (Channel: ${SLACK_CHANNEL})`);
 }
 
 if (activeTelegramConfig) {
@@ -193,173 +194,12 @@ async function fetchTechmemeContent() {
 }
 
 /**
- * Uses Google's Gemini AI to generate an intelligent summary of news items
- * 
- * Sends the raw headline data to Gemini with specific instructions to:
- * - Identify the top 10 most important stories
- * - Format for Slack-style delivery with emojis and proper markdown
- * - Keep summaries concise and actionable
- * 
- * @param {string} content - Formatted string of news items with URLs
- * @returns {Promise<string>} Formatted summary text ready for delivery
- * @throws {Error} If the AI generation fails
- */
-async function summarizeWithGemini(content) {
-  console.log('\n🤖 Generating summary with Gemini AI...');
-  
-  try {
-    // Initialize the Gemini model
-    const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
-    console.log(`   Using model: ${GEMINI_MODEL}`);
-    
-    // Craft the prompt with specific instructions for the AI
-    const prompt = `
-     You are a high-signal tech and business news aggregator.
-Your goal is to identify the top 10 most important new stories by synthesizing information from multiple reliable sources, not just the provided text.
-
-Primary source:
-Techmeme (provided below)
-Secondary sources to cross-check and enrich context:
-X (formerly Twitter): verified accounts, founders, VCs, researchers, reputable journalists
-Reddit: relevant high-quality subreddits (e.g. r/startups, r/technology, r/MachineLearning, r/artificial)
-Major tech/business outlets (e.g. Bloomberg, The Information, WSJ, FT, The Verge, Wired)
-
-Selection criteria:
-At least 50% of the selected items must be focused on business, startups, AI, or core technology trends
-
-Prioritize stories with:
-Strategic business impact
-Market or industry implications
-Notable funding, acquisitions, IPOs, or shutdowns
-Breakthroughs or setbacks in AI, infrastructure, or platforms
-De-prioritize shallow product launches or incremental updates unless they have outsized impact
-
-Instructions:
-Read the raw Techmeme content below
-Cross-check and validate importance using the secondary sources
-Merge duplicates into a single, stronger story when appropriate
-Rank by real-world significance, not volume of coverage
-
-Output format (for Slack):
-Use a clean bulleted list (• or -)
-Start each bullet with a relevant emoji
-Use single asterisks for bold titles (e.g. Title)
-Keep summaries concise (1–2 sentences max)
-Clearly state why the story matters
-Add a link to the most authoritative original article for each item
-Raw Content:
-      ${content}
-    `;
-
-    console.log('   Sending prompt to Gemini...');
-    const startTime = Date.now();
-    
-    // Send the request to Gemini
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    let text = response.text();
-    
-    const duration = ((Date.now() - startTime) / 1000).toFixed(2);
-    console.log(`✓ Received response from Gemini (${duration}s)`);
-    console.log(`   Generated text length: ${text.length} characters`);
-    console.log(`   Preview: ${text.substring(0, 100)}...`);
-    
-    // POST-PROCESSING: Clean up the AI output for downstream delivery formatting
-    console.log('   Applying delivery formatting...');
-    
-    // Convert double asterisks to single asterisks (Slack uses single * for bold)
-    text = text.replace(/\*\*/g, '*');
-    
-    // Remove any triple asterisks that might accidentally appear
-    text = text.replace(/\*\*\*/g, '*');
-    
-    // Remove markdown-style links [text](url) and convert to Slack format <url|text>
-    // This prevents duplicate "read more" issues
-    text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, (match, linkText, url) => {
-      return `<${url}|${linkText}>`;
-    });
-    
-    // Replace any remaining bare URLs with Slack's link format
-    // Only match URLs that are NOT already inside < > brackets (Slack format)
-    text = text.replace(/(?<!<)(https?:\/\/[^\s<>\)\]]+)(?![^<]*>)/g, (url) => {
-      return `<${url}|read more>`;
-    });
-    
-    const urlCount = (text.match(/</g) || []).length;
-    console.log('✓ Formatted URLs for downstream delivery');
-    
-    return text;
-  } catch (error) {
-    console.error('❌ Error during Gemini summarization:', error.message);
-    if (error.response) {
-      console.error(`   Response data:`, error.response.data);
-    }
-    throw error;
-  }
-}
-
-/**
- * Builds a consistent digest date for downstream delivery headers
- *
- * @returns {string} Locale-formatted date string
- */
-function getFormattedDigestDate() {
-  return new Date().toLocaleDateString('en-US', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
-
-/**
- * Posts the formatted digest to the specified Slack channel
- * 
- * Prepends a header with the current date and newspaper emoji,
- * then sends the message using Slack's Web API with markdown enabled.
- * 
- * @param {string} text - The formatted summary text to post
- * @throws {Error} If the Slack API call fails
- */
-async function postToSlack(text) {
-  console.log('\n📤 Posting to Slack...');
-  
-  try {
-    // Create a beautiful header with today's date
-    const formattedDate = getFormattedDigestDate();
-    const header = `*Techmeme Top 10 Digest - ${formattedDate}* :newspaper:\n\n`;
-    
-    console.log(`   Target channel: ${SLACK_CHANNEL}`);
-    console.log(`   Message length: ${(header + text).length} characters`);
-    
-    // Send the message to Slack
-    const result = await slackClient.chat.postMessage({
-      channel: SLACK_CHANNEL,
-      text: header + text,
-      mrkdwn: true  // Enable Slack markdown formatting
-    });
-    
-    console.log('✅ Successfully posted to Slack!');
-    console.log(`   Message timestamp: ${result.ts}`);
-    console.log(`   Channel: ${result.channel}`);
-  } catch (error) {
-    console.error('❌ Error posting to Slack:', error.message);
-    if (error.data) {
-      console.error(`   Error code: ${error.data.error}`);
-      console.error(`   Details:`, error.data);
-    }
-    throw error;
-  }
-}
-
-/**
  * Main orchestration function - coordinates the entire digest workflow
  * 
  * Workflow:
  * 1. Fetch headlines from Techmeme
- * 2. Format the data for AI processing
- * 3. Generate intelligent summary with Gemini
- * 4. Post the digest to each configured delivery channel
+ * 2. Select and summarize the top stories with Gemini (structured JSON)
+ * 3. Render and post the digest to each configured delivery channel
  * 
  * @throws {Error} If any step in the workflow fails
  */
@@ -379,23 +219,24 @@ async function main() {
       throw new Error('No items fetched from Techmeme. Cannot proceed.');
     }
     
-    // STEP 2: Format items as readable text for the AI
-    console.log('\n📝 Formatting content for AI processing...');
-    const content = items.map((item, index) => 
-      `${index + 1}. ${item.text}\n   URL: ${item.url}`
-    ).join('\n\n');
-    console.log(`✓ Formatted ${items.length} items for AI`);
-    
-    // STEP 3: Generate summary with Gemini AI
-    const summary = await summarizeWithGemini(content);
-    
-    // STEP 4: Post to each configured delivery target
-    if (activeSlackConfig) {
-      await postToSlack(summary);
-    }
+    // STEP 2: Select and summarize the top stories with Gemini AI
+    const stories = await generateDigest(items, { apiKey: GEMINI_API_KEY, model: GEMINI_MODEL });
+    const formattedDate = getFormattedDigestDate();
 
-    if (activeTelegramConfig) {
-      await postToTelegram(summary);
+    // STEP 3: Post to each configured delivery target
+    if (dryRunMode) {
+      console.log('\n🧪 Dry run — Slack payload:');
+      console.log(JSON.stringify(renderSlackMessage(stories, formattedDate), null, 2));
+      console.log('\n🧪 Dry run — Telegram messages:');
+      renderTelegramMessages(stories, formattedDate).forEach((message) => console.log(`\n${message}`));
+    } else {
+      if (activeSlackConfig) {
+        await postToSlack(stories, { token: SLACK_TOKEN, channel: SLACK_CHANNEL, formattedDate });
+      }
+
+      if (activeTelegramConfig) {
+        await postToTelegram(stories, { botToken: TELEGRAM_BOT_TOKEN, chatId: TELEGRAM_CHAT_ID, formattedDate });
+      }
     }
     
     // Calculate and display total execution time
