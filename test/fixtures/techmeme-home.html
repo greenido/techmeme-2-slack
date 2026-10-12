@@ -1,0 +1,36 @@
+<!-- Minimal invented page mirroring Techmeme's homepage markup: ranked
+     clusters in #topcol1 (lead item + .relitems + "More:" links) and
+     sponsor posts in another column. -->
+<html><body>
+<div id="topcol1">
+  <div class="clus">
+    <div class="itc1"><div class="itc2" id="p1"><div class="item">
+      <div class="ii"><a href="https://news.example.com/acme-model"><img class="ill" src="/i1.jpg"></a>
+        <strong class="L5"><a class="ourh" href="https://news.example.com/acme-model">Acme launches Rocket-2, a frontier AI model</a></strong>&nbsp; —&nbsp; Acme said the model beats   rivals on agentic benchmarks.</div>
+    </div></div></div>
+    <div class="dbpt"><span class="drhed">More:</span>&nbsp;<span class="bls"><a href="https://a.example.com/1">A</a>, <a href="https://b.example.com/2">B</a></span></div>
+    <div class="relitems">
+      <div class="itc1"><div class="itc2" id="p2"><div class="item">
+        <div class="ii"><strong class="L2"><a class="ourh" href="https://news.example.com/acme-pricing">Acme prices Rocket-2 at $3 per million tokens</a></strong></div>
+      </div></div></div>
+      <div class="itc1"><div class="itc2" id="p3"><div class="item">
+        <div class="ii"><strong class="L1"><a class="ourh" href="https://news.example.com/acme-interview">Interview with Acme's CEO about Rocket-2</a></strong></div>
+      </div></div></div>
+    </div>
+  </div>
+  <div class="clus">
+    <div class="itc1"><div class="itc2" id="p4"><div class="item">
+      <div class="ii"><strong class="L3"><a class="ourh" href="/261012/p4">Globex agrees to acquire Initech for $2B</a></strong></div>
+    </div></div></div>
+  </div>
+  <div class="clus">
+    <!-- Same lead URL as the first cluster: should be skipped -->
+    <div class="itc1"><div class="itc2" id="p5"><div class="item">
+      <div class="ii"><strong class="L1"><a class="ourh" href="https://news.example.com/acme-model">Acme model follow-up</a></strong></div>
+    </div></div></div>
+  </div>
+</div>
+<div id="topcol2">
+  <div class="ii"><strong><a href="https://sponsor.example.com/ad">Sponsor post: try our CRM</a></strong></div>
+</div>
+</body></html>

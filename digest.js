@@ -53,13 +53,21 @@ const DIGEST_SCHEMA = {
 /**
  * Builds the Gemini prompt from the scraped Techmeme items
  *
- * @param {Array<{text: string, url: string}>} items - Scraped headlines
+ * @param {Array<{text: string, url: string, coverage?: number}>} items - Scraped headlines, in Techmeme's ranked order
+ * @param {{recentlyCovered?: string[]}} [options] - Titles sent in recent digests
  * @returns {string} Prompt text
  */
-function buildPrompt(items) {
+function buildPrompt(items, { recentlyCovered = [] } = {}) {
   const headlines = items
-    .map((item, index) => `${index + 1}. ${item.text}`)
+    .map((item, index) => {
+      const coverage = item.coverage ? ` [${item.coverage} related articles]` : '';
+      return `${index + 1}. ${item.text}${coverage}`;
+    })
     .join('\n\n');
+
+  const recentSection = recentlyCovered.length > 0
+    ? `\nAlready covered in recent digests (skip these events unless the headline reports a major new development):\n${recentlyCovered.map((title) => `- ${title}`).join('\n')}\n`
+    : '';
 
   return `You are a high-signal tech and business news editor.
 Pick the ${DIGEST_SIZE} most important stories from today's Techmeme headlines below.
@@ -71,11 +79,11 @@ Selection criteria:
 - Prioritize strategic business impact, market or industry implications, notable funding, acquisitions, IPOs or shutdowns, and breakthroughs or setbacks in AI, infrastructure, or platforms.
 - De-prioritize shallow product launches or incremental updates unless they have outsized impact.
 - Every pick must be a different event. If several headlines cover the same company announcement, product, or event, pick only the single best one, even if that means returning fewer than ${DIGEST_SIZE} stories.
-- Rank by real-world significance, most important first.
+- Rank by real-world significance, most important first. The list is in Techmeme's ranked order, and the related-article count shows how widely a story is covered; use both as signals, not rules.
 
 For each pick, return the headline number in "source", a fitting emoji, a short title, and a one- or two-sentence summary that says why it matters.
 Write plain text only: no markdown, no links, no URLs.
-
+${recentSection}
 Today's Techmeme headlines:
 
 ${headlines}`;
@@ -136,11 +144,11 @@ function parseDigest(responseText, items) {
  * Transient API errors (429/5xx) are retried by the SDK. If the primary model
  * still fails, or returns unusable output, the fallback model is tried once.
  *
- * @param {Array<{text: string, url: string}>} items - Scraped headlines
- * @param {{apiKey: string, model: string, fallbackModel?: string|null}} options - Gemini configuration
+ * @param {Array<{text: string, url: string, coverage?: number}>} items - Scraped headlines
+ * @param {{apiKey: string, model: string, fallbackModel?: string|null, recentlyCovered?: string[]}} options - Gemini configuration
  * @returns {Promise<Array<{emoji: string, title: string, summary: string, url: string}>>}
  */
-async function generateDigest(items, { apiKey, model, fallbackModel = null }) {
+async function generateDigest(items, { apiKey, model, fallbackModel = null, recentlyCovered = [] }) {
   console.log('\n🤖 Generating digest with Gemini AI...');
 
   const ai = new GoogleGenAI({
@@ -150,24 +158,25 @@ async function generateDigest(items, { apiKey, model, fallbackModel = null }) {
       retryOptions: { attempts: GEMINI_ATTEMPTS },
     },
   });
+  const prompt = buildPrompt(items, { recentlyCovered });
 
   try {
-    return await generateWithModel(ai, model, items);
+    return await generateWithModel(ai, model, items, prompt);
   } catch (error) {
     if (!fallbackModel || fallbackModel === model) throw error;
 
     console.warn(`⚠️  ${model} failed (${error.message}); retrying with fallback model ${fallbackModel}`);
-    return generateWithModel(ai, fallbackModel, items);
+    return generateWithModel(ai, fallbackModel, items, prompt);
   }
 }
 
-async function generateWithModel(ai, model, items) {
+async function generateWithModel(ai, model, items, prompt) {
   console.log(`   Using model: ${model}`);
   const startTime = Date.now();
 
   const response = await ai.models.generateContent({
     model,
-    contents: buildPrompt(items),
+    contents: prompt,
     config: {
       responseMimeType: 'application/json',
       responseJsonSchema: DIGEST_SCHEMA,

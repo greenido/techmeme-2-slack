@@ -11,9 +11,9 @@
 require('dotenv').config();
 
 // Dependencies for HTTP requests, HTML parsing, AI, and messaging integrations
-const cheerio = require('cheerio');
-const { fetchWithRetry } = require('./http');
 const { generateDigest, getFormattedDigestDate } = require('./digest');
+const { filterUnsent, loadHistory, recentTitles, saveHistory } = require('./state');
+const { fetchTechmemeContent } = require('./techmeme');
 const { postToSlack, renderSlackMessage } = require('./slack');
 const { postToTelegram, renderTelegramMessages } = require('./telegram');
 
@@ -21,8 +21,10 @@ const { postToTelegram, renderTelegramMessages } = require('./telegram');
 // CONFIGURATION
 // ═══════════════════════════════════════════════════════════════════════════
 
-// Techmeme source URL
-const TECHMEME_URL = 'https://techmeme.com/';
+// Sent-story history, used to avoid repeating stories across days
+const HISTORY_FILE = process.env.HISTORY_FILE || 'data/sent-stories.json';
+// Titles from this many recent days are listed in the prompt as already covered
+const RECENT_TITLE_DAYS = 3;
 
 // Google Gemini AI configuration
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -107,101 +109,17 @@ if (activeTelegramConfig) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// CORE FUNCTIONS
+// MAIN WORKFLOW
 // ═══════════════════════════════════════════════════════════════════════════
-
-/**
- * Fetches and parses the latest headlines from Techmeme
- * 
- * Uses Cheerio to parse the HTML and extract headline text and URLs.
- * Attempts to find items using the main '.ii' class selector, with a
- * fallback strategy if the page structure has changed.
- * 
- * @returns {Promise<Array<{text: string, url: string}>>} Array of news items
- * @throws {Error} If the HTTP request fails
- */
-async function fetchTechmemeContent() {
-  console.log('\n📡 Fetching content from Techmeme...');
-  
-  try {
-    // Make HTTP request to Techmeme homepage
-    const response = await fetchWithRetry(TECHMEME_URL, {}, { label: 'Techmeme fetch' });
-    if (!response.ok) {
-      throw new Error(`Techmeme returned HTTP ${response.status} ${response.statusText}`);
-    }
-    const data = await response.text();
-    console.log('✓ Successfully retrieved HTML content');
-    
-    // Load HTML into Cheerio for jQuery-like parsing
-    const $ = cheerio.load(data);
-    
-    // Array to store extracted headline items
-    let items = [];
-    
-    // Select the main column headlines (usually inside .ii class)
-    $('.ii').each((i, el) => {
-        if (items.length >= 15) return;
-        const $el = $(el);
-        const $link = $el.find('a').first();
-        const text = $el.text().trim();
-        let url = $link.attr('href');
-        
-        if (text && url) {
-            // Make URL absolute if it's relative
-            if (url.startsWith('/')) {
-                url = 'https://techmeme.com' + url;
-            }
-            items.push({ text, url });
-        }
-    });
-
-    if (items.length === 0) {
-        console.log('⚠️  No items found with .ii selector, trying fallback method...');
-        
-        // FALLBACK EXTRACTION STRATEGY
-        // If the page structure has changed, try extracting from <strong> tags
-        // This is a more general approach that should catch headlines
-        $('strong').each((i, el) => {
-            if (items.length >= 15) return;
-            const $el = $(el);
-            const text = $el.text().trim();
-            const $link = $el.find('a').first().length ? $el.find('a').first() : $el.closest('a');
-            let url = $link.attr('href');
-            
-            if (text.length > 20 && url) {
-                if (url.startsWith('/')) {
-                    url = 'https://techmeme.com' + url;
-                }
-                items.push({ text, url });
-            }
-        });
-    }
-    
-    console.log(`✓ Successfully extracted ${items.length} headlines`);
-    
-    // Log a preview of the first few items for debugging
-    if (items.length > 0) {
-      console.log('   Preview of first item:');
-      console.log(`   - Title: ${items[0].text.substring(0, 60)}...`);
-      console.log(`   - URL: ${items[0].url}`);
-    } else {
-      console.warn('⚠️  Warning: No items were extracted!');
-    }
-    
-    return items;
-  } catch (error) {
-    console.error('❌ Error fetching Techmeme:', error.message);
-    throw error;
-  }
-}
 
 /**
  * Main orchestration function - coordinates the entire digest workflow
  * 
  * Workflow:
- * 1. Fetch headlines from Techmeme
+ * 1. Fetch ranked headlines from Techmeme and drop ones sent recently
  * 2. Select and summarize the top stories with Gemini (structured JSON)
  * 3. Render and post the digest to each configured delivery channel
+ * 4. Record the delivered stories in the history file
  * 
  * @throws {Error} If any step in the workflow fails
  */
@@ -215,10 +133,18 @@ async function main() {
   
   try {
     // STEP 1: Fetch content from Techmeme
-    const items = await fetchTechmemeContent();
+    const scrapedItems = await fetchTechmemeContent();
     
-    if (items.length === 0) {
+    if (scrapedItems.length === 0) {
       throw new Error('No items fetched from Techmeme. Cannot proceed.');
+    }
+
+    const history = loadHistory(HISTORY_FILE);
+    const items = filterUnsent(scrapedItems, history);
+    console.log(`✓ ${scrapedItems.length - items.length} stories skipped as already sent (history: ${history.length} entries)`);
+
+    if (items.length === 0) {
+      throw new Error('Every Techmeme story was already sent recently. Nothing new to post.');
     }
     
     // STEP 2: Select and summarize the top stories with Gemini AI
@@ -226,6 +152,7 @@ async function main() {
       apiKey: GEMINI_API_KEY,
       model: GEMINI_MODEL,
       fallbackModel: GEMINI_FALLBACK_MODEL === 'none' ? null : GEMINI_FALLBACK_MODEL,
+      recentlyCovered: recentTitles(history, RECENT_TITLE_DAYS),
     });
     const formattedDate = getFormattedDigestDate();
 
@@ -249,6 +176,12 @@ async function main() {
         } catch (error) {
           failedTargets.push(name);
         }
+      }
+
+      // Record the stories if anyone received them, so tomorrow skips them
+      if (failedTargets.length < deliveries.length) {
+        saveHistory(HISTORY_FILE, history, stories);
+        console.log(`✓ Recorded ${stories.length} stories in ${HISTORY_FILE}`);
       }
 
       if (failedTargets.length > 0) {

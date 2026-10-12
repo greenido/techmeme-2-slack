@@ -7,7 +7,11 @@
     "start": "node index.js",
     "start:telegram": "node index.js --telegram-only",
     "start:dry-run": "node index.js --dry-run",
-    "test:telegram": "node telegram-test.js"
+    "test": "node --test \"test/**/*.test.js\"",
+    "test:telegram": "node telegram-smoke.js"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "dependencies": {
     "@google/genai": "^2.28.0",

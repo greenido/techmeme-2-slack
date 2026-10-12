@@ -32,9 +32,9 @@
 <td width="50%">
 
 ### 📊 **Smart Aggregation**
-- Scrapes latest headlines from Techmeme
-- Extracts top 15 stories with fallback strategies
-- Merges duplicate stories from multiple sources
+- Scrapes Techmeme's ranked homepage, one item per story cluster
+- Passes each story's coverage (related articles) to the model as a signal
+- Remembers sent stories for 14 days so the digest doesn't repeat itself
 - Ranks by real-world significance
 
 </td>
@@ -69,7 +69,7 @@ Before you begin, ensure you have:
 
 | Requirement | Description |
 |------------|-------------|
-| **Node.js** | Version 20.x or higher ([Download](https://nodejs.org/)) |
+| **Node.js** | Version 22.x or higher ([Download](https://nodejs.org/)) |
 | **Gemini API Key** | Get it from [Google AI Studio](https://makersuite.google.com/app/apikey) |
 | **Delivery Target** | Configure at least one destination: Slack or Telegram |
 | **Slack Bot Token** | Optional. Create a bot at [api.slack.com](https://api.slack.com/apps) |
@@ -347,6 +347,18 @@ You should see detailed console output:
 
 ---
 
+## 🧪 Testing
+
+```bash
+npm test               # unit tests (no network, no credentials)
+npm run start:dry-run  # full run against Techmeme + Gemini, prints messages instead of posting
+npm run test:telegram  # sends a real test message to TELEGRAM_CHAT_ID
+```
+
+CI runs the syntax check, unit tests, and `npm audit` on every pull request and push to `main` ([ci.yml](.github/workflows/ci.yml)).
+
+---
+
 ## 🔄 Deployment Options
 
 ### ☁️ Option 1: GitHub Actions (Recommended)
@@ -370,13 +382,16 @@ You should see detailed console output:
    | `SLACK_CHANNEL_ID` | Optional. Your Slack channel ID |
    | `TELEGRAM_BOT_TOKEN` | Optional. Your Telegram bot token |
    | `TELEGRAM_CHAT_ID` | Optional. Telegram channel username or numeric chat ID |
+   | `ALERT_TELEGRAM_CHAT_ID` | Optional. A separate Telegram chat that gets a message when a run fails (uses `TELEGRAM_BOT_TOKEN`) |
 
    Add the secrets for at least one delivery target.
 
 3. **The workflow is already configured!**
    - Located at [.github/workflows/daily-digest.yml](.github/workflows/daily-digest.yml)
-   - Runs automatically at **8:00 AM PST (4:00 PM UTC)** every day
+   - Runs automatically at **14:00 UTC** every day (GitHub often starts scheduled runs hours late)
    - Can also be triggered manually from the Actions tab
+   - Runs the test suite first, then the digest
+   - Commits the updated `data/sent-stories.json` after each run (one small bot commit per day). This also keeps the repository active, so GitHub doesn't disable the schedule after 60 days without commits
 
 4. **Monitor execution:**
    - Go to the "Actions" tab in your GitHub repository
@@ -388,8 +403,8 @@ The workflow uses cron syntax to schedule runs:
 
 ```yaml
 schedule:
-  # 8:00 AM PST = 4:00 PM UTC (PST is UTC-8)
-  - cron: '0 16 * * *'
+  # 14:00 UTC = 7:00 AM PDT / 6:00 AM PST
+  - cron: '0 14 * * *'
 ```
 
 To change the schedule, modify the cron expression in [daily-digest.yml](.github/workflows/daily-digest.yml).
@@ -442,7 +457,9 @@ For running on your local machine or server:
    - Run at 8:00 AM daily (`0 8 * * *`)
    - Navigate to the project directory
    - Execute the script with the absolute Node path
-   - Log output to `cron.log` for debugging
+   - Log output to `cron.log` for debugging (ignored by git)
+
+   Local runs update `data/sent-stories.json` too. If GitHub Actions is also posting the digest, set `HISTORY_FILE` to a path outside the repo for local runs, or run only one of the two.
 
 4. **Save and exit** (in vim: `:wq`)
 
@@ -482,6 +499,13 @@ GEMINI_MODEL=gemini-flash-latest
 - Gemini calls time out after 90s and are retried up to 3 times; if the model still fails or returns unusable output, `GEMINI_FALLBACK_MODEL` is tried once.
 - Slack calls use the SDK's five-retries-in-five-minutes policy.
 - Each delivery target is attempted even if another fails; the run exits non-zero if any target failed.
+
+### Story History
+
+Delivered stories are recorded in `data/sent-stories.json` (path configurable with `HISTORY_FILE`) and kept for 14 days:
+- Techmeme stories whose URL was sent in that window are skipped before Gemini sees them
+- Titles from the last 3 days are listed in the prompt as already covered, so the model skips the same event under a new URL unless there's a major development
+- Dry runs never update the history
 
 ### AI Prompt Customization
 
@@ -540,7 +564,8 @@ The response shape is defined by `DIGEST_SCHEMA` in the same file. Formatting li
 **Cause:** Techmeme's HTML structure may have changed.
 
 **Solution:**
-- The script has built-in fallback selectors
+- The script falls back to plain `.ii` items if no story clusters are found
+- Run `npm test` to check the parser against the fixture in `test/fixtures/`
 - Check `cron.log` for detailed error messages
 - Verify Techmeme is accessible: `curl -I https://techmeme.com`
 </details>
@@ -575,7 +600,7 @@ The response shape is defined by `DIGEST_SCHEMA` in the same file. Formatting li
     ┌─────────────────┐            ┌─────────────────┐
     │  📡 Scrape      │            │  ☁️  GitHub     │
     │  Techmeme.com   │            │   Actions       │
-    │  (15 stories)   │            │  Scheduler      │
+    │  (~20 clusters) │            │  Scheduler      │
     └─────────────────┘            └─────────────────┘
               │
               ▼
@@ -608,7 +633,7 @@ The response shape is defined by `DIGEST_SCHEMA` in the same file. Formatting li
 
 ## 🛠️ Tech Stack
 
-- **Runtime:** Node.js 20.x
+- **Runtime:** Node.js 22+ (CI tests 22.x and 24.x; the daily job uses 24.x)
 - **AI/ML:** Google Gemini via `@google/genai` (structured output)
 - **Web Scraping:** native `fetch` + Cheerio
 - **Messaging:** Slack Web API + Telegram Bot API
