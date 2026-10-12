@@ -1,3 +1,54 @@
 {
-  "stories": []
+  "stories": [
+    {
+      "url": "https://research.meta.ai/blog/muse-wonder",
+      "title": "Meta Releases Muse Wonder AI Models",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImhuOHhJWE1DRnQiLCJwIjoiL25ld3MvMTAwOTQ2NS9taWNyb3NvZnQtbWFpYS0zMDAtY2hpcC1pbXByb3ZlbWVudHMtcm9sbG91dCIsImV4cCI6MTc5MjI0OTI3MCwiaWF0IjoxNzkxODE3MjcwfQ.i9L0gEtKZ0hTFs7qN6PA6RQy74E-sUQ_GKvVv5h7JJY&utm_medium=gift-link",
+      "title": "Microsoft Unveils Maia 300 In-House AI Inference Chip",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-12/french-supermarket-refrigeration-sites-hit-by-cyberattacks",
+      "title": "Cyberattack Hits Refrigeration Systems in French Supermarkets",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.wsj.com/business/deals/quantum-computing-company-ionq-to-buy-cybersecurity-firm-for-up-to-1-3-billion-65af65bd?st=uPLJKd&reflink=desktopwebshare_permalink",
+      "title": "IonQ to Acquire Elisity in $1.3B Deal",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.wsj.com/business/deals/dating-app-bumble-in-advanced-talks-to-go-private-at-1-billion-valuation-fcc8c6ef",
+      "title": "Bumble in Advanced Talks to Go Private for $1B",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1009294/ledger-wallet-tampering-suspected-after-reports-of-crypto-thefts",
+      "title": "Ledger Confirms Hardware Implant in $86M+ Theft",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.telegraph.co.uk/news/2026/10/11/britain-get-first-look-ai-systems-after-white-house-u-turn/",
+      "title": "US Restores UK Regulators' Access to Top AI Models",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-12/epic-games-delays-disney-project-asks-developers-to-use-more-ai?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MTgyOTQ5NCwiZXhwIjoxNzkyNDM0Mjk0LCJhcnRpY2xlSWQiOiJUTVQ0SDVSS1YyVEQwMCIsImJjb25uZWN0SWQiOiJCMUVBQkI5NjQ2QUM0REZFQTJBRkI4MjI1MzgyQTJFQSJ9.rC824FbXuutjticK4TKijZtWW-ewDWvg6AIoVnPo5IA",
+      "title": "Epic Delays Shooter to Enforce AI-First Development",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://www.anthropic.com/research/self-replicating-ai",
+      "title": "Anthropic Warns Small AI Models Could Soon Self-Replicate on IoT",
+      "sentAt": "2026-10-12"
+    },
+    {
+      "url": "https://counterpointresearch.com/en/insights/global-smartphone-shipments-hit-a-new-low-with-20-percent-yoy-decline-lowest-in-14-years",
+      "title": "Smartphone Shipments Drop 20% to 14-Year Low",
+      "sentAt": "2026-10-12"
+    }
+  ]
 }
