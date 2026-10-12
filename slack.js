@@ -1,4 +1,5 @@
 const { WebClient, retryPolicies } = require('@slack/web-api');
+const { groupByCategory } = require('./digest');
 
 const SLACK_TIMEOUT_MS = 30_000;
 
@@ -36,16 +37,16 @@ function truncate(text, maxLength) {
 }
 
 /**
- * Renders digest stories as a Slack Block Kit message
+ * Renders digest stories as a Slack Block Kit message, grouped by category
  *
- * @param {Array<{emoji: string, title: string, summary: string, url: string}>} stories
+ * @param {Array<{category?: string, emoji: string, title: string, summary: string, url: string}>} stories
  * @param {string} formattedDate - Date shown in the header
  * @returns {{text: string, blocks: Array<object>}} chat.postMessage payload
  */
 function renderSlackMessage(stories, formattedDate) {
   const headerText = `📰 Techmeme Top ${stories.length} Digest - ${formattedDate}`;
 
-  const storyBlocks = stories.map((story) => {
+  const storyBlock = (story) => {
     const link = `<${escapeSlackUrl(story.url)}|${escapeSlackText(story.title)}>`;
     const text = `${story.emoji} *${link}*\n${escapeSlackText(story.summary)}`;
 
@@ -53,7 +54,14 @@ function renderSlackMessage(stories, formattedDate) {
       type: 'section',
       text: { type: 'mrkdwn', text: truncate(text, SLACK_SECTION_MAX_LENGTH) },
     };
-  });
+  };
+
+  // Each group: a divider (except the first), a bold category heading, then its stories
+  const groupBlocks = groupByCategory(stories).flatMap((group, index) => [
+    ...(index > 0 ? [{ type: 'divider' }] : []),
+    { type: 'section', text: { type: 'mrkdwn', text: `*${escapeSlackText(group.category)}*` } },
+    ...group.stories.map(storyBlock),
+  ]);
 
   // Plain-text fallback used for notifications and clients without Block Kit
   const fallbackText = [
@@ -65,7 +73,7 @@ function renderSlackMessage(stories, formattedDate) {
     text: escapeSlackText(fallbackText),
     blocks: [
       { type: 'header', text: { type: 'plain_text', text: truncate(headerText, 150), emoji: true } },
-      ...storyBlocks,
+      ...groupBlocks,
     ],
   };
 }

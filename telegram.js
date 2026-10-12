@@ -1,3 +1,4 @@
+const { groupByCategory } = require('./digest');
 const { fetchWithRetry } = require('./http');
 
 const TELEGRAM_MAX_MESSAGE_LENGTH = 4096;
@@ -37,12 +38,13 @@ function renderTelegramStory(story, maxLength) {
 }
 
 /**
- * Renders digest stories as one or more Telegram HTML messages
+ * Renders digest stories as one or more Telegram HTML messages, grouped by category
  *
  * Stories are never split across messages; a new part starts when the next
- * story would push the message over Telegram's 4096-character limit.
+ * story would push the message over Telegram's 4096-character limit, and a
+ * group that continues into a new part repeats its category heading.
  *
- * @param {Array<{emoji: string, title: string, summary: string, url: string}>} stories
+ * @param {Array<{category?: string, emoji: string, title: string, summary: string, url: string}>} stories
  * @param {string} formattedDate - Date shown in the header
  * @returns {string[]} Messages ready for sendMessage with parse_mode HTML
  */
@@ -52,17 +54,23 @@ function renderTelegramMessages(stories, formattedDate) {
   const bodies = [];
   let currentBody = '';
 
-  for (const story of stories) {
-    const storyHtml = renderTelegramStory(story, maxBodyLength);
-    const candidate = currentBody ? `${currentBody}\n\n${storyHtml}` : storyHtml;
+  for (const group of groupByCategory(stories)) {
+    const heading = `<b><u>${escapeTelegramHtml(group.category)}</u></b>`;
 
-    if (candidate.length <= maxBodyLength) {
-      currentBody = candidate;
-      continue;
-    }
+    group.stories.forEach((story, index) => {
+      const storyHtml = renderTelegramStory(story, maxBodyLength - heading.length - 1);
+      const withHeading = `${heading}\n${storyHtml}`;
+      const block = index === 0 ? withHeading : storyHtml;
+      const candidate = currentBody ? `${currentBody}\n\n${block}` : block;
 
-    bodies.push(currentBody);
-    currentBody = storyHtml;
+      if (candidate.length <= maxBodyLength) {
+        currentBody = candidate;
+        return;
+      }
+
+      bodies.push(currentBody);
+      currentBody = withHeading;
+    });
   }
 
   if (currentBody) {

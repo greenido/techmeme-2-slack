@@ -15,6 +15,9 @@ const DIGEST_SIZE = 10;
 const GEMINI_TIMEOUT_MS = 90_000;
 const GEMINI_ATTEMPTS = 3;
 
+// Stories are grouped under these headings, in order of each group's top story
+const CATEGORIES = ['AI', 'Deals & Funding', 'Big Tech', 'Policy & Regulation', 'Security', 'Devices & Hardware', 'Other'];
+
 // JSON Schema for the model response (Gemini `responseJsonSchema`)
 const DIGEST_SCHEMA = {
   type: 'object',
@@ -30,6 +33,11 @@ const DIGEST_SCHEMA = {
             type: 'integer',
             description: 'The number of the headline (from the numbered list) this story is based on.',
           },
+          category: {
+            type: 'string',
+            enum: CATEGORIES,
+            description: 'The single best-fitting section for the story.',
+          },
           emoji: {
             type: 'string',
             description: 'A single emoji that fits the story.',
@@ -43,7 +51,7 @@ const DIGEST_SCHEMA = {
             description: 'One or two plain-text sentences: what happened and why it matters.',
           },
         },
-        required: ['source', 'emoji', 'title', 'summary'],
+        required: ['source', 'category', 'emoji', 'title', 'summary'],
       },
     },
   },
@@ -72,7 +80,7 @@ function buildPrompt(items, { recentlyCovered = [] } = {}) {
   return `You are a high-signal tech and business news editor.
 Pick the ${DIGEST_SIZE} most important stories from today's Techmeme headlines below.
 
-Use only the information in the headlines. Do not add facts, numbers, or claims that are not stated there.
+Use only the information in the headlines. Do not add facts, numbers, or claims that are not stated there. Write every number exactly as it appears in its headline (for example "$1.3B", not "1,300 million"); stories with numbers that are not in their headline are discarded.
 
 Selection criteria:
 - At least half of the picks should be about business, startups, AI, or core technology trends.
@@ -81,7 +89,7 @@ Selection criteria:
 - Every pick must be a different event. If several headlines cover the same company announcement, product, or event, pick only the single best one, even if that means returning fewer than ${DIGEST_SIZE} stories.
 - Rank by real-world significance, most important first. The list is in Techmeme's ranked order, and the related-article count shows how widely a story is covered; use both as signals, not rules.
 
-For each pick, return the headline number in "source", a fitting emoji, a short title, and a one- or two-sentence summary that says why it matters.
+For each pick, return the headline number in "source", the best-fitting category, a fitting emoji, a short title, and a one- or two-sentence summary that says why it matters.
 Write plain text only: no markdown, no links, no URLs.
 ${recentSection}
 Today's Techmeme headlines:
@@ -90,14 +98,39 @@ ${headlines}`;
 }
 
 /**
+ * Extracts numbers from text in a comparable form ("1,300" → "1300", "1.3" stays)
+ *
+ * @param {string} text - Any text
+ * @returns {string[]} Normalized numbers
+ */
+function extractNumbers(text) {
+  return (String(text).match(/\d+(?:[.,]\d+)*/g) || []).map((number) =>
+    number.replace(/,(?=\d{3}(?:\D|$))/g, '').replace(/,/g, '.')
+  );
+}
+
+/**
+ * Lists numbers in the model's text that do not appear in the source headline
+ *
+ * @param {string} text - Model-written title and summary
+ * @param {string} sourceText - The scraped headline and excerpt
+ * @returns {string[]} Unsupported numbers (empty if every number is grounded)
+ */
+function findUnsupportedNumbers(text, sourceText) {
+  const sourceNumbers = new Set(extractNumbers(sourceText));
+  return extractNumbers(text).filter((number) => !sourceNumbers.has(number));
+}
+
+/**
  * Validates the model's JSON response and attaches the scraped URLs
  *
  * Drops stories that reference an unknown headline number, repeat a headline,
- * or are missing text, so a bad model response can never inject a link.
+ * are missing text, or contain numbers not found in their headline, so a bad
+ * model response can never inject a link or a made-up figure.
  *
  * @param {string} responseText - Raw JSON text returned by Gemini
  * @param {Array<{text: string, url: string}>} items - Scraped headlines
- * @returns {Array<{emoji: string, title: string, summary: string, url: string}>}
+ * @returns {Array<{category: string, emoji: string, title: string, summary: string, url: string}>}
  * @throws {Error} If the response is not valid JSON or contains no usable stories
  */
 function parseDigest(responseText, items) {
@@ -117,12 +150,19 @@ function parseDigest(responseText, items) {
     const title = String(story?.title ?? '').trim();
     const summary = String(story?.summary ?? '').trim();
     const emoji = String(story?.emoji ?? '').trim() || '📰';
+    const category = CATEGORIES.includes(story?.category) ? story.category : 'Other';
 
     if (!Number.isInteger(source) || source < 1 || source > items.length) continue;
     if (usedSources.has(source) || !title || !summary) continue;
 
+    const unsupported = findUnsupportedNumbers(`${title} ${summary}`, items[source - 1].text);
+    if (unsupported.length > 0) {
+      console.warn(`⚠️  Dropped "${title}": numbers not in the headline (${unsupported.join(', ')})`);
+      continue;
+    }
+
     usedSources.add(source);
-    stories.push({ emoji, title, summary, url: items[source - 1].url });
+    stories.push({ category, emoji, title, summary, url: items[source - 1].url });
 
     if (stories.length === DIGEST_SIZE) break;
   }
@@ -146,7 +186,7 @@ function parseDigest(responseText, items) {
  *
  * @param {Array<{text: string, url: string, coverage?: number}>} items - Scraped headlines
  * @param {{apiKey: string, model: string, fallbackModel?: string|null, recentlyCovered?: string[]}} options - Gemini configuration
- * @returns {Promise<Array<{emoji: string, title: string, summary: string, url: string}>>}
+ * @returns {Promise<Array<{category: string, emoji: string, title: string, summary: string, url: string}>>}
  */
 async function generateDigest(items, { apiKey, model, fallbackModel = null, recentlyCovered = [] }) {
   console.log('\n🤖 Generating digest with Gemini AI...');
@@ -193,6 +233,25 @@ async function generateWithModel(ai, model, items, prompt) {
 }
 
 /**
+ * Groups stories by category, ordering groups by their highest-ranked story
+ * and keeping rank order within each group
+ *
+ * @param {Array<{category?: string}>} stories - Stories in rank order
+ * @returns {Array<{category: string, stories: Array<object>}>}
+ */
+function groupByCategory(stories) {
+  const groups = new Map();
+
+  for (const story of stories) {
+    const category = story.category || 'Other';
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(story);
+  }
+
+  return [...groups].map(([category, groupStories]) => ({ category, stories: groupStories }));
+}
+
+/**
  * Builds a consistent digest date for delivery headers
  *
  * @returns {string} Locale-formatted date string
@@ -207,10 +266,13 @@ function getFormattedDigestDate() {
 }
 
 module.exports = {
+  CATEGORIES,
   DIGEST_SCHEMA,
   DIGEST_SIZE,
   buildPrompt,
+  findUnsupportedNumbers,
   generateDigest,
   getFormattedDigestDate,
+  groupByCategory,
   parseDigest,
 };

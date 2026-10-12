@@ -1,6 +1,6 @@
 const assert = require('node:assert/strict');
 const { test } = require('node:test');
-const { DIGEST_SIZE, buildPrompt, parseDigest } = require('../digest');
+const { DIGEST_SIZE, buildPrompt, findUnsupportedNumbers, groupByCategory, parseDigest } = require('../digest');
 
 const items = [
   { text: 'Acme raises $1B', url: 'https://a.example.com/1', coverage: 12 },
@@ -8,7 +8,8 @@ const items = [
   { text: 'Initech is acquired', url: 'https://c.example.com/3' },
 ];
 
-const story = (source, extra = {}) => ({ source, emoji: '📰', title: `Title ${source}`, summary: `Summary ${source}`, ...extra });
+const NAMES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen'];
+const story = (source, extra = {}) => ({ source, category: 'AI', emoji: '📰', title: `Title ${NAMES[Math.floor(source)]}`, summary: `Summary ${NAMES[Math.floor(source)]}`, ...extra });
 
 test('buildPrompt numbers headlines, shows coverage, and never includes URLs', () => {
   const prompt = buildPrompt(items);
@@ -28,7 +29,7 @@ test('buildPrompt lists recently covered titles', () => {
 test('parseDigest takes URLs from scraped items, not the model', () => {
   const stories = parseDigest(JSON.stringify({ stories: [story(3, { url: 'https://evil.example' })] }), items);
 
-  assert.deepEqual(stories, [{ emoji: '📰', title: 'Title 3', summary: 'Summary 3', url: 'https://c.example.com/3' }]);
+  assert.deepEqual(stories, [{ category: 'AI', emoji: '📰', title: 'Title three', summary: 'Summary three', url: 'https://c.example.com/3' }]);
 });
 
 test('parseDigest drops out-of-range, duplicate and empty stories', () => {
@@ -57,4 +58,41 @@ test('parseDigest rejects invalid or empty responses', () => {
   assert.throws(() => parseDigest('not json', items), /invalid JSON/);
   assert.throws(() => parseDigest('{"stories":[]}', items), /no usable stories/);
   assert.throws(() => parseDigest('{}', items), /no usable stories/);
+});
+
+test('parseDigest drops stories with numbers that are not in their headline', () => {
+  const stories = parseDigest(JSON.stringify({ stories: [
+    story(1, { title: 'Acme raises $1B', summary: 'A big round.' }),
+    story(2, { title: 'Globex sells 5M phones', summary: 'Not in the headline.' }),
+  ] }), items);
+
+  assert.deepEqual(stories.map((s) => s.title), ['Acme raises $1B']);
+});
+
+test('findUnsupportedNumbers normalizes thousands separators and decimals', () => {
+  const source = 'Volta raised $1.3B from 1,300 investors in Q3; Fable 5.1 shipped';
+
+  assert.deepEqual(findUnsupportedNumbers('$1.3B from 1300 investors, Q3, version 5.1', source), []);
+  assert.deepEqual(findUnsupportedNumbers('$1.5B in 2026', source), ['1.5', '2026']);
+});
+
+test('parseDigest maps unknown categories to Other', () => {
+  const [result] = parseDigest(JSON.stringify({ stories: [story(1, { title: 'Acme raises $1B', category: 'Sports' })] }), items);
+
+  assert.equal(result.category, 'Other');
+});
+
+test('groupByCategory orders groups by their top story and keeps rank within groups', () => {
+  const groups = groupByCategory([
+    { category: 'AI', title: 'a1' },
+    { category: 'Security', title: 's1' },
+    { category: 'AI', title: 'a2' },
+    { title: 'none' },
+  ]);
+
+  assert.deepEqual(groups.map((g) => [g.category, g.stories.map((s) => s.title)]), [
+    ['AI', ['a1', 'a2']],
+    ['Security', ['s1']],
+    ['Other', ['none']],
+  ]);
 });

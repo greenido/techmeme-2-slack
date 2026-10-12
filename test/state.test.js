@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { test } = require('node:test');
-const { filterUnsent, loadHistory, recentTitles, saveHistory } = require('../state');
+const { filterUnsent, loadHistory, recentTitles, saveHistory, sentToday } = require('../state');
 
 const NOW = new Date('2026-10-12T15:00:00Z');
 const history = [
@@ -47,4 +47,9 @@ test('filterUnsent drops items sent within the history window', () => {
 
 test('recentTitles only returns titles from the last N days', () => {
   assert.deepEqual(recentTitles(history, 3, NOW), ['Yesterday']);
+});
+
+test('sentToday detects a delivery earlier on the same UTC day', () => {
+  assert.equal(sentToday(history, NOW), false);
+  assert.equal(sentToday([...history, { url: 'https://a.example/x', sentAt: '2026-10-12' }], NOW), true);
 });
