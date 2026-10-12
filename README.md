@@ -365,7 +365,7 @@ You should see detailed console output:
    |------------|-------------|
    | `GEMINI_API_KEY` | Your Google Gemini API key |
    | `GEMINI_MODEL` | Optional. Model name (default: `gemini-flash-latest`) |
-| `GEMINI_FALLBACK_MODEL` | Optional. Used if the primary model keeps failing (default: `gemini-flash-lite-latest`, `none` disables) |
+   | `GEMINI_FALLBACK_MODEL` | Optional. Used if the primary model keeps failing (default: `gemini-flash-lite-latest`, `none` disables) |
    | `SLACK_BOT_TOKEN` | Optional. Your Slack bot token |
    | `SLACK_CHANNEL_ID` | Optional. Your Slack channel ID |
    | `TELEGRAM_BOT_TOKEN` | Optional. Your Telegram bot token |
@@ -471,17 +471,17 @@ The bot supports various Gemini models. Choose based on your needs:
 
 Run `node list-models.js` to see every model your API key can use. The model must support structured JSON output.
 
+Set in your `.env` file:
+```env
+GEMINI_MODEL=gemini-flash-latest
+```
+
 ### Reliability
 
 - Techmeme and Telegram requests time out after 15s and are retried up to 3 times on network errors, 429s and 5xx responses (Telegram's `retry_after` is honored).
 - Gemini calls time out after 90s and are retried up to 3 times; if the model still fails or returns unusable output, `GEMINI_FALLBACK_MODEL` is tried once.
 - Slack calls use the SDK's five-retries-in-five-minutes policy.
 - Each delivery target is attempted even if another fails; the run exits non-zero if any target failed.
-
-Set in your `.env` file:
-```env
-GEMINI_MODEL=gemini-flash-latest
-```
 
 ### AI Prompt Customization
 
