@@ -1,36 +1,37 @@
 require('dotenv').config();
 
-const { buildTelegramMessages, postToTelegram } = require('./telegram');
+const { getFormattedDigestDate } = require('./digest');
+const { renderTelegramMessages, postToTelegram } = require('./telegram');
 
-function buildDefaultTestMessage(longMode) {
-  const intro = [
-    '🧪 *Telegram delivery test*',
-    `Generated at ${new Date().toLocaleString('en-US')}.`,
-    'This verifies Slack-style bold, links, and Telegram chunking.',
-    '<https://techmeme.com|Open Techmeme>'
-  ].join('\n');
+function buildTestStories(longMode, customMessage) {
+  const intro = {
+    emoji: '🧪',
+    title: 'Telegram delivery test',
+    summary: customMessage || `Generated at ${new Date().toLocaleString('en-US')}. This verifies bold linked titles, escaping (<, >, &), and Telegram chunking.`,
+    url: 'https://techmeme.com',
+  };
 
   if (!longMode) {
-    return intro;
+    return [intro];
   }
 
-  const stories = Array.from({ length: 24 }, (_, index) => {
-    const storyNumber = index + 1;
-    return [
-      `• 🚀 *Story ${storyNumber}* This is a long Telegram-only delivery test item designed to exercise multipart posting without running the full Techmeme + Gemini workflow. It should remain readable after Slack-to-Telegram conversion and include a working link for each item.`,
-      `<https://example.com/story-${storyNumber}|read more>`
-    ].join('\n');
-  }).join('\n\n');
+  const stories = Array.from({ length: 24 }, (_, index) => ({
+    emoji: '🚀',
+    title: `Story ${index + 1}`,
+    summary: 'This is a long Telegram-only delivery test item designed to exercise multipart posting without running the full Techmeme + Gemini workflow. It should remain readable and include a working link for each item.',
+    url: `https://example.com/story-${index + 1}`,
+  }));
 
-  return `${intro}\n\n${stories}`;
+  return [intro, ...stories];
 }
 
 async function main() {
   const args = process.argv.slice(2);
   const longMode = args.includes('--long');
   const customMessage = args.filter((arg) => arg !== '--long').join(' ').trim();
-  const message = customMessage || buildDefaultTestMessage(longMode);
-  const previewMessages = buildTelegramMessages(message);
+  const stories = buildTestStories(longMode, customMessage);
+  const formattedDate = getFormattedDigestDate();
+  const previewMessages = renderTelegramMessages(stories, formattedDate);
 
   console.log('═══════════════════════════════════════════════════════════════════════════');
   console.log('📨 TELEGRAM DELIVERY TEST');
@@ -40,7 +41,7 @@ async function main() {
     console.log(`   Part ${index + 1}: ${part.length} characters`);
   });
 
-  await postToTelegram(message);
+  await postToTelegram(stories, { formattedDate });
 
   console.log('═══════════════════════════════════════════════════════════════════════════');
   console.log('✅ TELEGRAM TEST COMPLETED');

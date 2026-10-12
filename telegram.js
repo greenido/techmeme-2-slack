@@ -2,15 +2,6 @@ const axios = require('axios');
 
 const TELEGRAM_MAX_MESSAGE_LENGTH = 4096;
 
-function getFormattedDigestDate() {
-  return new Date().toLocaleDateString('en-US', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
-
 function escapeTelegramHtml(value) {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -19,192 +10,78 @@ function escapeTelegramHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
-function convertSlackTextToTelegramHtml(text) {
-  const linkPlaceholders = [];
-
-  let converted = text.replace(/<([^|>]+)\|([^>]+)>/g, (match, url, linkText) => {
-    const placeholder = `__TELEGRAM_LINK_${linkPlaceholders.length}__`;
-    linkPlaceholders.push({ placeholder, url, linkText });
-    return placeholder;
-  });
-
-  converted = escapeTelegramHtml(converted);
-  converted = converted.replace(/\*([^*\n][^*\n]*?)\*/g, '<b>$1</b>');
-
-  for (const { placeholder, url, linkText } of linkPlaceholders) {
-    const safeLink = `<a href="${escapeTelegramHtml(url)}">${escapeTelegramHtml(linkText)}</a>`;
-    converted = converted.replace(placeholder, safeLink);
-  }
-
-  return converted;
-}
-
-function getTelegramHeader(formattedDate, partNumber, totalParts) {
+function getTelegramHeader(formattedDate, storyCount, partNumber, totalParts) {
   const partSuffix = totalParts > 1 ? ` (Part ${partNumber}/${totalParts})` : '';
-  return `<b>Techmeme Top 10 Digest - ${escapeTelegramHtml(formattedDate + partSuffix)}</b> 📰\n\n`;
+  return `<b>Techmeme Top ${storyCount} Digest - ${escapeTelegramHtml(formattedDate + partSuffix)}</b> 📰\n\n`;
 }
 
-function getTelegramBodyLength(text) {
-  return convertSlackTextToTelegramHtml(text).length;
+/**
+ * Renders one story as Telegram HTML, shortening the summary if needed
+ *
+ * @param {{emoji: string, title: string, summary: string, url: string}} story
+ * @param {number} maxLength - Maximum length of the rendered HTML
+ * @returns {string} Telegram HTML for the story
+ */
+function renderTelegramStory(story, maxLength) {
+  const heading = `${escapeTelegramHtml(story.emoji)} <b><a href="${escapeTelegramHtml(story.url)}">${escapeTelegramHtml(story.title)}</a></b>`;
+  let summary = story.summary;
+  let html = `${heading}\n${escapeTelegramHtml(summary)}`;
+
+  // Trim the plain-text summary (not the HTML) so entities and tags stay intact
+  while (html.length > maxLength && summary.length > 0) {
+    summary = summary.slice(0, Math.max(0, summary.length - (html.length - maxLength) - 1));
+    html = `${heading}\n${escapeTelegramHtml(summary)}…`;
+  }
+
+  return html;
 }
 
-function takeLargestFittingPrefix(text, maxBodyLength) {
-  let low = 1;
-  let high = text.length;
-  let best = 1;
-
-  while (low <= high) {
-    const mid = Math.floor((low + high) / 2);
-    const candidate = text.slice(0, mid);
-
-    if (getTelegramBodyLength(candidate) <= maxBodyLength) {
-      best = mid;
-      low = mid + 1;
-    } else {
-      high = mid - 1;
-    }
-  }
-
-  return best;
-}
-
-function hardSplitSlackSegment(segment, maxBodyLength) {
-  const parts = [];
-  let remaining = segment;
-
-  while (remaining.length > 0) {
-    const prefixLength = takeLargestFittingPrefix(remaining, maxBodyLength);
-    parts.push(remaining.slice(0, prefixLength).trim());
-    remaining = remaining.slice(prefixLength).trim();
-  }
-
-  return parts.filter(Boolean);
-}
-
-function splitSlackSegment(segment, maxBodyLength) {
-  if (getTelegramBodyLength(segment) <= maxBodyLength) {
-    return [segment];
-  }
-
-  const lines = segment.split('\n').map((line) => line.trim()).filter(Boolean);
-  if (lines.length > 1) {
-    const parts = [];
-    let current = '';
-
-    for (const line of lines) {
-      const candidate = current ? `${current}\n${line}` : line;
-
-      if (getTelegramBodyLength(candidate) <= maxBodyLength) {
-        current = candidate;
-        continue;
-      }
-
-      if (current) {
-        parts.push(current);
-      }
-
-      if (getTelegramBodyLength(line) <= maxBodyLength) {
-        current = line;
-      } else {
-        parts.push(...splitSlackSegment(line, maxBodyLength));
-        current = '';
-      }
-    }
-
-    if (current) {
-      parts.push(current);
-    }
-
-    return parts;
-  }
-
-  const words = segment.split(/\s+/).filter(Boolean);
-  if (words.length > 1) {
-    const parts = [];
-    let current = '';
-
-    for (const word of words) {
-      const candidate = current ? `${current} ${word}` : word;
-
-      if (getTelegramBodyLength(candidate) <= maxBodyLength) {
-        current = candidate;
-        continue;
-      }
-
-      if (current) {
-        parts.push(current);
-      }
-
-      if (getTelegramBodyLength(word) <= maxBodyLength) {
-        current = word;
-      } else {
-        parts.push(...hardSplitSlackSegment(word, maxBodyLength));
-        current = '';
-      }
-    }
-
-    if (current) {
-      parts.push(current);
-    }
-
-    return parts;
-  }
-
-  return hardSplitSlackSegment(segment, maxBodyLength);
-}
-
-function buildTelegramMessages(text) {
-  const formattedDate = getFormattedDigestDate();
-  const headerReserve = getTelegramHeader(formattedDate, 999, 999).length;
+/**
+ * Renders digest stories as one or more Telegram HTML messages
+ *
+ * Stories are never split across messages; a new part starts when the next
+ * story would push the message over Telegram's 4096-character limit.
+ *
+ * @param {Array<{emoji: string, title: string, summary: string, url: string}>} stories
+ * @param {string} formattedDate - Date shown in the header
+ * @returns {string[]} Messages ready for sendMessage with parse_mode HTML
+ */
+function renderTelegramMessages(stories, formattedDate) {
+  const headerReserve = getTelegramHeader(formattedDate, stories.length, 99, 99).length;
   const maxBodyLength = TELEGRAM_MAX_MESSAGE_LENGTH - headerReserve;
-  const normalizedText = String(text || '').trim();
-
-  if (!normalizedText) {
-    return [getTelegramHeader(formattedDate, 1, 1).trimEnd()];
-  }
-
-  const paragraphs = normalizedText
-    .split(/\n\s*\n/)
-    .map((paragraph) => paragraph.trim())
-    .filter(Boolean);
-
-  const segments = paragraphs.flatMap((paragraph) => splitSlackSegment(paragraph, maxBodyLength));
   const bodies = [];
   let currentBody = '';
 
-  for (const segment of segments) {
-    const candidate = currentBody ? `${currentBody}\n\n${segment}` : segment;
+  for (const story of stories) {
+    const storyHtml = renderTelegramStory(story, maxBodyLength);
+    const candidate = currentBody ? `${currentBody}\n\n${storyHtml}` : storyHtml;
 
-    if (getTelegramBodyLength(candidate) <= maxBodyLength) {
+    if (candidate.length <= maxBodyLength) {
       currentBody = candidate;
       continue;
     }
 
-    if (currentBody) {
-      bodies.push(currentBody);
-    }
-
-    currentBody = segment;
+    bodies.push(currentBody);
+    currentBody = storyHtml;
   }
 
   if (currentBody) {
     bodies.push(currentBody);
   }
 
-  const totalParts = bodies.length;
-
-  return bodies.map((body, index) => {
-    const message = `${getTelegramHeader(formattedDate, index + 1, totalParts)}${convertSlackTextToTelegramHtml(body)}`;
-
-    if (message.length > TELEGRAM_MAX_MESSAGE_LENGTH) {
-      throw new Error(`Telegram message part ${index + 1} exceeds ${TELEGRAM_MAX_MESSAGE_LENGTH} characters.`);
-    }
-
-    return message;
-  });
+  return bodies.map((body, index) =>
+    `${getTelegramHeader(formattedDate, stories.length, index + 1, bodies.length)}${body}`
+  );
 }
 
-async function postToTelegram(text, options = {}) {
+/**
+ * Posts the digest to a Telegram chat, splitting it into parts if needed
+ *
+ * @param {Array<{emoji: string, title: string, summary: string, url: string}>} stories
+ * @param {{botToken?: string, chatId?: string, formattedDate: string}} options
+ * @returns {Promise<Array<object>>} Telegram message objects
+ */
+async function postToTelegram(stories, options) {
   const botToken = options.botToken || process.env.TELEGRAM_BOT_TOKEN;
   const chatId = options.chatId || process.env.TELEGRAM_CHAT_ID;
 
@@ -215,7 +92,7 @@ async function postToTelegram(text, options = {}) {
   console.log('\n📤 Posting to Telegram...');
 
   try {
-    const messages = buildTelegramMessages(text);
+    const messages = renderTelegramMessages(stories, options.formattedDate);
 
     console.log(`   Target chat: ${chatId}`);
     console.log(`   Sending ${messages.length} message part${messages.length === 1 ? '' : 's'}`);
@@ -256,8 +133,7 @@ async function postToTelegram(text, options = {}) {
 
 module.exports = {
   TELEGRAM_MAX_MESSAGE_LENGTH,
-  buildTelegramMessages,
-  convertSlackTextToTelegramHtml,
   escapeTelegramHtml,
   postToTelegram,
+  renderTelegramMessages,
 };

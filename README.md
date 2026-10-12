@@ -24,7 +24,7 @@
 
 ### 🤖 **AI-Powered Intelligence**
 - Uses Google's Gemini AI for intelligent story selection
-- Cross-references multiple sources (X/Twitter, Reddit, major outlets)
+- Structured JSON output: every link comes from Techmeme, never from the model
 - Prioritizes business impact, AI breakthroughs, and market trends
 - Filters out noise and focuses on high-signal content
 
@@ -43,7 +43,7 @@
 <td>
 
 ### 💬 **Messaging Integrations**
-- Slack delivery with rich markdown formatting
+- Slack delivery with Block Kit formatting
 - Telegram delivery with channel-friendly HTML formatting
 - Clickable links to original articles
 - Daily header with formatted date
@@ -103,7 +103,7 @@ Edit `.env` with your credentials:
 ```env
 # Google Gemini AI Configuration
 GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.0-flash-exp    # Or gemini-pro-latest
+GEMINI_MODEL=gemini-flash-latest    # Or gemini-pro-latest
 
 # Configure at least one delivery target.
 
@@ -280,7 +280,7 @@ If it fails with `chat not found` or `forbidden`, the most common causes are:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.0-flash-exp
+GEMINI_MODEL=gemini-flash-latest
 TELEGRAM_BOT_TOKEN=1234567890:AAExampleTelegramBotTokenHere
 TELEGRAM_CHAT_ID=@techmeme_digest
 ```
@@ -313,6 +313,14 @@ npm run start:telegram
 node index.js --telegram-only
 ```
 
+To preview the digest without posting anything (prints the Slack payload and Telegram messages):
+
+```bash
+npm run start:dry-run
+# or
+node index.js --dry-run
+```
+
 You should see detailed console output:
 
 ```text
@@ -321,14 +329,15 @@ You should see detailed console output:
 ═══════════════════════════════════════════════════════════════════════════
 ✓ Environment variables validated successfully
 ✓ Delivery targets configured: Slack, Telegram
-✓ Gemini AI client initialized (Model: gemini-2.0-flash-exp)
-✓ Slack client initialized (Channel: C1234567890)
+✓ Gemini model: gemini-flash-latest
+✓ Slack delivery configured (Channel: C1234567890)
 ✓ Telegram delivery configured (Chat: @techmeme_digest)
 
 📡 Fetching content from Techmeme...
 ✓ Successfully extracted 15 headlines
-🤖 Generating summary with Gemini AI...
+🤖 Generating digest with Gemini AI...
 ✓ Received response from Gemini (2.34s)
+✓ Parsed 10 stories
 📤 Posting to Slack...
 ✅ Successfully posted to Slack!
 📤 Posting to Telegram...
@@ -354,7 +363,7 @@ You should see detailed console output:
    | Secret Name | Description |
    |------------|-------------|
    | `GEMINI_API_KEY` | Your Google Gemini API key |
-   | `GEMINI_MODEL` | Model name (e.g., `gemini-2.0-flash-exp`) |
+   | `GEMINI_MODEL` | Optional. Model name (default: `gemini-flash-latest`) |
    | `SLACK_BOT_TOKEN` | Optional. Your Slack bot token |
    | `SLACK_CHANNEL_ID` | Optional. Your Slack channel ID |
    | `TELEGRAM_BOT_TOKEN` | Optional. Your Telegram bot token |
@@ -454,22 +463,24 @@ The bot supports various Gemini models. Choose based on your needs:
 
 | Model | Best For | Speed | Quality |
 |-------|----------|-------|---------|
-| `gemini-2.0-flash-exp` | Fast daily digests | ⚡️⚡️⚡️ | ⭐️⭐️⭐️ |
-| `gemini-pro-latest` | Balanced performance | ⚡️⚡️ | ⭐️⭐️⭐️⭐️ |
-| `gemini-1.5-pro` | Highest quality | ⚡️ | ⭐️⭐️⭐️⭐️⭐️ |
+| `gemini-flash-lite-latest` | Cheapest daily digests | ⚡️⚡️⚡️ | ⭐️⭐️⭐️ |
+| `gemini-flash-latest` (default) | Fast, balanced | ⚡️⚡️ | ⭐️⭐️⭐️⭐️ |
+| `gemini-pro-latest` | Highest quality | ⚡️ | ⭐️⭐️⭐️⭐️⭐️ |
+
+Run `node list-models.js` to see every model your API key can use. The model must support structured JSON output.
 
 Set in your `.env` file:
 ```env
-GEMINI_MODEL=gemini-2.0-flash-exp
+GEMINI_MODEL=gemini-flash-latest
 ```
 
 ### AI Prompt Customization
 
-The AI prompt can be customized in [index.js](index.js) (lines 170-198) to adjust:
+The AI prompt can be customized in `buildPrompt()` in [digest.js](digest.js) to adjust:
 - Story selection criteria
-- Formatting preferences  
-- Source prioritization
 - Summary length and style
+
+The response shape is defined by `DIGEST_SCHEMA` in the same file. Formatting lives in [slack.js](slack.js) and [telegram.js](telegram.js), so the prompt never needs to know about Slack or Telegram markup.
 
 ---
 
@@ -561,8 +572,8 @@ The AI prompt can be customized in [index.js](index.js) (lines 170-198) to adjus
               ▼
     ┌─────────────────┐
     │  🤖 Gemini AI   │
-    │  Analyze &      │
-    │  Summarize      │
+    │  Pick & summ-   │
+    │  arize as JSON  │
     │  (Top 10)       │
     └─────────────────┘
               │
@@ -589,7 +600,7 @@ The AI prompt can be customized in [index.js](index.js) (lines 170-198) to adjus
 ## 🛠️ Tech Stack
 
 - **Runtime:** Node.js 20.x
-- **AI/ML:** Google Gemini 2.0 Flash / Pro
+- **AI/ML:** Google Gemini via `@google/genai` (structured output)
 - **Web Scraping:** Axios + Cheerio
 - **Messaging:** Slack Web API + Telegram Bot API
 - **Automation:** GitHub Actions / Cron
