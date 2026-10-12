@@ -11,8 +11,8 @@
 require('dotenv').config();
 
 // Dependencies for HTTP requests, HTML parsing, AI, and messaging integrations
-const axios = require('axios');
 const cheerio = require('cheerio');
+const { fetchWithRetry } = require('./http');
 const { generateDigest, getFormattedDigestDate } = require('./digest');
 const { postToSlack, renderSlackMessage } = require('./slack');
 const { postToTelegram, renderTelegramMessages } = require('./telegram');
@@ -27,6 +27,8 @@ const TECHMEME_URL = 'https://techmeme.com/';
 // Google Gemini AI configuration
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-flash-latest'; // Fallback to latest Flash if not specified
+// Tried once if the primary model keeps failing (e.g. 503 overloaded); set to "none" to disable
+const GEMINI_FALLBACK_MODEL = process.env.GEMINI_FALLBACK_MODEL || 'gemini-flash-lite-latest';
 
 // Slack integration configuration
 const SLACK_TOKEN = process.env.SLACK_BOT_TOKEN;
@@ -94,7 +96,7 @@ if (dryRunMode) {
 // SERVICE CONFIGURATION
 // ═══════════════════════════════════════════════════════════════════════════
 
-console.log(`✓ Gemini model: ${GEMINI_MODEL}`);
+console.log(`✓ Gemini model: ${GEMINI_MODEL} (fallback: ${GEMINI_FALLBACK_MODEL})`);
 
 if (activeSlackConfig) {
   console.log(`✓ Slack delivery configured (Channel: ${SLACK_CHANNEL})`);
@@ -123,7 +125,11 @@ async function fetchTechmemeContent() {
   
   try {
     // Make HTTP request to Techmeme homepage
-    const { data } = await axios.get(TECHMEME_URL);
+    const response = await fetchWithRetry(TECHMEME_URL, {}, { label: 'Techmeme fetch' });
+    if (!response.ok) {
+      throw new Error(`Techmeme returned HTTP ${response.status} ${response.statusText}`);
+    }
+    const data = await response.text();
     console.log('✓ Successfully retrieved HTML content');
     
     // Load HTML into Cheerio for jQuery-like parsing
@@ -185,10 +191,6 @@ async function fetchTechmemeContent() {
     return items;
   } catch (error) {
     console.error('❌ Error fetching Techmeme:', error.message);
-    if (error.response) {
-      console.error(`   HTTP Status: ${error.response.status}`);
-      console.error(`   Status Text: ${error.response.statusText}`);
-    }
     throw error;
   }
 }
@@ -220,7 +222,11 @@ async function main() {
     }
     
     // STEP 2: Select and summarize the top stories with Gemini AI
-    const stories = await generateDigest(items, { apiKey: GEMINI_API_KEY, model: GEMINI_MODEL });
+    const stories = await generateDigest(items, {
+      apiKey: GEMINI_API_KEY,
+      model: GEMINI_MODEL,
+      fallbackModel: GEMINI_FALLBACK_MODEL === 'none' ? null : GEMINI_FALLBACK_MODEL,
+    });
     const formattedDate = getFormattedDigestDate();
 
     // STEP 3: Post to each configured delivery target
@@ -230,12 +236,23 @@ async function main() {
       console.log('\n🧪 Dry run — Telegram messages:');
       renderTelegramMessages(stories, formattedDate).forEach((message) => console.log(`\n${message}`));
     } else {
-      if (activeSlackConfig) {
-        await postToSlack(stories, { token: SLACK_TOKEN, channel: SLACK_CHANNEL, formattedDate });
+      // Each channel is attempted even if an earlier one failed
+      const deliveries = [
+        activeSlackConfig && ['Slack', () => postToSlack(stories, { token: SLACK_TOKEN, channel: SLACK_CHANNEL, formattedDate })],
+        activeTelegramConfig && ['Telegram', () => postToTelegram(stories, { botToken: TELEGRAM_BOT_TOKEN, chatId: TELEGRAM_CHAT_ID, formattedDate })],
+      ].filter(Boolean);
+      const failedTargets = [];
+
+      for (const [name, deliver] of deliveries) {
+        try {
+          await deliver();
+        } catch (error) {
+          failedTargets.push(name);
+        }
       }
 
-      if (activeTelegramConfig) {
-        await postToTelegram(stories, { botToken: TELEGRAM_BOT_TOKEN, chatId: TELEGRAM_CHAT_ID, formattedDate });
+      if (failedTargets.length > 0) {
+        throw new Error(`Delivery failed for: ${failedTargets.join(', ')}`);
       }
     }
     

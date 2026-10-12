@@ -39,8 +39,10 @@ async function listAvailableModels() {
     console.log('🔍 Querying Google Generative Language API...');
     
     // Make direct REST API call to fetch models catalog
+    // Send the key as a header so it never appears in URLs or proxy logs
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models?key=${GEMINI_API_KEY}`
+      'https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000',
+      { headers: { 'x-goog-api-key': GEMINI_API_KEY } }
     );
     
     if (!response.ok) {
@@ -97,13 +99,10 @@ async function listAvailableModels() {
     console.error('❌ ERROR FETCHING MODELS');
     console.error('═══════════════════════════════════════════════════════════════════════════');
     console.error('Error message:', error.message);
-    if (error.response) {
-      console.error('Response status:', error.response.status);
-      console.error('Response data:', error.response.data);
-    }
     console.error('\nFull error:');
     console.error(error);
     console.error('═══════════════════════════════════════════════════════════════════════════\n');
+    process.exitCode = 1;
   }
 }
 

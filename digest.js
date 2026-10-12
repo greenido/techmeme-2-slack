@@ -11,6 +11,10 @@ const { GoogleGenAI } = require('@google/genai');
 
 const DIGEST_SIZE = 10;
 
+// Per-attempt request timeout and attempts (including the first) per model
+const GEMINI_TIMEOUT_MS = 90_000;
+const GEMINI_ATTEMPTS = 3;
+
 // JSON Schema for the model response (Gemini `responseJsonSchema`)
 const DIGEST_SCHEMA = {
   type: 'object',
@@ -129,15 +133,36 @@ function parseDigest(responseText, items) {
 /**
  * Uses Gemini to select and summarize the top stories
  *
+ * Transient API errors (429/5xx) are retried by the SDK. If the primary model
+ * still fails, or returns unusable output, the fallback model is tried once.
+ *
  * @param {Array<{text: string, url: string}>} items - Scraped headlines
- * @param {{apiKey: string, model: string}} options - Gemini configuration
+ * @param {{apiKey: string, model: string, fallbackModel?: string|null}} options - Gemini configuration
  * @returns {Promise<Array<{emoji: string, title: string, summary: string, url: string}>>}
  */
-async function generateDigest(items, { apiKey, model }) {
+async function generateDigest(items, { apiKey, model, fallbackModel = null }) {
   console.log('\n🤖 Generating digest with Gemini AI...');
-  console.log(`   Using model: ${model}`);
 
-  const ai = new GoogleGenAI({ apiKey });
+  const ai = new GoogleGenAI({
+    apiKey,
+    httpOptions: {
+      timeout: GEMINI_TIMEOUT_MS,
+      retryOptions: { attempts: GEMINI_ATTEMPTS },
+    },
+  });
+
+  try {
+    return await generateWithModel(ai, model, items);
+  } catch (error) {
+    if (!fallbackModel || fallbackModel === model) throw error;
+
+    console.warn(`⚠️  ${model} failed (${error.message}); retrying with fallback model ${fallbackModel}`);
+    return generateWithModel(ai, fallbackModel, items);
+  }
+}
+
+async function generateWithModel(ai, model, items) {
+  console.log(`   Using model: ${model}`);
   const startTime = Date.now();
 
   const response = await ai.models.generateContent({
