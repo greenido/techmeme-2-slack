@@ -72,6 +72,19 @@ function filterUnsent(items, history, now = new Date()) {
 }
 
 /**
+ * Whether a digest was already delivered today (UTC), to avoid double posts
+ * when a manual run and the schedule land on the same day
+ *
+ * @param {Array<{sentAt: string}>} history - Sent-story history
+ * @param {Date} [now] - Current time (for tests)
+ * @returns {boolean}
+ */
+function sentToday(history, now = new Date()) {
+  const today = now.toISOString().slice(0, 10);
+  return history.some((story) => story.sentAt === today);
+}
+
+/**
  * Titles sent in the last few days, for the prompt's "already covered" list
  *
  * @param {Array<{title: string, sentAt: string}>} history - Sent-story history
@@ -91,4 +104,5 @@ module.exports = {
   loadHistory,
   recentTitles,
   saveHistory,
+  sentToday,
 };

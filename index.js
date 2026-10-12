@@ -8,11 +8,13 @@
 // ═══════════════════════════════════════════════════════════════════════════
 
 // Load environment variables from .env file
-require('dotenv').config();
+require('./env');
 
 // Dependencies for HTTP requests, HTML parsing, AI, and messaging integrations
+const fs = require('node:fs');
 const { generateDigest, getFormattedDigestDate } = require('./digest');
-const { filterUnsent, loadHistory, recentTitles, saveHistory } = require('./state');
+const { renderMarkdownSummary } = require('./markdown');
+const { filterUnsent, loadHistory, recentTitles, saveHistory, sentToday } = require('./state');
 const { fetchTechmemeContent } = require('./techmeme');
 const { postToSlack, renderSlackMessage } = require('./slack');
 const { postToTelegram, renderTelegramMessages } = require('./telegram');
@@ -43,6 +45,8 @@ const cliArgs = process.argv.slice(2);
 const telegramOnlyMode = cliArgs.includes('--telegram-only');
 // --dry-run prints the rendered Slack and Telegram messages instead of posting them
 const dryRunMode = cliArgs.includes('--dry-run');
+// --force posts even if a digest was already delivered today
+const forceMode = cliArgs.includes('--force');
 
 const hasSlackConfig = Boolean(SLACK_TOKEN && SLACK_CHANNEL);
 const hasTelegramConfig = Boolean(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID);
@@ -93,6 +97,9 @@ if (telegramOnlyMode) {
 if (dryRunMode) {
   console.log('✓ Delivery mode: dry run (nothing will be posted)');
 }
+if (forceMode) {
+  console.log('✓ Force mode: posting even if a digest was already sent today');
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // SERVICE CONFIGURATION
@@ -132,6 +139,13 @@ async function main() {
   const workflowStartTime = Date.now();
   
   try {
+    // Post at most one digest per day unless forced (dry runs never post)
+    const history = loadHistory(HISTORY_FILE);
+    if (!dryRunMode && !forceMode && sentToday(history)) {
+      console.log('\n⏭️  A digest was already delivered today; skipping. Use --force to post anyway.');
+      return;
+    }
+
     // STEP 1: Fetch content from Techmeme
     const scrapedItems = await fetchTechmemeContent();
     
@@ -139,7 +153,6 @@ async function main() {
       throw new Error('No items fetched from Techmeme. Cannot proceed.');
     }
 
-    const history = loadHistory(HISTORY_FILE);
     const items = filterUnsent(scrapedItems, history);
     console.log(`✓ ${scrapedItems.length - items.length} stories skipped as already sent (history: ${history.length} entries)`);
 
@@ -155,6 +168,11 @@ async function main() {
       recentlyCovered: recentTitles(history, RECENT_TITLE_DAYS),
     });
     const formattedDate = getFormattedDigestDate();
+
+    // In GitHub Actions, show the digest on the run's summary page
+    if (process.env.GITHUB_STEP_SUMMARY) {
+      fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, renderMarkdownSummary(stories, formattedDate));
+    }
 
     // STEP 3: Post to each configured delivery target
     if (dryRunMode) {

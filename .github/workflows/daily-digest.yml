@@ -2,9 +2,15 @@ name: Daily Tech Digest
 
 on:
   schedule:
-    # Note: GitHub Actions uses UTC time, and scheduled runs often start hours late
-    - cron: '0 14 * * *'
+    # 10:00 UTC (3:00 AM PT). GitHub often starts scheduled runs hours late,
+    # so this aims for delivery during the US morning.
+    - cron: '0 10 * * *'
   workflow_dispatch: # Allows manual triggering from GitHub UI
+    inputs:
+      force:
+        description: 'Post even if a digest was already sent today'
+        type: boolean
+        default: false
 
 # contents: write lets the job commit data/sent-stories.json. The daily commit
 # also keeps this public repo "active", so GitHub never auto-disables the
@@ -50,7 +56,7 @@ jobs:
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: npm start
+        run: npm start -- ${{ inputs.force && '--force' || '' }}
 
       # Runs even if one delivery target failed: the script still records the
       # stories that reached the other target.

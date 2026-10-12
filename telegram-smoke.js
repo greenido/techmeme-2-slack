@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('./env');
 
 const { getFormattedDigestDate } = require('./digest');
 const { renderTelegramMessages, postToTelegram } = require('./telegram');
