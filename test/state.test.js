@@ -53,3 +53,11 @@ test('sentToday detects a delivery earlier on the same UTC day', () => {
   assert.equal(sentToday(history, NOW), false);
   assert.equal(sentToday([...history, { url: 'https://a.example/x', sentAt: '2026-10-12' }], NOW), true);
 });
+
+test('loadHistory cleans URLs written before tokens were stripped', () => {
+  const file = tempFile();
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, JSON.stringify({ stories: [{ url: 'https://a.example/x?accessToken=eyJabc.def.ghi', title: 'X', sentAt: '2026-10-12' }] }));
+
+  assert.equal(loadHistory(file)[0].url, 'https://a.example/x');
+});

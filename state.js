@@ -8,6 +8,7 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const { cleanUrl } = require('./url');
 
 const HISTORY_DAYS = 14;
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -26,8 +27,11 @@ function isRecent(sentAt, days, now) {
 function loadHistory(filePath) {
   try {
     const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    // URLs are re-cleaned so entries written before url.js existed lose their tokens
     return Array.isArray(parsed?.stories)
-      ? parsed.stories.filter((story) => typeof story?.url === 'string')
+      ? parsed.stories
+        .filter((story) => typeof story?.url === 'string')
+        .map((story) => ({ ...story, url: cleanUrl(story.url) }))
       : [];
   } catch (error) {
     if (error.code !== 'ENOENT') {
@@ -49,7 +53,7 @@ function saveHistory(filePath, history, stories, now = new Date()) {
   const sentAt = now.toISOString().slice(0, 10);
   const updated = [
     ...history.filter((story) => isRecent(story.sentAt, HISTORY_DAYS, now.getTime())),
-    ...stories.map(({ url, title }) => ({ url, title, sentAt })),
+    ...stories.map(({ url, title }) => ({ url: cleanUrl(url), title, sentAt })),
   ];
 
   fs.mkdirSync(path.dirname(filePath), { recursive: true });

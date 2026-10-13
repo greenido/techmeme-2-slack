@@ -10,13 +10,15 @@
 
 const cheerio = require('cheerio');
 const { fetchWithRetry } = require('./http');
+const { cleanUrl } = require('./url');
 
 const TECHMEME_URL = 'https://techmeme.com/';
 const MAX_HEADLINES = 40;
 const MAX_EXCERPT_LENGTH = 300;
 
+// Absolute URL with tokens and tracking parameters removed (see url.js)
 function toAbsoluteUrl(url) {
-  return url.startsWith('/') ? `https://techmeme.com${url}` : url;
+  return cleanUrl(url.startsWith('/') ? `https://techmeme.com${url}` : url);
 }
 
 function cleanText(text) {

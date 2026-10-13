@@ -38,3 +38,9 @@ test('falls back to deduped .ii items when there are no clusters', () => {
 
   assert.deepEqual(items, [{ text: 'One', url: 'https://techmeme.com/x', coverage: 0 }]);
 });
+
+test('removes gift tokens and tracking from scraped URLs', () => {
+  const [first] = parseTechmemeHtml(html);
+
+  assert.equal(first.url, 'https://news.example.com/acme-model');
+});

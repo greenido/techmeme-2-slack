@@ -63,6 +63,8 @@ jobs:
       - name: Commit sent-story history
         if: ${{ !cancelled() }}
         run: |
+          # Refuse to commit tokens or personal data (see test/data-hygiene.test.js)
+          node --test test/data-hygiene.test.js
           git add data/sent-stories.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No history changes to commit"
