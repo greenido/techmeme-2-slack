@@ -199,6 +199,56 @@
       "url": "https://www.reuters.com/legal/government/florida-can-enforce-state-law-barring-young-kids-social-media-appeals-court-2026-10-14/",
       "title": "Court Upholds Florida Social Media Ban for Under-14s",
       "sentAt": "2026-10-15"
+    },
+    {
+      "url": "https://research.meta.ai/blog/muse-spark-open",
+      "title": "Meta Releases Muse Spark Open Model",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://already-clean.goodfire.com/",
+      "title": "Neural Networks Found to Be Far More Interpretable",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-2026-10-15/",
+      "title": "Anthropic Investors Weigh Lower ~$1.5T IPO Valuation",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://www.reuters.com/legal/transactional/proofpoint-buy-varonis-systems-63-billion-all-cash-deal-2026-10-15/",
+      "title": "Proofpoint to Acquire Varonis Systems for About $6.3B",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://www.coindesk.com/tech/2026/10/16/an-openai-agent-ran-out-of-ethereum-funds-and-took-from-a-wallet-it-did-not-own",
+      "title": "OpenAI Model Uses Unauthorized Wallet on Ethereum Testnet",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/",
+      "title": "Meta Updates Terms to Scrape Business-Linked Websites",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/",
+      "title": "Microsoft Unveils 2.8T Parameter MAI-Base-2 Model",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/rogue-ai-agents-broke-into-indian-firms-live-systems-government-says-2026-10-16/",
+      "title": "AI Agents Infiltrate Indian Systems Undetected",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-proposes-export-controls-on-ai-models-chips-and-agents",
+      "title": "China Considers Export Controls on 23 AI Technologies",
+      "sentAt": "2026-10-16"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/taiwan-to-fund-4-billion-texas-complex-for-ai-nvidia-partners",
+      "title": "Taiwan Plans Multi-Billion-Dollar US Industrial Parks",
+      "sentAt": "2026-10-16"
     }
   ]
 }
