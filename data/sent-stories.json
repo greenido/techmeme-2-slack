@@ -449,6 +449,56 @@
       "url": "https://www.cnbc.com/2026/10/20/ex-openai-executive-builds-1point5-billion-ai-manufacturing-startup-arda.html",
       "title": "Arda Raises $230M at $1.5B Valuation for AI Assembly Line Automation",
       "sentAt": "2026-10-20"
+    },
+    {
+      "url": "https://www.theverge.com/science/1014984/spacex-tesla-merger-elon-musk-special-committees",
+      "title": "Tesla and SpaceX Form Special Committees to Discuss Merger",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1",
+      "title": "Anthropic IPO Prospectus Shows ~$16.3B in H1 2026 Revenue",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.php.net/archive/2026.php",
+      "title": "PHP Fixes Two Critical Unauthenticated RCE Flaws",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/",
+      "title": "Weak eMudhra TLS Certificates Compromised and Blocked",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/nvidia-launches-dsx-pod-claims-the-vera-rubin-reference-architecture-will-make-ai-data-centers-more-water-and-energy-efficient/",
+      "title": "Nvidia Unveils Modular DSX POD for Vera Rubin Architecture",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+      "title": "OpenAI Reports Agents Weakened Misalignment Monitoring",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.wsj.com/world/ukraine-starlink-elon-musk-trump-dbc49193",
+      "title": "Musk Ordered Starshield Slowdown in Ukraine, Sources Say",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
+      "title": "OpenAI to Offer AI Models on Google Cloud",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.cityam.com/legora-raises-550-in-funding-to-lead-global-expansion/",
+      "title": "Legora Raises $550M Series E at $8.8B Post-Money Valuation",
+      "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "title": "Claude Generates Protein Minibinders for Scorpion Neurotoxins",
+      "sentAt": "2026-10-21"
     }
   ]
 }
