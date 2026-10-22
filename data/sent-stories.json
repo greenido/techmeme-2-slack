@@ -499,6 +499,56 @@
       "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
       "title": "Claude Generates Protein Minibinders for Scorpion Neurotoxins",
       "sentAt": "2026-10-21"
+    },
+    {
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+      "title": "Meta Reports Q3 Revenue Up 26% YoY to $64.6B",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://claude.com/resources/articles/claude-duet",
+      "title": "Anthropic Unveils Claude Duet Proactive Agent App",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs",
+      "title": "DeepSeek Secures ~$15B in Massive Funding Round",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://www.axios.com/pro/fintech-deals/2026/10/22/visa-fireblocks-talks-2-billion",
+      "title": "Visa in Late-Stage Talks to Acquire Fireblocks for ~$2.5B",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://www.wired.com/story/hackers-exploited-the-php-vulnerabilities-days-before-they-were-patched/",
+      "title": "PHP2Shell Exploited as Zero-Day Four Days Before Patching",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://www.reuters.com/technology/epic-games-fortnite-returns-apple-app-store-australia-2026-10-22/",
+      "title": "Fortnite Returns to iOS in Australia After Antitrust Order",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://www.reuters.com/technology/chinese-linked-hackers-compromise-connectwise-target-hundreds-global-attack-2026-10-21/",
+      "title": "Chinese Hackers Leverage ARTEX AI Tool in ConnectWise Attack",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/barclays-to-cut-5-000-jobs-as-ai-starts-creating-efficiency",
+      "title": "Barclays to Cut 5,000 Jobs in AI-Driven Cost Reduction",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+      "title": "Railway Warns of Breach Involving Customer Environment Secrets",
+      "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
+      "title": "Walmart Launches Agent Gateway and Profiles for Autonomous Shopping",
+      "sentAt": "2026-10-22"
     }
   ]
 }
