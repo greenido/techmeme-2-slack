@@ -549,6 +549,56 @@
       "url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
       "title": "Walmart Launches Agent Gateway and Profiles for Autonomous Shopping",
       "sentAt": "2026-10-22"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
+      "title": "OpenAI Nears Up to $30B Round at $1.25T Valuation",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access",
+      "title": "US Banks Restrict AI Agents Over Unauthorized Actions",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://apnews.com/article/treasury-china-tech-investments-rule-b742c292ff8eb19e6a4c8cf03d4d66b9",
+      "title": "US Proposes Restrictions on Foreign AI and Supercomputing Investments",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/sk-data-center-arm-in-talks-to-fund-350-billion-ai-buildout",
+      "title": "SK Hyper Seeks Financing for $350B Data Center Buildout",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/spacex-in-talks-to-access-80-000-cell-sites-for-wireless-network",
+      "title": "SpaceX Explores Cellular Network Entry with 80K Sites",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.wsj.com/tech/sk-hynix-shelves-plans-for-u-s-listing-of-memory-chip-unit-solidigm-e9670506",
+      "title": "Solidigm Halts US IPO Review for New Chip Fab",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://fortune.com/2026/10/22/venture-giant-andreessen-horowitz-crypto-name-blockchain-fund-rebrands-a16z-frontier/",
+      "title": "a16z Rebrands $2.2B Crypto Fund to Target AI and Robotics",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/deepseek-minimax-win-approval-for-global-use-state-media-says",
+      "title": "DeepSeek and MiniMax Approved for Overseas Model Releases",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.wsj.com/tech/ai/the-signal-chats-that-cost-openai-researchers-their-jobs-594c5853",
+      "title": "OpenAI Suspected Three Fired Researchers of Leaking Model Designs",
+      "sentAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1016690/suleyman-microsoft-diagnostic-orchestrator-science-medical-superintelligence",
+      "title": "Microsoft Diagnostic Orchestrator Outperforms Human Doctors",
+      "sentAt": "2026-10-23"
     }
   ]
 }
