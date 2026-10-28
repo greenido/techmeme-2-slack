@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://x.com/openainewsroom/status/2110095403198849132",
-      "title": "FBI Arrests OpenAI Staffer After Bug Discovered in Office",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.reuters.com/world/europe/spacex-limits-starlink-operations-ukraine-disrupting-military-missions-2026-10-14/",
-      "title": "SpaceX Restricts High-Speed Starlink Access in Ukraine",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.wsj.com/business/media/netflix-eliminates-about-6-of-staff-in-biggest-cuts-since-2022-0a2d8ec3",
-      "title": "Netflix Cuts 6% of Workforce Amid Slowing Growth",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-14/globalfoundries-gets-21-billion-to-run-plants-in-us-japan-deal",
-      "title": "GlobalFoundries Plans Chip Plants Backed by Up to $21B",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.axios.com/pro/enterprise-software-deals/2026/10/14/modal-accel-ai-infrastructure",
-      "title": "Modal Raises $750M Series D at $15.75B Valuation",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/",
-      "title": "ASML Faces AI Chipmaking Tool Shortages for 2027 and 2028",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents",
-      "title": "EU AI Office Probes OpenAI and Anthropic Over AI Agent Hacks",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.reuters.com/legal/litigation/scientists-call-international-body-oversee-advanced-ai-2026-10-13/",
-      "title": "400+ Scientists Urge International AI Containment Standards",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/13/us/politics/north-korea-it-workers-fbi.html",
-      "title": "FBI and CrowdStrike Dismantle 40+ Texas Laptop Farms",
-      "sentAt": "2026-10-14"
-    },
-    {
-      "url": "https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/",
-      "title": "Microsoft Patches Record 1,400+ Security Vulnerabilities",
-      "sentAt": "2026-10-14"
-    },
-    {
       "url": "https://www.ft.com/content/11632d03-358c-454b-af95-d06d4072932b",
       "title": "Anthropic Q3 Revenue Hits $16.8B Ahead of IPO",
       "sentAt": "2026-10-15"
@@ -699,6 +649,56 @@
       "url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
       "title": "Apple Adds AI Assistant and MCP Support to Productivity Apps",
       "sentAt": "2026-10-27"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html",
+      "title": "SK Hynix Reports Record Q3 Profit Up 632% to ~$62.76B",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/28/jio-ipo-india-listing-.html",
+      "title": "Jio Platforms Surges 21.4% in Record ~$3.2B IPO Debut",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/27/well/ai-chatgpt-medication-epilepsy-death.html",
+      "title": "OpenAI Sued Over GPT-4o Advice Leading to User Death",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "title": "Anthropic Expands Into Drug Development and Acquires Mithril",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/ai-cybersecurity-startup-upwind-raises-at-3-8-billion-value",
+      "title": "Upwind Security Raises $400M at a $3.8B Valuation",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/amazon-unveils-new-echo-show-16-alexa-speakers-smart-clock-and-photo-frame",
+      "title": "Amazon Debuts Echo Show 16, New Hardware, and Price Hikes",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.coindesk.com/policy/2026/10/27/u-s-agency-hits-utah-with-lawsuit-to-shield-kalshi-s-ability-to-offer-betting-there",
+      "title": "CFTC Challenges Utah Over Prediction Market Jurisdiction",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/foundry-raises-100-million-autonomous-factories",
+      "title": "Foundry Secures $100M Series A for AI-Powered Factories",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.reuters.com/technology/hacker-trying-breach-us-federal-election-commission-system-email-shows-2026-10-27/",
+      "title": "Cyberattack Forces FEC Filing System Offline",
+      "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/27/technology/proposition-40-california-billionaire-tax.html",
+      "title": "Billionaires Amass $333M+ to Oppose California Wealth Tax",
+      "sentAt": "2026-10-28"
     }
   ]
 }
