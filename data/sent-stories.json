@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.ft.com/content/11632d03-358c-454b-af95-d06d4072932b",
-      "title": "Anthropic Q3 Revenue Hits $16.8B Ahead of IPO",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html",
-      "title": "TSMC Posts Record Q3 Profit of $23.7B on AI Demand",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://www.wired.com/story/nightmare-scenario-zero-click-spyware-is-infecting-phones-via-targeted-ads/",
-      "title": "Citizen Lab Uncovers AdFection Zero-Click Spyware Campaign",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://news.bloomberglaw.com/privacy-and-data-security/half-dozen-states-hit-openai-with-kids-online-safety-lawsuits",
-      "title": "Eight US States Sue OpenAI Over Minor Safeguards",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-15/ramp-completes-funding-at-60-billion-value-as-revenue-surges",
-      "title": "Ramp Raises $1.85B at $60B Valuation",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://www.reuters.com/world/india/mukesh-ambanis-jio-files-updated-prospectus-record-india-ipo-2026-10-14/",
-      "title": "Jio Platforms Targets $3.2B in Record India IPO",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://cyberscoop.com/microsoft-disrupts-chinese-language-phishing-kit-ecosystem/",
-      "title": "Coalition Disrupts Massive Phishing Ecosystem",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://www.axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation",
-      "title": "US FTC Probes OpenAI and Anthropic Safety Practices",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-14/apple-openai-head-to-court-in-high-stakes-ai-trade-secret-fight",
-      "title": "OpenAI Pauses Disputed Trade Secret Use in Apple Dispute",
-      "sentAt": "2026-10-15"
-    },
-    {
-      "url": "https://www.reuters.com/legal/government/florida-can-enforce-state-law-barring-young-kids-social-media-appeals-court-2026-10-14/",
-      "title": "Court Upholds Florida Social Media Ban for Under-14s",
-      "sentAt": "2026-10-15"
-    },
-    {
       "url": "https://research.meta.ai/blog/muse-spark-open",
       "title": "Meta Releases Muse Spark Open Model",
       "sentAt": "2026-10-16"
@@ -699,6 +649,56 @@
       "url": "https://www.nytimes.com/2026/10/27/technology/proposition-40-california-billionaire-tax.html",
       "title": "Billionaires Amass $333M+ to Oppose California Wealth Tax",
       "sentAt": "2026-10-28"
+    },
+    {
+      "url": "https://www.ft.com/content/eb386156-5bf9-4edd-80f2-803fdee1e33d",
+      "title": "Alphabet Loses $500B in Market Cap After AI Spending Drives Negative Cash Flow",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.reuters.com/legal/transactional/doordash-strikes-17-billion-deal-us-rival-instacart-bets-grocery-delivery-2026-10-29/",
+      "title": "DoorDash to Acquire Instacart in ~$17B Delivery Mega-Merger",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "title": "Microsoft Beats Q1 Targets as Azure Surges 48%",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-jensen-huang-trump.html",
+      "title": "US Officials Suspect Megaspeed Exec Alice Huang Was Chinese Asset",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.wired.com/story/massive-leak-exposes-41000-homeland-security-workers-including-undercover-ice-agents/",
+      "title": "Breach of DHS Okta System Exposes Data of 41,000+ Personnel",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.reuters.com/world/us-doj-is-inquiring-about-nvidias-purchase-hugging-face-sources-say-2026-10-28/",
+      "title": "US DOJ Probes Antitrust Impact of Nvidia's Hugging Face Deal",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/29/business/dealbook/its-investors-say-kalshi-is-worth-40-billion-is-an-ipo-next.html",
+      "title": "Kalshi Secures $1B at a $40B Valuation Ahead of Planned IPO",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/canada-nvidia-back-cohere-in-round-at-over-20-billion-value",
+      "title": "Cohere Begins First Close of Major Funding Round at $20.5B Valuation",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.zdnet.com/innovation/mistral-large-4-weights-release/",
+      "title": "Mistral Releases Weights for Mistral Large 4",
+      "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.wsj.com/tech/apple-iphone-memory-chips-ai-c0084cc9",
+      "title": "AI Hyperscaler Demand Quintuples Flash Memory Prices",
+      "sentAt": "2026-10-29"
     }
   ]
 }
