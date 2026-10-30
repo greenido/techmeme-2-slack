@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://research.meta.ai/blog/muse-spark-open",
-      "title": "Meta Releases Muse Spark Open Model",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://already-clean.goodfire.com/",
-      "title": "Neural Networks Found to Be Far More Interpretable",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://www.reuters.com/business/finance/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-2026-10-15/",
-      "title": "Anthropic Investors Weigh Lower ~$1.5T IPO Valuation",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://www.reuters.com/legal/transactional/proofpoint-buy-varonis-systems-63-billion-all-cash-deal-2026-10-15/",
-      "title": "Proofpoint to Acquire Varonis Systems for About $6.3B",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://www.coindesk.com/tech/2026/10/16/an-openai-agent-ran-out-of-ethereum-funds-and-took-from-a-wallet-it-did-not-own",
-      "title": "OpenAI Model Uses Unauthorized Wallet on Ethereum Testnet",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/",
-      "title": "Meta Updates Terms to Scrape Business-Linked Websites",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/",
-      "title": "Microsoft Unveils 2.8T Parameter MAI-Base-2 Model",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://www.reuters.com/legal/litigation/rogue-ai-agents-broke-into-indian-firms-live-systems-government-says-2026-10-16/",
-      "title": "AI Agents Infiltrate Indian Systems Undetected",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-proposes-export-controls-on-ai-models-chips-and-agents",
-      "title": "China Considers Export Controls on 23 AI Technologies",
-      "sentAt": "2026-10-16"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-16/taiwan-to-fund-4-billion-texas-complex-for-ai-nvidia-partners",
-      "title": "Taiwan Plans Multi-Billion-Dollar US Industrial Parks",
-      "sentAt": "2026-10-16"
-    },
-    {
       "url": "https://www.telegraph.co.uk/world-news/2026/10/16/musk-approached-trump-slow-down-starlink-help-ukraine/",
       "title": "Musk Reportedly Urged Trump to Slow Starshield in Ukraine",
       "sentAt": "2026-10-17"
@@ -699,6 +649,56 @@
       "url": "https://www.wsj.com/tech/apple-iphone-memory-chips-ai-c0084cc9",
       "title": "AI Hyperscaler Demand Quintuples Flash Memory Prices",
       "sentAt": "2026-10-29"
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/blockchain-analysis-firm-trm-says-north-korea-behind-binance-crypto-theft-2026-10-30/",
+      "title": "TRM Labs Links ~$6.36B Binance Hack to North Korean Group",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.businesswire.com/news/home/20261028373648/en/",
+      "title": "Amazon Misses Q3 Revenue Estimates as AWS Grows 39.3%",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/29/intel-intc-q3-earnings-report-2026-.html",
+      "title": "Intel Drops 20%+ After Soft Q4 Outlook Offsets Q3 Growth",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/behind-deepseeks-16-billion-funding-chinese-tech-titans-state-players",
+      "title": "DeepSeek Expands Round Over Rising Blackwell Black Market Costs",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/29/reddit-rddt-q3-2026.html",
+      "title": "Reddit Drops 25%+ on Soft Q4 Forecast Despite 53% Revenue Growth",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/nyse-owner-plans-market-for-hyperliquid-perpetual-futures-in-us",
+      "title": "NYSE Owner ICE Partners With Trade.xyz for Perpetual Markets",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.nbcnews.com/tech/security/china-linked-hackers-used-ai-target-200-organizations-crowdstrike-says-rcna606343",
+      "title": "CrowdStrike Details AI-Driven Attacks by China-Linked Hackers",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.reuters.com/world/meta-tiktok-x-lose-legal-challenge-against-uk-watchdog-over-online-safety-data-2026-10-30/",
+      "title": "UK Court Rejects Tech Giants' Challenge to Online Safety Act Demands",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/coinbase-returns-to-profitability-while-posting-another-revenue-drop",
+      "title": "Coinbase Turns First Profit in a Year Despite 35% Revenue Slide",
+      "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.reuters.com/business/polymarket-reports-major-outage-suspends-trading-actions-2026-10-29/",
+      "title": "Polymarket Restores Trading Following Third-Party Security Incident",
+      "sentAt": "2026-10-30"
     }
   ]
 }
