@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.telegraph.co.uk/world-news/2026/10/16/musk-approached-trump-slow-down-starlink-help-ukraine/",
-      "title": "Musk Reportedly Urged Trump to Slow Starshield in Ukraine",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://www.ft.com/content/7b236286-ca1d-4063-a728-7f968a638b8f",
-      "title": "Apple Sees High Demand for Foldable iPhone Duo",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
-      "title": "Claude Explains Origins of Long-Suspected NIST Crypto Standard",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://www.politico.com/news/2026/10/16/anthropic-ai-safety-01124654",
-      "title": "Anthropic Pitches AI Safety Legislation to US Lawmakers",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://www.ft.com/content/cb4034e1-475f-40b9-a5f9-256e91aacb89",
-      "title": "Anthropic Seeks Blackstone Financing for $60B TPU Debt Package",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://www.anthropic.com/research/employment-at-anthropic",
-      "title": "Anthropic Details How AI Adoption Alters Internal Hiring and Work",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://www.ft.com/content/7477e462-c899-4841-a5cf-c01706e23982",
-      "title": "Alexandr Wang Emerges as Potential Successor to Mark Zuckerberg",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://9to5mac.com/2026/10/16/apples-new-app-store-rules-crack-down-on-ai-nudification-and-bait-and-switch-apps/",
-      "title": "Apple Tightens App Review Rules Against AI Nudification",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-15/blackstone-s-huge-ai-bet-runs-from-data-centers-to-google-and-nvidia-deals",
-      "title": "Blackstone President Jon Gray Expands $200B AI Data Center Empire",
-      "sentAt": "2026-10-17"
-    },
-    {
-      "url": "https://asia.nikkei.com/business/tech/semiconductors/japan-s-kioxia-sheds-two-thirds-of-peak-market-value-as-china-chip-rivals-emerge",
-      "title": "Kioxia Loses Two-Thirds of Market Cap Amid Chinese Competition",
-      "sentAt": "2026-10-17"
-    },
-    {
       "url": "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c",
       "title": "Grid and Regulatory Roadblocks Threaten US Data Center Expansion",
       "sentAt": "2026-10-18"
@@ -699,6 +649,56 @@
       "url": "https://www.reuters.com/business/polymarket-reports-major-outage-suspends-trading-actions-2026-10-29/",
       "title": "Polymarket Restores Trading Following Third-Party Security Incident",
       "sentAt": "2026-10-30"
+    },
+    {
+      "url": "https://www.ft.com/content/7a3ad950-1b3b-4d9e-8c15-65a61ae6180f",
+      "title": "OpenAI Lowers Target to Seek ~$20B at a $1.25T Valuation",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-30/big-tech-holds-3-trillion-in-spending-commitments-for-ai-boom",
+      "title": "Big Tech Commits $3T+ to AI Spending",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.wsj.com/finance/the-new-bottleneck-in-americas-ai-build-out-a-shortage-of-cheap-money-0c14c84d",
+      "title": "Neoclouds Effectively Shut Out of Bond Market",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/30/meta-outlook-to-revised-to-negative-by-sp-after-cash-flow-negative.html",
+      "title": "S&P Downgrades Meta Outlook to Negative Over AI Capex",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://x.com/felixrieseberg/status/2116170451466543578",
+      "title": "Tampered Claude Code Extension Published on Cursor Marketplace",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+      "title": "Tech Giants Adopt Universal Standard for AI Scraping Opt-Outs",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.wired.com/story/i-spent-30-minutes-with-apples-ceo-now-i-know-why-john-ternus-got-the-job/",
+      "title": "John Ternus Outlines Apple's Pragmatic AI Stance",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc/",
+      "title": "Arizona AI Data Centers Face Growing Backlash Over Water",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/openai-ceo-says-its-quite-terrible-for-your-pc-to-have-ram-sam-altman-says-data-centers-offer-better-utilization",
+      "title": "Sam Altman Weighs In on Supply-Constrained DRAM Allocation",
+      "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+      "title": "Google's Suncatcher Data Center Satellite Goes Online",
+      "sentAt": "2026-10-31"
     }
   ]
 }
