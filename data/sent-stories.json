@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c",
-      "title": "Grid and Regulatory Roadblocks Threaten US Data Center Expansion",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://www.telegraph.co.uk/business/2026/10/18/microsoft-axes-ai-deal-setback-uk-data-centre-pioneer/",
-      "title": "Microsoft Scraps Nscale AI Data Center Deal Over Power Delays",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/",
-      "title": "Google Demonstrates Magic State Cultivation on Willow Quantum Chip",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/newsletters/2026-10-17/disney-offers-soft-landing-to-staff-at-troubled-character-ai",
-      "title": "Disney to Hire 60+ Character.AI Staff in Post-Bankruptcy Deal",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-15/gtcr-elliott-acquire-software-firm-ccc-for-4-6-billion",
-      "title": "GTCR and Elliott to Take CCC Private in $6.1B Valuation Deal",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://www.ft.com/content/f7c26ac0-f5f2-443a-86b2-39d62f7920a9",
-      "title": "Anthropic Prepares Autonomous AI Agents for Complex Negotiations",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-17/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner",
-      "title": "DeepSeek Unveils Leaner V4.1-Flash-1017 Model",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://startupfortune.com/opencode-breach-exposes-stored-openai-and-anthropic-keys-prompts-urgent-key-rotation/",
-      "title": "OpenCode Hit by Breach in Large-Scale Distillation Attack",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://www.hollywoodreporter.com/news/politics-news/musk-movie-tiktok-banned-theaters-showtimes-1236734308/",
-      "title": "TikTok Suspends Account for Elon Musk Documentary",
-      "sentAt": "2026-10-18"
-    },
-    {
-      "url": "https://fortune.com/2026/10/15/holyvolt-funding-45-million-battery-startup-ai-sweden-michigan-prast-ingvarsson/",
-      "title": "Battery Material AI Startup Holyvolt Secures $45M",
-      "sentAt": "2026-10-18"
-    },
-    {
       "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7",
       "title": "Anthropic's Five-Member Trust Holds Sweeping Control Over Board",
       "sentAt": "2026-10-19"
@@ -699,6 +649,56 @@
       "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
       "title": "Google's Suncatcher Data Center Satellite Goes Online",
       "sentAt": "2026-10-31"
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/binance-resume-withdrawals-after-recovering-bulk-6-billion-stolen-funds-2026-11-01/",
+      "title": "Binance Resumes Withdrawals After Covering 95% of $6.3B Hack",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f",
+      "title": "Default Insurance Costs for Hyperscalers Reach Highest Level Since 2021",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/guidewire-buy-uk-insurance-ai-firm-hyperexponential-deal-worth-up-21-billion-2026-10-27/",
+      "title": "Guidewire to Acquire Hyperexponential for $1.7B+ in Cash",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic",
+      "title": "DeepSeek Open Sources Super-Agent Coding Prototype",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/meta-built-humanoid-prototype-chinese-startup-ramp-robotics-push",
+      "title": "Meta Partners With Chinese Firm Fourier on Prototype Humanoid Robot",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://www.washingtonpost.com/technology/2026/10/30/how-an-obscure-website-became-force-americas-election-information-machine/",
+      "title": "AI Chatbots Rely on Error-Prone Sites for US Midterm Answers",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+      "title": "OpenAI Patches Bug Permitting Code Execution via Shared ChatGPT Links",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://technode.com/2026/10/28/brain-computer-interface-startup-neuroxess-raises-rmb-700-million-in-series-b-funding/",
+      "title": "Brain-Computer Interface Startup NeuroXess Raises ~$105M Series B",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://www.wsj.com/pro/venture-capital/ai-startup-lumaril-wants-to-make-factories-the-best-version-of-themselves-b65ea83d",
+      "title": "Industrial AI Software Provider Lumaril Raises $66M Series A",
+      "sentAt": "2026-11-01"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
+      "title": "Deepgram Acquires Pipecat Creator Daily for Voice AI Expansion",
+      "sentAt": "2026-11-01"
     }
   ]
 }
