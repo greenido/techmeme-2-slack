@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.theverge.com/science/1014984/spacex-tesla-merger-elon-musk-special-committees",
-      "title": "Tesla and SpaceX Form Special Committees to Discuss Merger",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1",
-      "title": "Anthropic IPO Prospectus Shows ~$16.3B in H1 2026 Revenue",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://www.php.net/archive/2026.php",
-      "title": "PHP Fixes Two Critical Unauthenticated RCE Flaws",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/",
-      "title": "Weak eMudhra TLS Certificates Compromised and Blocked",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://www.datacenterdynamics.com/en/news/nvidia-launches-dsx-pod-claims-the-vera-rubin-reference-architecture-will-make-ai-data-centers-more-water-and-energy-efficient/",
-      "title": "Nvidia Unveils Modular DSX POD for Vera Rubin Architecture",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
-      "title": "OpenAI Reports Agents Weakened Misalignment Monitoring",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://www.wsj.com/world/ukraine-starlink-elon-musk-trump-dbc49193",
-      "title": "Musk Ordered Starshield Slowdown in Ukraine, Sources Say",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
-      "title": "OpenAI to Offer AI Models on Google Cloud",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://www.cityam.com/legora-raises-550-in-funding-to-lead-global-expansion/",
-      "title": "Legora Raises $550M Series E at $8.8B Post-Money Valuation",
-      "sentAt": "2026-10-21"
-    },
-    {
-      "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
-      "title": "Claude Generates Protein Minibinders for Scorpion Neurotoxins",
-      "sentAt": "2026-10-21"
-    },
-    {
       "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
       "title": "Meta Reports Q3 Revenue Up 26% YoY to $64.6B",
       "sentAt": "2026-10-22"
@@ -699,6 +649,56 @@
       "url": "https://www.cnbc.com/2026/11/03/brookfield-ai-data-center-yorkshire-drax.html",
       "title": "Brookfield, Drax, and Radiant to Build 100MW UK AI Data Center",
       "sentAt": "2026-11-03"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-04/ai-data-center-boom-is-set-for-upheaval-after-us-election-rout",
+      "title": "Democratic Wins Threaten 50% of AI Data Center Proposals",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://www.ft.com/content/c5a6a738-cd78-4a8e-a814-57a7473ebb9c",
+      "title": "Oracle Scraps ~$7B AI Chip Lease Deal With Tencent",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-04/qualcomm-to-build-equipment-for-spacex-s-us-mobile-phone-network",
+      "title": "Qualcomm and SpaceX Partner on Nationwide 5G Network",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/",
+      "title": "Sequoia Raises ~$10B and Overhauls Fund Structure",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://newsletter.semianalysis.com/p/elon-is-doing-it-again-spacex-will",
+      "title": "SpaceX Lifts 2027 Data Center Capacity Target to ~13GW",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/04/revoluts-valuation-jumps-53-to-115b-in-new-share-sale-as-it-prepares-to-launch-us-bank/",
+      "title": "Revolut Valued at $115B in Secondary Share Sale",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://www.theage.com.au/technology/canva-unveils-mass-job-cuts-in-hardest-moment-of-its-history-20261104-p61b62.html",
+      "title": "Canva Restructures and Cuts 1,271 Jobs",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-04/google-to-spend-15-billion-in-malaysia-data-center-expansion",
+      "title": "Google to Invest $15B in Malaysian Cloud and Data Centers",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-04/tencent-declares-latest-ai-model-ranks-among-china-s-best",
+      "title": "Tencent Releases Hy4 Open-Weight AI Model",
+      "sentAt": "2026-11-04"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-03/apple-releases-ios-27-3-beta-with-watch-ai-listening-tools-health-app-china-ai",
+      "title": "Apple Introduces Apple Intelligence to China in iOS 27.3 Beta",
+      "sentAt": "2026-11-04"
     }
   ]
 }
