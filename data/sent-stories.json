@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
-      "title": "OpenAI Nears Up to $30B Round at $1.25T Valuation",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access",
-      "title": "US Banks Restrict AI Agents Over Unauthorized Actions",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://apnews.com/article/treasury-china-tech-investments-rule-b742c292ff8eb19e6a4c8cf03d4d66b9",
-      "title": "US Proposes Restrictions on Foreign AI and Supercomputing Investments",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-23/sk-data-center-arm-in-talks-to-fund-350-billion-ai-buildout",
-      "title": "SK Hyper Seeks Financing for $350B Data Center Buildout",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-22/spacex-in-talks-to-access-80-000-cell-sites-for-wireless-network",
-      "title": "SpaceX Explores Cellular Network Entry with 80K Sites",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://www.wsj.com/tech/sk-hynix-shelves-plans-for-u-s-listing-of-memory-chip-unit-solidigm-e9670506",
-      "title": "Solidigm Halts US IPO Review for New Chip Fab",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://fortune.com/2026/10/22/venture-giant-andreessen-horowitz-crypto-name-blockchain-fund-rebrands-a16z-frontier/",
-      "title": "a16z Rebrands $2.2B Crypto Fund to Target AI and Robotics",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-23/deepseek-minimax-win-approval-for-global-use-state-media-says",
-      "title": "DeepSeek and MiniMax Approved for Overseas Model Releases",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://www.wsj.com/tech/ai/the-signal-chats-that-cost-openai-researchers-their-jobs-594c5853",
-      "title": "OpenAI Suspected Three Fired Researchers of Leaking Model Designs",
-      "sentAt": "2026-10-23"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1016690/suleyman-microsoft-diagnostic-orchestrator-science-medical-superintelligence",
-      "title": "Microsoft Diagnostic Orchestrator Outperforms Human Doctors",
-      "sentAt": "2026-10-23"
-    },
-    {
       "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
       "title": "Moonshot Unveils Kimi K3.1 Pro Open-Weight Model",
       "sentAt": "2026-10-24"
@@ -699,6 +649,56 @@
       "url": "https://www.bloomberg.com/news/articles/2026-11-05/nintendo-profit-drops-after-memory-crunch-and-lack-of-big-debuts",
       "title": "Rising Switch 2 Costs Drag Nintendo Q2 Profit Down 16%",
       "sentAt": "2026-11-05"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-05/us-stock-futures-diverge-as-chip-selloff-extends-into-second-day",
+      "title": "Nasdaq 100 Drops 6% in Massive AI-Driven Tech Selloff",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.theinformation.com/briefings/anthropics-r-d-speed-may-doubled-due-ai-researchers-find",
+      "title": "Internal AI Tooling Accelerates Anthropic Model Development",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.ft.com/content/8ec923a8-a581-4995-a92c-c08e16bf2e98",
+      "title": "Tesla to Wind Down Cybertruck Output for Cybercab",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.wsj.com/finance/major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5-trillion-valuation-ca965d8b",
+      "title": "Investors Doubt Anthropic Can Reach $1.5T IPO Valuation",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.reuters.com/world/silver-lake-pif-have-held-recent-talks-buy-gaming-software-provider-unity-2026-11-05/",
+      "title": "Consortium Weighs ~$25B Acquisition of Unity",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "title": "Thinking Machines Lab Unveils Inkling 2 Small MoE Model",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/06/technology/microsoft-buyouts.html",
+      "title": "Microsoft Offers Buyouts to 60,000 Workers as AI Priority Shifts",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/nvidia-boosts-chip-tracking-in-southeast-asia-to-fight-smuggling",
+      "title": "Nvidia Tightens Location Tracking for Southeast Asian AI Chips",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
+      "title": "Decade-Old Flaw Exposes Passwordless musl Linux Systems",
+      "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://therecord.media/eu-accuses-tiktok-of-rabbit-hole-DSA-violation",
+      "title": "EU Finds TikTok Recommendation Algorithm Violates DSA",
+      "sentAt": "2026-11-06"
     }
   ]
 }
