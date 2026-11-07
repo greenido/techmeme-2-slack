@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
-      "title": "Moonshot Unveils Kimi K3.1 Pro Open-Weight Model",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
-      "title": "OpenAI Builds Offline World to Train Frontier Models",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/instacart-exploring-sale",
-      "title": "Instacart in Talks to Sell Itself to DoorDash or Uber",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://www.theinformation.com/briefings/aws-sold-capacity-2028-jassy-says",
-      "title": "AWS Cloud Capacity Largely Sold Out for 2027 and 2028",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
-      "title": "Anthropic Analyzes Mythos 5 Deception of GitHub Maintainer",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://www.androidauthority.com/google-personal-intelligence-privacy-3727111/",
-      "title": "Google Updates Privacy Policy for Personal Intelligence Ad Targeting",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://www.reuters.com/world/middle-east/iran-has-detailed-plans-hit-gulf-undersea-cables-if-war-resumes-officials-say-2026-10-23/",
-      "title": "Iran Plans to Target Gulf Undersea Cables if Attacked",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://www.wsj.com/world/europe/ukraines-military-starlink-is-working-again-kyiv-says-7ad2617d",
-      "title": "Ukraine Starshield Service Restored Following Trump Request",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://counterpointresearch.com/en/insights/global-pc-shipments-plunge-21-percent-in-q3-2026",
-      "title": "Global PC Shipments Drop 21% YoY in Q3 to 57M Units",
-      "sentAt": "2026-10-24"
-    },
-    {
-      "url": "https://www.bbc.com/news/articles/cqdjv8xllvyyo",
-      "title": "UK to Invest £100M in AI Biosecurity Lab",
-      "sentAt": "2026-10-24"
-    },
-    {
       "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
       "title": "US Companies See No Payoff from AI Outside Tech",
       "sentAt": "2026-10-25"
@@ -699,6 +649,56 @@
       "url": "https://therecord.media/eu-accuses-tiktok-of-rabbit-hole-DSA-violation",
       "title": "EU Finds TikTok Recommendation Algorithm Violates DSA",
       "sentAt": "2026-11-06"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html",
+      "title": "US Intelligence Links Megaspeed Exec to China Spy Agency Target on Jensen Huang",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value",
+      "title": "OpenAI Closes Roughly $11B in New Funding at $1.25T Valuation",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://www.ft.com/content/314e17df-e7af-4814-b208-70a0557cb452",
+      "title": "Anthropic Targets Pre-Thanksgiving IPO Seeking Up to $100B",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/google-takes-over-wyoming-data-center-that-crusoe-had-pitched",
+      "title": "Google Acquires Crusoe Data Center Site in Wyoming",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+      "title": "Censys Finds 800+ Exposed Copies of Chinese AI Hacking Tool ARTEX",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
+      "title": "Global Tablet Shipments Drop 23% YoY to 32M Units in Q3 2026",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://thenewstack.io/meta-muse-specialized-models/",
+      "title": "Meta Deploys Specialized Models Built with Muse Wonder",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://siliconangle.com/2026/11/05/ocient-raises-100-million-as-agentic-ai-drives-growth-in-large-scale-analytics/",
+      "title": "Ocient Secures $100M Series C for Agentic AI Analytics",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
+      "title": "Shenzhen Clamps Down on Smuggled Chips Ahead of APEC Summit",
+      "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1028813/apple-iphone-duo-optimized-apps",
+      "title": "Apple App Store Surpasses 100K Apps Optimized for iPhone Duo",
+      "sentAt": "2026-11-07"
     }
   ]
 }
