@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
-      "title": "US Companies See No Payoff from AI Outside Tech",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.wsj.com/business/deals/london-stock-exchange-group-agrees-to-buy-octus-from-permira-for-3-5-billion-69361aa5",
-      "title": "LSEG to Acquire Octus for $3.54B in Cash",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-23/blackstone-bet-on-chips-drove-a-debt-boom-that-s-upending-credit",
-      "title": "Chip-Backed Private Credit Heads Toward $1T Market",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/anthropics-margin-openais-opportunity",
-      "title": "Replit Shifts AI Spend to OpenAI in $100M+/Year Deal",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
-      "title": "Block Unveils Dessa Speech-to-Speech AI Model",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-24/meta-unseats-musk-as-tech-villain-for-lula-in-brazil-s-election",
-      "title": "Brazilian Court Orders Meta Not to Interfere in Election",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.axios.com/2026/10/24/ai-ceos-washington-political-liability",
-      "title": "Lawmakers View AI Leaders as Political Liabilities",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.fiercehealthcare.com/finance/baba-nabs-40m-series-backed-firstmark-capital-and-cvs-health-ventures-medicare-ai-care",
-      "title": "Baba Raises $40M Series A for Healthcare AI Tools",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.axios.com/pro/fintech-deals/2026/10/21/capitalos-21-million-spend-management",
-      "title": "CapitalOS Secures $21.9M Series A for Embedded Spend Tools",
-      "sentAt": "2026-10-25"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/23/us/alpha-school-ai-education-parents.html",
-      "title": "Alpha School AI Speed Claims Missed by Half of Students",
-      "sentAt": "2026-10-25"
-    },
-    {
       "url": "https://www.ft.com/content/94e5a0ae-874d-447a-bbfc-cd465a1a7555",
       "title": "Meta Plans to Raise $95B for AI Infrastructure",
       "sentAt": "2026-10-26"
@@ -699,6 +649,56 @@
       "url": "https://www.theverge.com/tech/1028813/apple-iphone-duo-optimized-apps",
       "title": "Apple App Store Surpasses 100K Apps Optimized for iPhone Duo",
       "sentAt": "2026-11-07"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
+      "title": "Apple Pushes to Accelerate Agentic AI Development",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.ft.com/content/41bf5c6a-9735-4f1a-a8e3-2bcccad58ba0",
+      "title": "Anthropic Commits $3.4B for 1.7GW of Power Generators",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
+      "title": "US Moves to Cut Crypto Exchange MEXC from Financial System",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede",
+      "title": "Apple Saves $2.7B in Taxes via Singapore Profits",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.politico.com/news/magazine/2026/11/06/ai-big-tech-2026-midterms-anthropic-openai-01152312",
+      "title": "AI-Safety Coalition Defeats $100M Super PAC in Midterms",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://nousresearch.com/arete",
+      "title": "Nous Research Releases Arete-27B to Counter Model Bias",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.theguardian.com/technology/2026/nov/07/datacentres-southeast-asia",
+      "title": "Southeast Asia Data Center Boom Hits Delays",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61",
+      "title": "Crypto Sector Braces for Inquiries After Midterm Elections",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://technode.com/2026/11/02/robot-training-data-startup-genrobot-ai-raises-100-million-in-series-a-funding/",
+      "title": "GenRobot AI Secures $100M Series A+ for Robot Training",
+      "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/blue-wave-may-stop-musks-texas-data-center-ambitions",
+      "title": "SpaceX Faces Potential Delays on Starbase Supercomputer",
+      "sentAt": "2026-11-08"
     }
   ]
 }
