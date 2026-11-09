@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.ft.com/content/94e5a0ae-874d-447a-bbfc-cd465a1a7555",
-      "title": "Meta Plans to Raise $95B for AI Infrastructure",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://x.com/elonmusk/status/2114434646914068862",
-      "title": "SpaceX Secures $40B GPU Debt as AI Credit Tightens",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-26/microsoft-to-offer-buyouts-to-60-000-workers-in-latest-cost-cut",
-      "title": "Microsoft Offers Buyouts to ~60K Employees",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
-      "title": "Anthropic Co-Founders Outline Transformative AI Potential",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/23/opinion/ai-computer-chips-semiconductor-arizona-industry.html",
-      "title": "TSMC Phoenix Plant Matches Taiwan Output Rates",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.washingtonpost.com/technology/2026/10/26/researchers-cybersecurity-start-up-cathedral-got-inside-anthropic/",
-      "title": "Cathedral Breaches Anthropic Systems in Testing Program",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-26/autonomous-construction-firm-bedrock-hits-4-1-billion-valuation",
-      "title": "Bedrock Robotics Reaches $4.1B Valuation in Series C",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
-      "title": "Apple Introduces Redesigned iPad Mini for $699+",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.ifixit.com/News/119895/iphone-duo-teardown",
-      "title": "iPhone Duo Teardown Shows Hinge and Screen Issues",
-      "sentAt": "2026-10-26"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/25/arts/music/anthropic-lawsuit-elvis-presley-songs.html",
-      "title": "Anthropic Sued for $41M+ Over Elvis Presley Songs",
-      "sentAt": "2026-10-26"
-    },
-    {
       "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
       "title": "OpenAI Announces Scientific Breakthroughs in Math and Physics",
       "sentAt": "2026-10-27"
@@ -699,6 +649,56 @@
       "url": "https://www.theinformation.com/articles/blue-wave-may-stop-musks-texas-data-center-ambitions",
       "title": "SpaceX Faces Potential Delays on Starbase Supercomputer",
       "sentAt": "2026-11-08"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-08/nvidia-board-to-probe-spying-case-after-ceo-jensen-huang-admits-infidelity",
+      "title": "Nvidia Board Probes Foreign Spy Plot Involving Jensen Huang",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "title": "Anthropic Unveils Mythos 5.2 and Fable 5.2 Models",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/google-escalates-nvidia-rivalry-with-new-versions-of-its-tpu-systems",
+      "title": "Google Unveils Specialized 8tx and 8i Max TPUs for 2027",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/coinbase-gets-final-regulatory-stamp-for-trust-bank-charter",
+      "title": "OCC Grants Coinbase Full Chartered Trust Bank Approval",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.cbsnews.com/news/donald-trump-2026-post-midterm-elections-interview-60-minutes-transcript/",
+      "title": "Trump Comments on AI Safety Guardrails and China",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+      "title": "Meta Releases Lightweight Muse Ember AI Model",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.reuters.com/world/french-officials-suspect-iran-is-behind-refrigerator-hacks-sources-say-2026-11-09/",
+      "title": "France Links October Cooling Cyberattacks to Iran",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership",
+      "title": "Disney and Adobe Ink Multiyear Generative AI Partnership",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/binance-hackers-made-memecoins-to-launder-stolen-crypto",
+      "title": "Binance Hackers Use NEAR Memecoins to Launder Stolen Funds",
+      "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1029627/meta-instagram-ai-age-assurance-global-expansion",
+      "title": "Meta Expands Instagram Teen Account AI Age Estimation Globally",
+      "sentAt": "2026-11-09"
     }
   ]
 }
