@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
-      "title": "OpenAI Announces Scientific Breakthroughs in Math and Physics",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/anthropics-85-margin-reality-check-skeptics",
-      "title": "Anthropic S-1 Shows 85% Gross Margin in H1",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f",
-      "title": "Broadcom Secures Bank Backing for $63B Anthropic Debt Deal",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.wsj.com/tech/ai/nvidia-to-invest-3-billion-in-metas-equity-offering-as-they-expand-ai-partnership-e8d3850a",
-      "title": "Nvidia Expands Meta Partnership with $3B Investment",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
-      "title": "Apple Unveils 14\" MacBook Pro with M6 Chip",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-27/disruptive-closes-10-billion-megafund-for-ai-defense-startups",
-      "title": "Disruptive Raises $10B for AI, Defense, and Software",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-27/anduril-and-qualcomm-plan-to-build-laptop-with-us-supply-chain",
-      "title": "Anduril and Qualcomm Unveil BlueChip Defense Laptops",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.nbcnews.com/tech/security/grand-theft-ai-highway-thieves-are-stealing-millions-data-center-gear-rcna603733",
-      "title": "$100M+ in US Data Center Freight Stolen Since June",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.reuters.com/business/media-telecom/alleged-israeli-spy-company-heavily-targeted-starlink-users-sources-say-2026-10-27/",
-      "title": "Discover-Tech Heavily Targeted Starlink Users in 100+ Countries",
-      "sentAt": "2026-10-27"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
-      "title": "Apple Adds AI Assistant and MCP Support to Productivity Apps",
-      "sentAt": "2026-10-27"
-    },
-    {
       "url": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html",
       "title": "SK Hynix Reports Record Q3 Profit Up 632% to ~$62.76B",
       "sentAt": "2026-10-28"
@@ -699,6 +649,56 @@
       "url": "https://www.theverge.com/tech/1029627/meta-instagram-ai-age-assurance-global-expansion",
       "title": "Meta Expands Instagram Teen Account AI Age Estimation Globally",
       "sentAt": "2026-11-09"
+    },
+    {
+      "url": "https://www.anthropic.com/news/roadshow-launch",
+      "title": "Anthropic Launches Nasdaq IPO Roadshow to Sell 825M Shares",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/jensen-huangs-yearslong-ties-alice-huang-enabled-nvidia-chip-sales-china",
+      "title": "Jensen Huang Relationship Linked to $7.5B+ in China Chip Shipments",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.reuters.com/legal/transactional/ai-training-startup-mercor-valued-20-billion-latest-funding-round-2026-11-10/",
+      "title": "AI Training Startup Mercor Secures $750M at $20B Valuation",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.theinformation.com/briefings/softbank-writes-3-7-billion-advance-payments-data-center-projects",
+      "title": "SoftBank Writes Off $3.7B in Data Center Equipment Advances",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-10/moonshot-rents-nvidia-s-top-ai-chips-in-china-documents-show",
+      "title": "Moonshot Rented Nvidia B300 Servers in Possible US Rules Breach",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
+      "title": "DeepMind AlphaProof Code Formally Verifies Signal Protocol",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "title": "Google Releases Gemini 4 Carbon to Paid API and AI Ultra Users",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://9to5mac.com/2026/11/09/apple-launches-50-intelligence-usage-packs-for-select-ai-features/",
+      "title": "Apple Rolls Out $50 Add-On Packs for AI Feature Overage",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.reuters.com/world/white-house-nominates-palantirs-losapio-lead-homeland-securitys-cyber-agency-2026-11-09/",
+      "title": "White House Nominates Palantir CISO Michael LoSapio to Lead CISA",
+      "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-10/ibm-to-end-immigration-sponsorship-for-roles-in-biggest-unit",
+      "title": "IBM Halts H-1B and Green Card Sponsorships in Consulting Arm",
+      "sentAt": "2026-11-10"
     }
   ]
 }
