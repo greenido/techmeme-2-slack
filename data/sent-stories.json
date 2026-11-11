@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html",
-      "title": "SK Hynix Reports Record Q3 Profit Up 632% to ~$62.76B",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/10/28/jio-ipo-india-listing-.html",
-      "title": "Jio Platforms Surges 21.4% in Record ~$3.2B IPO Debut",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/27/well/ai-chatgpt-medication-epilepsy-death.html",
-      "title": "OpenAI Sued Over GPT-4o Advice Leading to User Death",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.anthropic.com/research/early-progress-drug-development",
-      "title": "Anthropic Expands Into Drug Development and Acquires Mithril",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-28/ai-cybersecurity-startup-upwind-raises-at-3-8-billion-value",
-      "title": "Upwind Security Raises $400M at a $3.8B Valuation",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-28/amazon-unveils-new-echo-show-16-alexa-speakers-smart-clock-and-photo-frame",
-      "title": "Amazon Debuts Echo Show 16, New Hardware, and Price Hikes",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.coindesk.com/policy/2026/10/27/u-s-agency-hits-utah-with-lawsuit-to-shield-kalshi-s-ability-to-offer-betting-there",
-      "title": "CFTC Challenges Utah Over Prediction Market Jurisdiction",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/foundry-raises-100-million-autonomous-factories",
-      "title": "Foundry Secures $100M Series A for AI-Powered Factories",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.reuters.com/technology/hacker-trying-breach-us-federal-election-commission-system-email-shows-2026-10-27/",
-      "title": "Cyberattack Forces FEC Filing System Offline",
-      "sentAt": "2026-10-28"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/27/technology/proposition-40-california-billionaire-tax.html",
-      "title": "Billionaires Amass $333M+ to Oppose California Wealth Tax",
-      "sentAt": "2026-10-28"
-    },
-    {
       "url": "https://www.ft.com/content/eb386156-5bf9-4edd-80f2-803fdee1e33d",
       "title": "Alphabet Loses $500B in Market Cap After AI Spending Drives Negative Cash Flow",
       "sentAt": "2026-10-29"
@@ -699,6 +649,56 @@
       "url": "https://www.bloomberg.com/news/articles/2026-11-10/ibm-to-end-immigration-sponsorship-for-roles-in-biggest-unit",
       "title": "IBM Halts H-1B and Green Card Sponsorships in Consulting Arm",
       "sentAt": "2026-11-10"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html",
+      "title": "CoreWeave Q3 Revenue Surges 168% YoY to $3.66B",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/applied-intuition-in-talks-to-raise-1-5-billion-at-30-billion-value",
+      "title": "Applied Intuition in Talks to Raise $1.5B at ~$30B Valuation",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/eu-targets-social-media-addiction-and-online-dark-patterns",
+      "title": "EU Introduces Digital Fairness Act to Ban Dark Patterns",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
+      "title": "Google DeepMind Releases AlphaGenome 2 for DNA Research",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+      "title": "Grok Build Leaks Sensitive Data from Over 35,000 Apps",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.reuters.com/world/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-2026-11-11/",
+      "title": "Blacklisted Chinese University Obtains Nvidia H200 AI Chips",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.tomshardware.com/pc-components/cpus/amd-zen-6-epyc-venice-deep-dive-and-benchmarking-dual-epyc-9996-with-1-024-threads-delivers-up-to-93-percent-performance-gain-gen-on-gen-9686f-outclasses-nvidias-vera",
+      "title": "AMD Zen 6 EPYC Venice Outperforms Predecessors on TSMC N2P",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/utah-based-startup-raises-500-million-for-modular-ai-data-center",
+      "title": "Torus Raises $500M Series C for Modular AI Data Centers",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/nintendo-sold-5-2-million-copies-of-zelda-remake-in-four-days",
+      "title": "Nintendo Sells 5.2M Zelda Remake Copies in Four Days",
+      "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/bytedance-prepares-muse-like-agent-in-push-to-close-ai-gap",
+      "title": "ByteDance Targets AI Frontier by 2029-2030 with New Assistant",
+      "sentAt": "2026-11-11"
     }
   ]
 }
