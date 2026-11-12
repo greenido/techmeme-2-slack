@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.ft.com/content/eb386156-5bf9-4edd-80f2-803fdee1e33d",
-      "title": "Alphabet Loses $500B in Market Cap After AI Spending Drives Negative Cash Flow",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.reuters.com/legal/transactional/doordash-strikes-17-billion-deal-us-rival-instacart-bets-grocery-delivery-2026-10-29/",
-      "title": "DoorDash to Acquire Instacart in ~$17B Delivery Mega-Merger",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
-      "title": "Microsoft Beats Q1 Targets as Azure Surges 48%",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-jensen-huang-trump.html",
-      "title": "US Officials Suspect Megaspeed Exec Alice Huang Was Chinese Asset",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.wired.com/story/massive-leak-exposes-41000-homeland-security-workers-including-undercover-ice-agents/",
-      "title": "Breach of DHS Okta System Exposes Data of 41,000+ Personnel",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.reuters.com/world/us-doj-is-inquiring-about-nvidias-purchase-hugging-face-sources-say-2026-10-28/",
-      "title": "US DOJ Probes Antitrust Impact of Nvidia's Hugging Face Deal",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/10/29/business/dealbook/its-investors-say-kalshi-is-worth-40-billion-is-an-ipo-next.html",
-      "title": "Kalshi Secures $1B at a $40B Valuation Ahead of Planned IPO",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-29/canada-nvidia-back-cohere-in-round-at-over-20-billion-value",
-      "title": "Cohere Begins First Close of Major Funding Round at $20.5B Valuation",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.zdnet.com/innovation/mistral-large-4-weights-release/",
-      "title": "Mistral Releases Weights for Mistral Large 4",
-      "sentAt": "2026-10-29"
-    },
-    {
-      "url": "https://www.wsj.com/tech/apple-iphone-memory-chips-ai-c0084cc9",
-      "title": "AI Hyperscaler Demand Quintuples Flash Memory Prices",
-      "sentAt": "2026-10-29"
-    },
-    {
       "url": "https://www.reuters.com/legal/government/blockchain-analysis-firm-trm-says-north-korea-behind-binance-crypto-theft-2026-10-30/",
       "title": "TRM Labs Links ~$6.36B Binance Hack to North Korean Group",
       "sentAt": "2026-10-30"
@@ -699,6 +649,41 @@
       "url": "https://www.bloomberg.com/news/articles/2026-11-11/bytedance-prepares-muse-like-agent-in-push-to-close-ai-gap",
       "title": "ByteDance Targets AI Frontier by 2029-2030 with New Assistant",
       "sentAt": "2026-11-11"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "title": "Jensen Huang Resigns as Nvidia CEO and Board Member",
+      "sentAt": "2026-11-12"
+    },
+    {
+      "url": "https://www.semafor.com/article/11/12/2026/us-doj-probes-nvidia",
+      "title": "US DOJ Probes Threaten to Sweep Up Nvidia",
+      "sentAt": "2026-11-12"
+    },
+    {
+      "url": "https://www.wsj.com/business/earnings/nvidias-disappearing-singapore-sales-deepen-mystery-around-megaspeed-7d483180",
+      "title": "Nvidia Ceased Reporting Singapore Revenue After Scrutiny",
+      "sentAt": "2026-11-12"
+    },
+    {
+      "url": "https://www.ft.com/content/6cd890f1-2e4d-468a-807f-529f45e1678e",
+      "title": "Zelenskyy Says Starshield Faced Systematic Speed Restrictions",
+      "sentAt": "2026-11-12"
+    },
+    {
+      "url": "https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/",
+      "title": "Google and Samsung Open Android XR Glasses Preorders",
+      "sentAt": "2026-11-12"
+    },
+    {
+      "url": "https://theintercept.com/2026/11/11/openai-ukraine-russia-prank-security/",
+      "title": "Russian Pranksters Trick OpenAI Natsec Executives",
+      "sentAt": "2026-11-12"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit",
+      "title": "Apple HomeView Reviews Highlight Siri AI and Fast Controls",
+      "sentAt": "2026-11-12"
     }
   ]
 }
