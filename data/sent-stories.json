@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.reuters.com/legal/government/blockchain-analysis-firm-trm-says-north-korea-behind-binance-crypto-theft-2026-10-30/",
-      "title": "TRM Labs Links ~$6.36B Binance Hack to North Korean Group",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.businesswire.com/news/home/20261028373648/en/",
-      "title": "Amazon Misses Q3 Revenue Estimates as AWS Grows 39.3%",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/10/29/intel-intc-q3-earnings-report-2026-.html",
-      "title": "Intel Drops 20%+ After Soft Q4 Outlook Offsets Q3 Growth",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/behind-deepseeks-16-billion-funding-chinese-tech-titans-state-players",
-      "title": "DeepSeek Expands Round Over Rising Blackwell Black Market Costs",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/10/29/reddit-rddt-q3-2026.html",
-      "title": "Reddit Drops 25%+ on Soft Q4 Forecast Despite 53% Revenue Growth",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-29/nyse-owner-plans-market-for-hyperliquid-perpetual-futures-in-us",
-      "title": "NYSE Owner ICE Partners With Trade.xyz for Perpetual Markets",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.nbcnews.com/tech/security/china-linked-hackers-used-ai-target-200-organizations-crowdstrike-says-rcna606343",
-      "title": "CrowdStrike Details AI-Driven Attacks by China-Linked Hackers",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.reuters.com/world/meta-tiktok-x-lose-legal-challenge-against-uk-watchdog-over-online-safety-data-2026-10-30/",
-      "title": "UK Court Rejects Tech Giants' Challenge to Online Safety Act Demands",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-29/coinbase-returns-to-profitability-while-posting-another-revenue-drop",
-      "title": "Coinbase Turns First Profit in a Year Despite 35% Revenue Slide",
-      "sentAt": "2026-10-30"
-    },
-    {
-      "url": "https://www.reuters.com/business/polymarket-reports-major-outage-suspends-trading-actions-2026-10-29/",
-      "title": "Polymarket Restores Trading Following Third-Party Security Incident",
-      "sentAt": "2026-10-30"
-    },
-    {
       "url": "https://www.ft.com/content/7a3ad950-1b3b-4d9e-8c15-65a61ae6180f",
       "title": "OpenAI Lowers Target to Seek ~$20B at a $1.25T Valuation",
       "sentAt": "2026-10-31"
@@ -684,6 +634,56 @@
       "url": "https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit",
       "title": "Apple HomeView Reviews Highlight Siri AI and Fast Controls",
       "sentAt": "2026-11-12"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/spacex-and-tesla-talks-on-record-merger-are-said-to-progress",
+      "title": "SpaceX and Tesla Progress Toward Potential Merger Deal",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://www.ft.com/content/2a64f698-46dd-4178-a3f4-4c5f4c0a0926",
+      "title": "Nvidia Approaches Arm CEO Rene Haas to Succeed Jensen Huang",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html",
+      "title": "OpenAI Launches ChatGPT Wallet for Autonomous Agent Purchases",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://cnn.com/2026/11/12/politics/alice-huang-us-intel-jensen-huang-nvidia",
+      "title": "US Officials Disagree Over Chinese Espionage Allegations",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://unemploymentlabs.com/checkpoint-forensics",
+      "title": "Chinese AI Models Show Evidence of Restricted Blackwell GPUs",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/anthropic-ipo-share-orders-from-china-are-said-to-be-rebuffed",
+      "title": "Anthropic Bars Chinese and Hong Kong Investors from Its IPO",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/us-details-2-7-billion-freeze-after-north-korea-s-binance-hack",
+      "title": "DOJ Secures Authorization to Seize $1.2B in Stolen Crypto",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://www.wsj.com/pro/venture-capital/this-startup-raised-1-billion-to-build-ai-faster-and-with-fewer-humans-f7f07a59",
+      "title": "AI R&D Startup Mirendil Raises $1B Series A",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/samsung-is-in-talks-to-acquire-data-center-cooling-firm-modine",
+      "title": "Samsung in Talks to Acquire Cooling Firm Modine Manufacturing",
+      "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://x.com/artificialanlys/status/2120941511223185722",
+      "title": "Gemini 4 Hydrogen Rivals Top Models at Lower Cost",
+      "sentAt": "2026-11-13"
     }
   ]
 }
