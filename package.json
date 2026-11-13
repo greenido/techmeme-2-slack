@@ -14,7 +14,7 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@google/genai": "^2.28.0",
+    "@google/genai": "^2.32.0",
     "@slack/web-api": "^8.2.0",
     "cheerio": "^1.0.0-rc.12"
   }
