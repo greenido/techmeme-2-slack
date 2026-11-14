@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.ft.com/content/7a3ad950-1b3b-4d9e-8c15-65a61ae6180f",
-      "title": "OpenAI Lowers Target to Seek ~$20B at a $1.25T Valuation",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-10-30/big-tech-holds-3-trillion-in-spending-commitments-for-ai-boom",
-      "title": "Big Tech Commits $3T+ to AI Spending",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://www.wsj.com/finance/the-new-bottleneck-in-americas-ai-build-out-a-shortage-of-cheap-money-0c14c84d",
-      "title": "Neoclouds Effectively Shut Out of Bond Market",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/10/30/meta-outlook-to-revised-to-negative-by-sp-after-cash-flow-negative.html",
-      "title": "S&P Downgrades Meta Outlook to Negative Over AI Capex",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://x.com/felixrieseberg/status/2116170451466543578",
-      "title": "Tampered Claude Code Extension Published on Cursor Marketplace",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
-      "title": "Tech Giants Adopt Universal Standard for AI Scraping Opt-Outs",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://www.wired.com/story/i-spent-30-minutes-with-apples-ceo-now-i-know-why-john-ternus-got-the-job/",
-      "title": "John Ternus Outlines Apple's Pragmatic AI Stance",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc/",
-      "title": "Arizona AI Data Centers Face Growing Backlash Over Water",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/openai-ceo-says-its-quite-terrible-for-your-pc-to-have-ram-sam-altman-says-data-centers-offer-better-utilization",
-      "title": "Sam Altman Weighs In on Supply-Constrained DRAM Allocation",
-      "sentAt": "2026-10-31"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
-      "title": "Google's Suncatcher Data Center Satellite Goes Online",
-      "sentAt": "2026-10-31"
-    },
-    {
       "url": "https://www.reuters.com/legal/government/binance-resume-withdrawals-after-recovering-bulk-6-billion-stolen-funds-2026-11-01/",
       "title": "Binance Resumes Withdrawals After Covering 95% of $6.3B Hack",
       "sentAt": "2026-11-01"
@@ -684,6 +634,56 @@
       "url": "https://x.com/artificialanlys/status/2120941511223185722",
       "title": "Gemini 4 Hydrogen Rivals Top Models at Lower Cost",
       "sentAt": "2026-11-13"
+    },
+    {
+      "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/",
+      "title": "FAA lifts nationwide ground stop caused by network update crash",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages",
+      "title": "Microsoft restores Microsoft 365 following widespread global outage",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/",
+      "title": "Italy fines Meta €805M over unauthorized Android photo and video access",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/tesla-says-it-s-starting-to-sell-cybercabs-for-personal-use",
+      "title": "Tesla opens Cybercab orders to select customers for personal use",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/ex-nvidia-ceo-misled-top-lawyer-affair-with-chinese-businesswoman-sources-say-2026-11-14/",
+      "title": "Jensen Huang reportedly misled Nvidia leaders regarding Alice Huang relationship",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.mobihealthnews.com/news/charta-health-raises-55m-launches-new-ai-coding-tools",
+      "title": "Charta Health secures $55M Series B for AI medical workflow automation",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.axios.com/pro/all-deals/2026/11/10/private-equity-due-diligence-ai-operand-31m",
+      "title": "Operand raises $31M at $220M valuation for PE due diligence AI",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.ft.com/content/0ef40ac9-6d01-428f-98c8-a52bf5b9a787",
+      "title": "SBF relinquished Anthropic stake now worth ~$37B for ~$1.3B",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.ft.com/content/a1bcce14-c326-488f-b736-6e831b0fb6cf",
+      "title": "Swiss city of Lugano pushes to reinvent itself as a crypto hub",
+      "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.dwarkesh.com/p/rsi",
+      "title": "AI progress in math signals rapid acceleration in AI research capabilities",
+      "sentAt": "2026-11-14"
     }
   ]
 }
