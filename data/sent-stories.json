@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.reuters.com/legal/government/binance-resume-withdrawals-after-recovering-bulk-6-billion-stolen-funds-2026-11-01/",
-      "title": "Binance Resumes Withdrawals After Covering 95% of $6.3B Hack",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f",
-      "title": "Default Insurance Costs for Hyperscalers Reach Highest Level Since 2021",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://www.reuters.com/legal/litigation/guidewire-buy-uk-insurance-ai-firm-hyperexponential-deal-worth-up-21-billion-2026-10-27/",
-      "title": "Guidewire to Acquire Hyperexponential for $1.7B+ in Cash",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic",
-      "title": "DeepSeek Open Sources Super-Agent Coding Prototype",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/meta-built-humanoid-prototype-chinese-startup-ramp-robotics-push",
-      "title": "Meta Partners With Chinese Firm Fourier on Prototype Humanoid Robot",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://www.washingtonpost.com/technology/2026/10/30/how-an-obscure-website-became-force-americas-election-information-machine/",
-      "title": "AI Chatbots Rely on Error-Prone Sites for US Midterm Answers",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
-      "title": "OpenAI Patches Bug Permitting Code Execution via Shared ChatGPT Links",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://technode.com/2026/10/28/brain-computer-interface-startup-neuroxess-raises-rmb-700-million-in-series-b-funding/",
-      "title": "Brain-Computer Interface Startup NeuroXess Raises ~$105M Series B",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://www.wsj.com/pro/venture-capital/ai-startup-lumaril-wants-to-make-factories-the-best-version-of-themselves-b65ea83d",
-      "title": "Industrial AI Software Provider Lumaril Raises $66M Series A",
-      "sentAt": "2026-11-01"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
-      "title": "Deepgram Acquires Pipecat Creator Daily for Voice AI Expansion",
-      "sentAt": "2026-11-01"
-    },
-    {
       "url": "https://www.bloomberg.com/news/articles/2026-11-02/anthropic-revenue-hits-nearly-17-billion-before-blockbuster-ipo",
       "title": "Anthropic S-1 Shows Q3 Revenue Up 12x to Nearly $17B and $23.3B Net Loss",
       "sentAt": "2026-11-02"
@@ -684,6 +634,56 @@
       "url": "https://www.dwarkesh.com/p/rsi",
       "title": "AI progress in math signals rapid acceleration in AI research capabilities",
       "sentAt": "2026-11-14"
+    },
+    {
+      "url": "https://www.wsj.com/tech/jensen-huang-backdoor-ai-data-centers-a5e4499d",
+      "title": "Nvidia Sanctions Gap Enabled Chip Access",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-15/apple-siri-ai-app-integrations-power-smart-glasses-iphone-duo-2-face-id-plan",
+      "title": "Apple Eyes 2027 for Smart Glasses Debut",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://asia.nikkei.com/editor-s-picks/interview/tsmc-seeks-to-back-next-chip-titan-with-new-investment-arm",
+      "title": "TSMC Launches $500M Chip Startup Fund",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/tech-giants-face-more-grid-cost-pressure-on-democratic-sweep",
+      "title": "Applied Digital Seeks Billions in Power Guarantees",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://fintech.global/2026/11/13/databento-hits-1-1bn-valuation-with-100m-series-c/",
+      "title": "Databento Secures $100M at $1.1B Valuation",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://www.upstartsmedia.com/p/nidus-ai-robotics-raises-30m",
+      "title": "Nidus Raises $30M for Defense Manufacturing AI",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://tech.eu/2026/11/12/nebuly-raises-21m-series-a-to-turn-ai-investments-into-measurable-results/",
+      "title": "Nebuly Raises $21M Series A for AI Agent ROI",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://nypost.com/2026/11/14/business/how-ex-nvidia-ceo-jensen-huang-threw-tantrums-in-the-office-dressed-down-tech-execs-i-hope-you-die/",
+      "title": "Insiders Detail Jensen Huang Office Tantrums",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/stablecoins-are-becoming-crypto-s-killer-app-across-latin-america",
+      "title": "USD Stablecoin Use Surges in Latin America",
+      "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://variety.com/2026/music/features/inside-first-ai-music-awards-sonic-intelligence-academy-1236947847/",
+      "title": "First AI Music Awards Hampered by Technical Issues",
+      "sentAt": "2026-11-15"
     }
   ]
 }
