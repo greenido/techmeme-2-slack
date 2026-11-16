@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-02/anthropic-revenue-hits-nearly-17-billion-before-blockbuster-ipo",
-      "title": "Anthropic S-1 Shows Q3 Revenue Up 12x to Nearly $17B and $23.3B Net Loss",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.reuters.com/legal/transactional/marvell-buy-lumentum-115-billion-deal-ai-data-center-bet-2026-11-02/",
-      "title": "Marvell to Acquire Optical Components Maker Lumentum for $115B",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.wsj.com/finance/oracle-looks-to-raise-20-billion-to-fund-ai-ambitions-582c814f",
-      "title": "Oracle Moves to Raise $20B via Stock and Bonds for AI Buildout",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-02/belgian-swedish-supermarkets-report-new-suspected-freezer-hack",
-      "title": "Supermarkets Across Multiple European Nations Suffer Refrigeration Cyberattacks",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.washingtonpost.com/technology/2026/11/02/inside-elon-musks-plan-upend-wireless-phone-industry/",
-      "title": "SpaceX in Talks With EchoStar to Buy Boost Mobile or Access Network",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities",
-      "title": "SemiAnalysis Launches GDPx Benchmark for Frontier AI Models",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/inside-apples-slog-create-first-robot",
-      "title": "Apple Developing Tabletop Robot With Arm and Display for ~$1,000",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.reuters.com/business/finance/alphabet-kicks-off-6-billion-bond-sale-tests-appetite-tech-debt-2026-11-02/",
-      "title": "Alphabet Sells €6B in Euro Bonds Drawing Over €17B in Demand",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.forbes.com/sites/johnwerner/2026/11/02/tutor-intelligence-why-not-just-teach-the-robots-ourselves/",
-      "title": "Warehouse Robotics Startup Tutor Raises $75M Series B Led by a16z",
-      "sentAt": "2026-11-02"
-    },
-    {
-      "url": "https://www.reuters.com/technology/putin-orders-private-data-centres-set-aside-10-capacity-support-it-2026-11-02/",
-      "title": "Russia Orders Non-State Data Centers to Reserve 10% of Capacity for State IT",
-      "sentAt": "2026-11-02"
-    },
-    {
       "url": "https://www.businesswire.com/news/home/20261102433950/en/",
       "title": "Apple Posts Q4 Revenue of $114.48B in Ternus' First Earnings Report",
       "sentAt": "2026-11-03"
@@ -684,6 +634,56 @@
       "url": "https://variety.com/2026/music/features/inside-first-ai-music-awards-sonic-intelligence-academy-1236947847/",
       "title": "First AI Music Awards Hampered by Technical Issues",
       "sentAt": "2026-11-15"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/16/nvidia-ceo-jensen-huang.html",
+      "title": "Nvidia Board Rules Out Jensen Huang Return as CEO",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/us-moves-to-limit-remote-access-to-advanced-ai-chips",
+      "title": "US Restricts Remote AI Chip Access in Five Countries",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://qwen.ai/blog?id=qwen4-max",
+      "title": "Alibaba Releases Flagship Qwen4-Max MoE Model",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://www.wsj.com/tech/ai/trump-administration-to-name-nvidia-among-ai-national-champions-c9284344",
+      "title": "US Plans AI National Champions Group for Global Export",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://www.politico.com/news/2026/11/16/bonta-sues-openai-over-rogue-ai-hack-of-hugging-face-01166953",
+      "title": "California AG Sues OpenAI Over Hugging Face Incident",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://siliconangle.com/2026/11/16/google-says-an-ai-framework-turned-security-patches-into-exploits-with-no-human-in-the-loop/",
+      "title": "Attackers Deploy Autonomous AI to Create Exploits from Patches",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/16/business/insurance-ai-debt.html",
+      "title": "US Life Insurers Amass $85.2B in AI Debt",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://www.ft.com/content/26e52d2a-b259-4283-af83-e2c75d67a2fc",
+      "title": "Plural Closes €1B Venture Fund to Back European Startups",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://www.wsj.com/pro/cybersecurity/cyber-startup-corma-raises-125-million-for-defensive-ai-agents-f30a4387",
+      "title": "Corma Raises $125M Series A for Defense AI Agents",
+      "sentAt": "2026-11-16"
+    },
+    {
+      "url": "https://www.wired.com/story/data-centers-use-more-electricity-than-michigan/",
+      "title": "Study: 403 US Data Centers Equal Michigan's Annual Power Use",
+      "sentAt": "2026-11-16"
     }
   ]
 }
