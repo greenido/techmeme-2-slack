@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-04/ai-data-center-boom-is-set-for-upheaval-after-us-election-rout",
-      "title": "Democratic Wins Threaten 50% of AI Data Center Proposals",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://www.ft.com/content/c5a6a738-cd78-4a8e-a814-57a7473ebb9c",
-      "title": "Oracle Scraps ~$7B AI Chip Lease Deal With Tencent",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-04/qualcomm-to-build-equipment-for-spacex-s-us-mobile-phone-network",
-      "title": "Qualcomm and SpaceX Partner on Nationwide 5G Network",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/",
-      "title": "Sequoia Raises ~$10B and Overhauls Fund Structure",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://newsletter.semianalysis.com/p/elon-is-doing-it-again-spacex-will",
-      "title": "SpaceX Lifts 2027 Data Center Capacity Target to ~13GW",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/04/revoluts-valuation-jumps-53-to-115b-in-new-share-sale-as-it-prepares-to-launch-us-bank/",
-      "title": "Revolut Valued at $115B in Secondary Share Sale",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://www.theage.com.au/technology/canva-unveils-mass-job-cuts-in-hardest-moment-of-its-history-20261104-p61b62.html",
-      "title": "Canva Restructures and Cuts 1,271 Jobs",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-04/google-to-spend-15-billion-in-malaysia-data-center-expansion",
-      "title": "Google to Invest $15B in Malaysian Cloud and Data Centers",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-04/tencent-declares-latest-ai-model-ranks-among-china-s-best",
-      "title": "Tencent Releases Hy4 Open-Weight AI Model",
-      "sentAt": "2026-11-04"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-03/apple-releases-ios-27-3-beta-with-watch-ai-listening-tools-health-app-china-ai",
-      "title": "Apple Introduces Apple Intelligence to China in iOS 27.3 Beta",
-      "sentAt": "2026-11-04"
-    },
-    {
       "url": "https://www.bloomberg.com/news/articles/2026-11-05/openai-to-change-how-it-handles-data-center-efforts-after-outcry",
       "title": "OpenAI Pledges Major Overhaul for Data Center Deals",
       "sentAt": "2026-11-05"
@@ -684,6 +634,56 @@
       "url": "https://www.bloomberg.com/news/articles/2026-11-17/top-ai-models-regularly-identify-civilians-as-military-targets-in-tests",
       "title": "AI Models Target Civilians and Schools in Combat Simulations",
       "sentAt": "2026-11-17"
+    },
+    {
+      "url": "https://www.washingtonsun.com/technology/bank-ceos-nsa-tell-congress-ai-driven-patches-behind-outages",
+      "title": "AI-Driven Patching Rush Triggered Recent System Outages",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/nvidia-introduced-alibaba-alice-huang-workaround-u-s-export-controls",
+      "title": "Nvidia Connected Alibaba With Alleged Chinese Spy",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
+      "title": "Anthropic Weighs Upsizing IPO Above $80 per Share",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.semafor.com/article/11/17/2026/some-nvidia-directors-push-to-bring-huang-back-despite-board-opposition",
+      "title": "Nvidia Board Faction Pushes for Jensen Huang's Return",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/microsoft-nears-500-million-deal-sell-ai-bytedance-irking-openai",
+      "title": "ByteDance in Talks for ~$500M Azure Deal for OpenAI Models",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/trump-administration-weighs-forcing-us-firms-disclose-chinese-ai-use-2026-11-18/",
+      "title": "US Considers Mandating Disclosure of Chinese AI Models",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-11-18/gta-6-review-rockstar-games-latest-is-a-masterpiece",
+      "title": "GTA VI Debuts to Critical Acclaim as a Technical Masterpiece",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.forbes.com/sites/thomasbrewster/2026/11/18/ai-finds-major-web-security-flaws/",
+      "title": "AI Models Detect Remote Code Execution Flaws in Nginx",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.theblock.co/news/deals/2026-11-18-variational-raises-110-million-at-1-5-billion-valuation-to-expand-onchain-derivatives-trading-443445",
+      "title": "Variational Secures $110M Series B at $1.5B Valuation",
+      "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.ft.com/content/5168b3e9-75d0-4be0-9ccd-d327d6b16c05",
+      "title": "KPMG Deploys 100+ AI Agents to Audit FTSE 250 Company",
+      "sentAt": "2026-11-18"
     }
   ]
 }
