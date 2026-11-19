@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-05/openai-to-change-how-it-handles-data-center-efforts-after-outcry",
-      "title": "OpenAI Pledges Major Overhaul for Data Center Deals",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.ft.com/content/f10c3e24-45e4-47ff-bde2-24a8de90aec4",
-      "title": "China Blocks SoftBank's $5.4B ABB Robotics Acquisition",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-05/shield-ai-to-hit-28-8-billion-value-with-5-3-billion-radar-acquisition",
-      "title": "Shield AI Raises $2.5B at a $28.8B Valuation",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-05/microsoft-sours-on-neoclouds-iren-nebius-nscale-on-delays-costs",
-      "title": "Microsoft Reassesses Risky Data Center and Neocloud Deals",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch",
-      "title": "OpenAI Launches GPT-6 Cyber Vulnerability Model",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1026716/amazon-uber-eats-prime-restaurant-delivery-partnership",
-      "title": "Amazon Names Uber Eats Official US Prime Delivery Partner",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-04/apple-cuts-internal-ai-usage-budgets-in-move-to-reduce-spending",
-      "title": "Apple Cuts Internal AI Spending Budgets for Engineers",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.reuters.com/world/us/google-meta-tiktok-sue-block-california-youth-social-media-law-2026-11-05/",
-      "title": "Tech Giants Sue to Block California Youth Online Safety Law",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.reuters.com/business/marc-lores-wonder-group-confidentially-files-us-ipo-2026-11-05/",
-      "title": "Food Delivery Startup Wonder Files Confidentially for US IPO",
-      "sentAt": "2026-11-05"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-05/nintendo-profit-drops-after-memory-crunch-and-lack-of-big-debuts",
-      "title": "Rising Switch 2 Costs Drag Nintendo Q2 Profit Down 16%",
-      "sentAt": "2026-11-05"
-    },
-    {
       "url": "https://www.bloomberg.com/news/articles/2026-11-05/us-stock-futures-diverge-as-chip-selloff-extends-into-second-day",
       "title": "Nasdaq 100 Drops 6% in Massive AI-Driven Tech Selloff",
       "sentAt": "2026-11-06"
@@ -684,6 +634,56 @@
       "url": "https://www.ft.com/content/5168b3e9-75d0-4be0-9ccd-d327d6b16c05",
       "title": "KPMG Deploys 100+ AI Agents to Audit FTSE 250 Company",
       "sentAt": "2026-11-18"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+      "title": "Anthropic Reaches ~$2T Market Cap in Nasdaq Debut",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74",
+      "title": "TSMC and Samsung Halt Certain Chip Shipments to China",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/iea-sees-data-center-boom-pushing-power-grids-to-the-limit",
+      "title": "IEA Forecasts $4T Global Data Center Investment by 2030",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "title": "Google Releases Gemini 4 Neon Across Apps and APIs",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/amd-slides-after-hunterbrook-shorts-stock-cites-circular-deals",
+      "title": "AMD Shares Drop 6%+ on Hunterbrook Short Report",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.politico.eu/newsletter/brussels-playbook/cyberattack-hits-the-commission/",
+      "title": "Cyberattack Disrupts European Commission Systems for 10+ Days",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.ft.com/content/46a5cf3c-a827-477f-b72f-e7415565e729",
+      "title": "UK Tribunal Orders Home Office to Acknowledge Apple Secret Order",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "title": "OpenAI Reports Sharp Rise in Autonomous Agent Workload",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
+      "title": "Malicious Packages Infiltrate Microsoft Agent Framework on PyPI",
+      "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/binance-secures-6-5-billion-freezing-order-from-abu-dhabi-court",
+      "title": "Binance Secures $6.5B Court Freezing Order After Attack",
+      "sentAt": "2026-11-19"
     }
   ]
 }
