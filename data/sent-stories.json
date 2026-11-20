@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-05/us-stock-futures-diverge-as-chip-selloff-extends-into-second-day",
-      "title": "Nasdaq 100 Drops 6% in Massive AI-Driven Tech Selloff",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://www.theinformation.com/briefings/anthropics-r-d-speed-may-doubled-due-ai-researchers-find",
-      "title": "Internal AI Tooling Accelerates Anthropic Model Development",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://www.ft.com/content/8ec923a8-a581-4995-a92c-c08e16bf2e98",
-      "title": "Tesla to Wind Down Cybertruck Output for Cybercab",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://www.wsj.com/finance/major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5-trillion-valuation-ca965d8b",
-      "title": "Investors Doubt Anthropic Can Reach $1.5T IPO Valuation",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://www.reuters.com/world/silver-lake-pif-have-held-recent-talks-buy-gaming-software-provider-unity-2026-11-05/",
-      "title": "Consortium Weighs ~$25B Acquisition of Unity",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://thinkingmachines.ai/news/inkling-2-small/",
-      "title": "Thinking Machines Lab Unveils Inkling 2 Small MoE Model",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://www.nytimes.com/2026/11/06/technology/microsoft-buyouts.html",
-      "title": "Microsoft Offers Buyouts to 60,000 Workers as AI Priority Shifts",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-06/nvidia-boosts-chip-tracking-in-southeast-asia-to-fight-smuggling",
-      "title": "Nvidia Tightens Location Tracking for Southeast Asian AI Chips",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
-      "title": "Decade-Old Flaw Exposes Passwordless musl Linux Systems",
-      "sentAt": "2026-11-06"
-    },
-    {
-      "url": "https://therecord.media/eu-accuses-tiktok-of-rabbit-hole-DSA-violation",
-      "title": "EU Finds TikTok Recommendation Algorithm Violates DSA",
-      "sentAt": "2026-11-06"
-    },
-    {
       "url": "https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html",
       "title": "US Intelligence Links Megaspeed Exec to China Spy Agency Target on Jensen Huang",
       "sentAt": "2026-11-07"
@@ -684,6 +634,56 @@
       "url": "https://www.bloomberg.com/news/articles/2026-11-18/binance-secures-6-5-billion-freezing-order-from-abu-dhabi-court",
       "title": "Binance Secures $6.5B Court Freezing Order After Attack",
       "sentAt": "2026-11-19"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html",
+      "title": "Anthropic Raises Additional $12.2B as Underwriters Exercise Greenshoe",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/",
+      "title": "Anthropic Researcher Claims Claude Proved the Riemann Hypothesis",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html",
+      "title": "Report Details Decades of Abusive Conduct by Jensen Huang at Nvidia",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/white-house-national-cyber-director-cairncross-leaving-his-post-axios-reports-2026-11-19/",
+      "title": "National Cyber Director Sean Cairncross Fired After Outages",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html",
+      "title": "Commerce Approved Sales of 879K+ Advanced AI Chips to China",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/apple-is-working-on-ai-agent-for-device-control-apps-browsing-and-coding",
+      "title": "Apple Developing Autonomous AI Agent Capable of Operating Devices",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/sk-hynix-to-be-kioxia-s-top-shareholder-after-bond-conversion",
+      "title": "SK Hynix to Become Kioxia's Largest Shareholder via Bond Conversion",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.cbsnews.com/sanfrancisco/news/california-nvidia-subpoena-jensen-huang-affair-alleged-chinese-spy/",
+      "title": "California AG Subpoenas Nvidia Over China Sales and Disclosures",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/signal-restricts-screenshots-block-ai-agents-reading-messages-2026-11-20/",
+      "title": "Signal Restricts Screenshots by Default to Hinder AI Agents",
+      "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://9to5google.com/2026/11/19/samsung-mobile-division-lead-choi-won-joon/",
+      "title": "Samsung Replaces Leadership in Mobile and Memory Divisions",
+      "sentAt": "2026-11-20"
     }
   ]
 }
