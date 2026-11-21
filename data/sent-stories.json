@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html",
-      "title": "US Intelligence Links Megaspeed Exec to China Spy Agency Target on Jensen Huang",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value",
-      "title": "OpenAI Closes Roughly $11B in New Funding at $1.25T Valuation",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://www.ft.com/content/314e17df-e7af-4814-b208-70a0557cb452",
-      "title": "Anthropic Targets Pre-Thanksgiving IPO Seeking Up to $100B",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-06/google-takes-over-wyoming-data-center-that-crusoe-had-pitched",
-      "title": "Google Acquires Crusoe Data Center Site in Wyoming",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
-      "title": "Censys Finds 800+ Exposed Copies of Chinese AI Hacking Tool ARTEX",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
-      "title": "Global Tablet Shipments Drop 23% YoY to 32M Units in Q3 2026",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://thenewstack.io/meta-muse-specialized-models/",
-      "title": "Meta Deploys Specialized Models Built with Muse Wonder",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://siliconangle.com/2026/11/05/ocient-raises-100-million-as-agentic-ai-drives-growth-in-large-scale-analytics/",
-      "title": "Ocient Secures $100M Series C for Agentic AI Analytics",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
-      "title": "Shenzhen Clamps Down on Smuggled Chips Ahead of APEC Summit",
-      "sentAt": "2026-11-07"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1028813/apple-iphone-duo-optimized-apps",
-      "title": "Apple App Store Surpasses 100K Apps Optimized for iPhone Duo",
-      "sentAt": "2026-11-07"
-    },
-    {
       "url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
       "title": "Apple Pushes to Accelerate Agentic AI Development",
       "sentAt": "2026-11-08"
@@ -684,6 +634,56 @@
       "url": "https://9to5google.com/2026/11/19/samsung-mobile-division-lead-choi-won-joon/",
       "title": "Samsung Replaces Leadership in Mobile and Memory Divisions",
       "sentAt": "2026-11-20"
+    },
+    {
+      "url": "https://www.ft.com/content/9f3c6ed6-c08f-4710-9683-ee2f5eb25841",
+      "title": "Nasdaq 100 Falls 10.4% in Worst Weekly Drop in Six-Plus Years",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/crowdstrike-is-in-talks-to-buy-cybersecurity-firm-zscaler",
+      "title": "CrowdStrike in Talks to Acquire Zscaler",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://cnn.com/2026/11/20/politics/fbi-hacked-again-target-crime-database",
+      "title": "FBI Investigates Apparent Breach of NCIC Database",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://www.reuters.com/world/us-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-2026-11-20/",
+      "title": "SEC Probes Nvidia Accounting Practices",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://variety.com/2026/gaming/news/gta-6-sales-3-79-billion-1236954198/",
+      "title": "GTA VI Generates $3.79B in Day-One Sales",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/tech/semiconductors/chip-supply-chain-warns-of-broader-disruption-from-new-us-export-controls",
+      "title": "US Export Restrictions Broaden to Consumer Electronics SoCs",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://x.com/oracle/status/2123884437045760420",
+      "title": "Oracle Secures Funding for OpenAI Infrastructure Contract",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://www.theinformation.com/articles/softbanks-masayoshi-son-explored-1-trillion-moonshot-buyout-sk-hynix",
+      "title": "SoftBank Explored Possible $1T SK Hynix Buyout",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "title": "TML Launches Open-Weights Inkling 2 Mini",
+      "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/20/cursor-chinese-ai-models-geopolitical-risk.html",
+      "title": "Cursor Considers Phasing Out Chinese AI Models",
+      "sentAt": "2026-11-21"
     }
   ]
 }
