@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
-      "title": "Apple Pushes to Accelerate Agentic AI Development",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://www.ft.com/content/41bf5c6a-9735-4f1a-a8e3-2bcccad58ba0",
-      "title": "Anthropic Commits $3.4B for 1.7GW of Power Generators",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
-      "title": "US Moves to Cut Crypto Exchange MEXC from Financial System",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede",
-      "title": "Apple Saves $2.7B in Taxes via Singapore Profits",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://www.politico.com/news/magazine/2026/11/06/ai-big-tech-2026-midterms-anthropic-openai-01152312",
-      "title": "AI-Safety Coalition Defeats $100M Super PAC in Midterms",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://nousresearch.com/arete",
-      "title": "Nous Research Releases Arete-27B to Counter Model Bias",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://www.theguardian.com/technology/2026/nov/07/datacentres-southeast-asia",
-      "title": "Southeast Asia Data Center Boom Hits Delays",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61",
-      "title": "Crypto Sector Braces for Inquiries After Midterm Elections",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://technode.com/2026/11/02/robot-training-data-startup-genrobot-ai-raises-100-million-in-series-a-funding/",
-      "title": "GenRobot AI Secures $100M Series A+ for Robot Training",
-      "sentAt": "2026-11-08"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/blue-wave-may-stop-musks-texas-data-center-ambitions",
-      "title": "SpaceX Faces Potential Delays on Starbase Supercomputer",
-      "sentAt": "2026-11-08"
-    },
-    {
       "url": "https://www.bloomberg.com/news/articles/2026-11-08/nvidia-board-to-probe-spying-case-after-ceo-jensen-huang-admits-infidelity",
       "title": "Nvidia Board Probes Foreign Spy Plot Involving Jensen Huang",
       "sentAt": "2026-11-09"
@@ -684,6 +634,56 @@
       "url": "https://www.cnbc.com/2026/11/20/cursor-chinese-ai-models-geopolitical-risk.html",
       "title": "Cursor Considers Phasing Out Chinese AI Models",
       "sentAt": "2026-11-21"
+    },
+    {
+      "url": "https://www.ft.com/content/dc7749dc-0f40-44a6-80bc-7f747d383616",
+      "title": "Amazon Nears $7.5B Acquisition of AI Startup Decart",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+      "title": "Math Communities Validate Alpöge's Proof of the Riemann Hypothesis",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "title": "Canary Tests Reveal Data Leaks Across AI Routing Services",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://www.ft.com/content/dd2a6594-6146-4ff1-ac8e-54749c1fc99f",
+      "title": "AI Server Makers Demand Higher Prices Post-Contract",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://www.wsj.com/tech/li-ming-megaspeed-nvidia-chips-china-6260d836",
+      "title": "Associate of Alice Huang Linked to AI Chip Smuggling Ring",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://www.reuters.com/world/like-spacex-anthropic-ran-an-unusual-ipo-process-chafing-some-bankers-2026-11-22/",
+      "title": "Anthropic Enforces Strict Secrecy Rules on IPO Banks",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/20/business/china-ai-investment-spending.html",
+      "title": "Chinese Tech Capex Set to Double to $139B in 2026",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://www.scientificamerican.com/article/ai-just-solved-the-real-navier-stokes-problem/",
+      "title": "Researchers Publish AI-Aided Proof of Navier-Stokes Blowup",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://gizmodo.com/its-like-gta-musk-touts-video-game-like-update-to-tesla-fsd-2000843584",
+      "title": "Tesla Rolls Out FSD v15 Featuring AI Video Generation",
+      "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://www.ft.com/content/3cf882c6-0be6-43f5-b01e-b6f765686c8b",
+      "title": "AI Accelerates Cyberattack Planning Against Industrial Gear",
+      "sentAt": "2026-11-22"
     }
   ]
 }
