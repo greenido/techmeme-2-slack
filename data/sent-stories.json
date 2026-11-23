@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-08/nvidia-board-to-probe-spying-case-after-ceo-jensen-huang-admits-infidelity",
-      "title": "Nvidia Board Probes Foreign Spy Plot Involving Jensen Huang",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-      "title": "Anthropic Unveils Mythos 5.2 and Fable 5.2 Models",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-09/google-escalates-nvidia-rivalry-with-new-versions-of-its-tpu-systems",
-      "title": "Google Unveils Specialized 8tx and 8i Max TPUs for 2027",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-09/coinbase-gets-final-regulatory-stamp-for-trust-bank-charter",
-      "title": "OCC Grants Coinbase Full Chartered Trust Bank Approval",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.cbsnews.com/news/donald-trump-2026-post-midterm-elections-interview-60-minutes-transcript/",
-      "title": "Trump Comments on AI Safety Guardrails and China",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
-      "title": "Meta Releases Lightweight Muse Ember AI Model",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.reuters.com/world/french-officials-suspect-iran-is-behind-refrigerator-hacks-sources-say-2026-11-09/",
-      "title": "France Links October Cooling Cyberattacks to Iran",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership",
-      "title": "Disney and Adobe Ink Multiyear Generative AI Partnership",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-09/binance-hackers-made-memecoins-to-launder-stolen-crypto",
-      "title": "Binance Hackers Use NEAR Memecoins to Launder Stolen Funds",
-      "sentAt": "2026-11-09"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1029627/meta-instagram-ai-age-assurance-global-expansion",
-      "title": "Meta Expands Instagram Teen Account AI Age Estimation Globally",
-      "sentAt": "2026-11-09"
-    },
-    {
       "url": "https://www.anthropic.com/news/roadshow-launch",
       "title": "Anthropic Launches Nasdaq IPO Roadshow to Sell 825M Shares",
       "sentAt": "2026-11-10"
@@ -684,6 +634,56 @@
       "url": "https://www.ft.com/content/3cf882c6-0be6-43f5-b01e-b6f765686c8b",
       "title": "AI Accelerates Cyberattack Planning Against Industrial Gear",
       "sentAt": "2026-11-22"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+      "title": "Nvidia Reinstates Jensen Huang as CEO as NVDA Surges 31%",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/crowdstrike-reaches-44-billion-cybersecurity-deal-for-zscaler",
+      "title": "CrowdStrike Agrees to Acquire Zscaler in ~$43.9B All-Stock Deal",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.semafor.com/article/11/23/2026/commerce-to-add-megaspeed-to-trade-blacklist",
+      "title": "US Plans to Place Megaspeed on Trade Blacklist",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/23/technology/spacex-lawsuit-ai-sexualized-images.html",
+      "title": "Oregon and Virginia Sue SpaceX Over Grok Imagine",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/bret-taylor-s-sierra-finalizing-more-than-1-75-billion-round",
+      "title": "AI Startup Sierra Finalizes $1.75B+ Round at $30B Valuation",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html",
+      "title": "Musk Says SpaceX Is Falling Behind in AI, Rents Out Compute",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://z.ai/blog/glm-5.4",
+      "title": "Z.ai Releases 750B-Parameter GLM-5.4 Model",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/arm-ceo-extends-contract-through-2033-after-nvidia-approach",
+      "title": "Arm CEO Rene Haas Extends Contract to 2033 After Nvidia Approach",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/marlowe-raises-277-million-to-bolster-alternatives-to-nvidia-chips",
+      "title": "Marlowe Raises $277M Seed at $1.15B Valuation for AI Chip Tools",
+      "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.zdnet.com/innovation/claude-ship-code-how-to-try/",
+      "title": "Anthropic Unveils Claude Ship for GitHub Pull Requests",
+      "sentAt": "2026-11-23"
     }
   ]
 }
