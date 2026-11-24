@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.anthropic.com/news/roadshow-launch",
-      "title": "Anthropic Launches Nasdaq IPO Roadshow to Sell 825M Shares",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://www.theinformation.com/articles/jensen-huangs-yearslong-ties-alice-huang-enabled-nvidia-chip-sales-china",
-      "title": "Jensen Huang Relationship Linked to $7.5B+ in China Chip Shipments",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://www.reuters.com/legal/transactional/ai-training-startup-mercor-valued-20-billion-latest-funding-round-2026-11-10/",
-      "title": "AI Training Startup Mercor Secures $750M at $20B Valuation",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://www.theinformation.com/briefings/softbank-writes-3-7-billion-advance-payments-data-center-projects",
-      "title": "SoftBank Writes Off $3.7B in Data Center Equipment Advances",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-10/moonshot-rents-nvidia-s-top-ai-chips-in-china-documents-show",
-      "title": "Moonshot Rented Nvidia B300 Servers in Possible US Rules Breach",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
-      "title": "DeepMind AlphaProof Code Formally Verifies Signal Protocol",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
-      "title": "Google Releases Gemini 4 Carbon to Paid API and AI Ultra Users",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://9to5mac.com/2026/11/09/apple-launches-50-intelligence-usage-packs-for-select-ai-features/",
-      "title": "Apple Rolls Out $50 Add-On Packs for AI Feature Overage",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://www.reuters.com/world/white-house-nominates-palantirs-losapio-lead-homeland-securitys-cyber-agency-2026-11-09/",
-      "title": "White House Nominates Palantir CISO Michael LoSapio to Lead CISA",
-      "sentAt": "2026-11-10"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-10/ibm-to-end-immigration-sponsorship-for-roles-in-biggest-unit",
-      "title": "IBM Halts H-1B and Green Card Sponsorships in Consulting Arm",
-      "sentAt": "2026-11-10"
-    },
-    {
       "url": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html",
       "title": "CoreWeave Q3 Revenue Surges 168% YoY to $3.66B",
       "sentAt": "2026-11-11"
@@ -684,6 +634,56 @@
       "url": "https://www.zdnet.com/innovation/claude-ship-code-how-to-try/",
       "title": "Anthropic Unveils Claude Ship for GitHub Pull Requests",
       "sentAt": "2026-11-23"
+    },
+    {
+      "url": "https://www.ft.com/content/82d3be02-8ac7-4acb-aefa-6e3722ee05cc",
+      "title": "Tech Leaders Lobbied Trump and Vance to Reinstate Jensen Huang",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks",
+      "title": "Employees Warn Unreleased OpenAI and Anthropic Models Are Too Powerful",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/",
+      "title": "Anthropic Dips Below $83 IPO Price as Founders Sell Shares",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.wsj.com/business/stripes-valuation-set-to-top-200-billion-in-latest-investor-talks-122c9027",
+      "title": "Stripe Weighs Tender Offer at Valuation Exceeding $200B",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.hollywoodreporter.com/music/music-industry-news/tidal-bans-wholly-ai-generated-music-1236762171/",
+      "title": "Tidal to Ban Fully AI-Generated Music Starting December 9",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.politico.eu/article/meta-ai-agent-muse-launch-uk/",
+      "title": "Meta Launches Muse AI Agent for UK Adults",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/",
+      "title": "Microsoft Declares Code Red Following 24-Hour Outage",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://siliconangle.com/2026/11/23/cisco-and-openai-launch-shirudo-an-open-source-infrastructure-shield-to-protect-against-ai-driven-cyberattacks/",
+      "title": "OpenAI and Cisco Debut Shirudo Runtime for Linux Systems",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/",
+      "title": "GTA VI Launch Breaks PlayStation Records with 39M+ Players",
+      "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.wired.com/story/3-billion-usernames-passwords-and-documents-leaked-online/",
+      "title": "Unsecured Databases Expose Over 3.5B Records and Documents",
+      "sentAt": "2026-11-24"
     }
   ]
 }
