@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html",
-      "title": "CoreWeave Q3 Revenue Surges 168% YoY to $3.66B",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-11/applied-intuition-in-talks-to-raise-1-5-billion-at-30-billion-value",
-      "title": "Applied Intuition in Talks to Raise $1.5B at ~$30B Valuation",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-11/eu-targets-social-media-addiction-and-online-dark-patterns",
-      "title": "EU Introduces Digital Fairness Act to Ban Dark Patterns",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
-      "title": "Google DeepMind Releases AlphaGenome 2 for DNA Research",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
-      "title": "Grok Build Leaks Sensitive Data from Over 35,000 Apps",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.reuters.com/world/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-2026-11-11/",
-      "title": "Blacklisted Chinese University Obtains Nvidia H200 AI Chips",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.tomshardware.com/pc-components/cpus/amd-zen-6-epyc-venice-deep-dive-and-benchmarking-dual-epyc-9996-with-1-024-threads-delivers-up-to-93-percent-performance-gain-gen-on-gen-9686f-outclasses-nvidias-vera",
-      "title": "AMD Zen 6 EPYC Venice Outperforms Predecessors on TSMC N2P",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-11/utah-based-startup-raises-500-million-for-modular-ai-data-center",
-      "title": "Torus Raises $500M Series C for Modular AI Data Centers",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-11/nintendo-sold-5-2-million-copies-of-zelda-remake-in-four-days",
-      "title": "Nintendo Sells 5.2M Zelda Remake Copies in Four Days",
-      "sentAt": "2026-11-11"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-11/bytedance-prepares-muse-like-agent-in-push-to-close-ai-gap",
-      "title": "ByteDance Targets AI Frontier by 2029-2030 with New Assistant",
-      "sentAt": "2026-11-11"
-    },
-    {
       "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
       "title": "Jensen Huang Resigns as Nvidia CEO and Board Member",
       "sentAt": "2026-11-12"
@@ -684,6 +634,56 @@
       "url": "https://www.wired.com/story/3-billion-usernames-passwords-and-documents-leaked-online/",
       "title": "Unsecured Databases Expose Over 3.5B Records and Documents",
       "sentAt": "2026-11-24"
+    },
+    {
+      "url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7",
+      "title": "US Officials Find No Evidence of Chinese Espionage in Jensen Huang Affair",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a",
+      "title": "Tech Stocks Tumble as Nasdaq 100 Drops Over 4% in AI Sell-Off",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound",
+      "title": "OpenAI Preprint Claims to Solve Matrix Multiplication Exponent Problem",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.ft.com/content/53d4b629-7ae4-4d63-ac37-e773b1dd3af0",
+      "title": "EU Plans €50B Sovereign Tech Equity Fund for AI and Quantum Bets",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/asia-data-centers-sound-out-us-clients-to-replace-china-demand",
+      "title": "Asian Neoclouds Seek US Clients as Compute Rules Drive Down B300 Costs",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://fortune.com/2026/11/25/exclusive-amazon-meta-talks-deal-muse-ai-shopping-agent-blockade/",
+      "title": "Meta and Amazon Weigh Deal to Bring Muse AI to Amazon Platform",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.wired.com/story/inside-trumps-demands-to-another-chips-ceo/",
+      "title": "Court Files Detail US Pressure Campaign for 10% Intel Stake",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/us-authorizes-spacex-deploy-1-million-satellites-data-centers-space-2026-11-25/",
+      "title": "FCC Grants SpaceX Approval for 1M Space Data Center Satellites",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://apnews.com/article/australia-digital-duty-care-law-tech-harm-b3f044575e9d8106f30a14eee2b89a81",
+      "title": "Australia Passes Online Safety Law Threatening Multibillion-Dollar Fines",
+      "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.theverge.com/policy/1041957/fincen-treasury-cybersecurity-incident",
+      "title": "US Treasury's FinCEN Probes System Breach After Unauthorized Access",
+      "sentAt": "2026-11-25"
     }
   ]
 }
