@@ -1,41 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
-      "title": "Jensen Huang Resigns as Nvidia CEO and Board Member",
-      "sentAt": "2026-11-12"
-    },
-    {
-      "url": "https://www.semafor.com/article/11/12/2026/us-doj-probes-nvidia",
-      "title": "US DOJ Probes Threaten to Sweep Up Nvidia",
-      "sentAt": "2026-11-12"
-    },
-    {
-      "url": "https://www.wsj.com/business/earnings/nvidias-disappearing-singapore-sales-deepen-mystery-around-megaspeed-7d483180",
-      "title": "Nvidia Ceased Reporting Singapore Revenue After Scrutiny",
-      "sentAt": "2026-11-12"
-    },
-    {
-      "url": "https://www.ft.com/content/6cd890f1-2e4d-468a-807f-529f45e1678e",
-      "title": "Zelenskyy Says Starshield Faced Systematic Speed Restrictions",
-      "sentAt": "2026-11-12"
-    },
-    {
-      "url": "https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/",
-      "title": "Google and Samsung Open Android XR Glasses Preorders",
-      "sentAt": "2026-11-12"
-    },
-    {
-      "url": "https://theintercept.com/2026/11/11/openai-ukraine-russia-prank-security/",
-      "title": "Russian Pranksters Trick OpenAI Natsec Executives",
-      "sentAt": "2026-11-12"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit",
-      "title": "Apple HomeView Reviews Highlight Siri AI and Fast Controls",
-      "sentAt": "2026-11-12"
-    },
-    {
       "url": "https://www.bloomberg.com/news/articles/2026-11-12/spacex-and-tesla-talks-on-record-merger-are-said-to-progress",
       "title": "SpaceX and Tesla Progress Toward Potential Merger Deal",
       "sentAt": "2026-11-13"
@@ -684,6 +649,56 @@
       "url": "https://www.theverge.com/policy/1041957/fincen-treasury-cybersecurity-incident",
       "title": "US Treasury's FinCEN Probes System Breach After Unauthorized Access",
       "sentAt": "2026-11-25"
+    },
+    {
+      "url": "https://www.ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370",
+      "title": "Nvidia Halts AI Server Shipments to Four Southeast Asian Nations",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://scottaaronson.blog/?p=10379",
+      "title": "AI Labs Reportedly Hold Cryptography-Breaking Breakthroughs",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring",
+      "title": "SAP Prepares to Cut at Least 10,000 Jobs in AI Reorganization",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://www.wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a",
+      "title": "Severe Memory Chip Shortage Forces Firms to Open War Rooms",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26/",
+      "title": "US Rules Delay Z.ai's 3T Flagship GLM-5.5 to Q1 2027 or Later",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/neuralink-gets-clearance-for-brain-implant-trial-in-als-patients",
+      "title": "Neuralink Receives FDA Approval for Pivotal ALS Brain Trial",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool",
+      "title": "State Hackers Add AI Penetration Testing Tool ARTEX to Arsenal",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://www.ft.com/content/ec820cb6-4983-4ece-8e7b-de116b57525d",
+      "title": "UK FCA Plans DeFi Authorization Rules Following $6.3B Binance Hack",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-26/musk-says-every-us-kid-to-get-two-spacex-shares-doubling-pledge",
+      "title": "Musk and SpaceX Pledge ~$18.4B in Shares to US Children",
+      "sentAt": "2026-11-26"
+    },
+    {
+      "url": "https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai",
+      "title": "MicroLED Interconnect Startup Avicena Raises $100M+ Series C",
+      "sentAt": "2026-11-26"
     }
   ]
 }
