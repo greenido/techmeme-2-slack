@@ -1,56 +1,6 @@
 {
   "stories": [
     {
-      "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/",
-      "title": "FAA lifts nationwide ground stop caused by network update crash",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages",
-      "title": "Microsoft restores Microsoft 365 following widespread global outage",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/",
-      "title": "Italy fines Meta €805M over unauthorized Android photo and video access",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-11-14/tesla-says-it-s-starting-to-sell-cybercabs-for-personal-use",
-      "title": "Tesla opens Cybercab orders to select customers for personal use",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.reuters.com/world/china/ex-nvidia-ceo-misled-top-lawyer-affair-with-chinese-businesswoman-sources-say-2026-11-14/",
-      "title": "Jensen Huang reportedly misled Nvidia leaders regarding Alice Huang relationship",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.mobihealthnews.com/news/charta-health-raises-55m-launches-new-ai-coding-tools",
-      "title": "Charta Health secures $55M Series B for AI medical workflow automation",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.axios.com/pro/all-deals/2026/11/10/private-equity-due-diligence-ai-operand-31m",
-      "title": "Operand raises $31M at $220M valuation for PE due diligence AI",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.ft.com/content/0ef40ac9-6d01-428f-98c8-a52bf5b9a787",
-      "title": "SBF relinquished Anthropic stake now worth ~$37B for ~$1.3B",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.ft.com/content/a1bcce14-c326-488f-b736-6e831b0fb6cf",
-      "title": "Swiss city of Lugano pushes to reinvent itself as a crypto hub",
-      "sentAt": "2026-11-14"
-    },
-    {
-      "url": "https://www.dwarkesh.com/p/rsi",
-      "title": "AI progress in math signals rapid acceleration in AI research capabilities",
-      "sentAt": "2026-11-14"
-    },
-    {
       "url": "https://www.wsj.com/tech/jensen-huang-backdoor-ai-data-centers-a5e4499d",
       "title": "Nvidia Sanctions Gap Enabled Chip Access",
       "sentAt": "2026-11-15"
@@ -699,6 +649,56 @@
       "url": "https://www.bloomberg.com/news/articles/2026-11-27/european-workers-ai-use-on-par-with-that-of-us-peers-ecb-says",
       "title": "ECB Survey Finds 44% of Employed EU Consumers Use AI Weekly",
       "sentAt": "2026-11-27"
+    },
+    {
+      "url": "https://www.dbreunig.com/2026/11/27/proactivity-can-read-as-sabotage.html",
+      "title": "Users Report Claude Silently Sabotaging ML Projects",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://embo.com/introducing-embo",
+      "title": "Embo Launches From Stealth With $110M Seed for Robotics World Models",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/trump-backed-world-liberty-crypto-token-falls-around-50-overnight-2026-11-28/",
+      "title": "Trump-Backed WLFI Token Plunges ~50% Overnight",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://www.wsj.com/finance/allstate-joins-growing-list-of-companies-hit-by-tech-outages-77dbb488",
+      "title": "Allstate Grapples With Multiday Outage Affecting App and Website",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://tech.eu/2026/11/24/trustly-completes-60m-funding-raise/",
+      "title": "Trustly Secures $60M Round to Bring Total Funding to $450M+",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://www.ft.com/content/76143592-b1c8-42d2-bf4c-17aa87255467",
+      "title": "AI Data Center Boom Strains US Aerospace and Defense Supply Chains",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://www.ft.com/content/7db3c2c9-dfad-4b5d-a8dc-aabf6fa87440",
+      "title": "Power Grids Deploy Sensors and Software to Cope With AI Energy Surge",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://fortune.com/2026/11/26/reddit-coo-jen-wong-user-karma-moderator-model-ai/",
+      "title": "Reddit COO Says 80%+ of Monetization Stems From Logged-In Users",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "title": "Q.ANT Developing 90nm Photonic Processors for AI Workloads",
+      "sentAt": "2026-11-28"
+    },
+    {
+      "url": "https://www.dwarkesh.com/p/daniel-kokotajlo-ege-erdil",
+      "title": "AI Researchers Debate Feasibility of Intelligence Explosion Before 2029",
+      "sentAt": "2026-11-28"
     }
   ]
 }
